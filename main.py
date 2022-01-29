@@ -1,4 +1,3 @@
-import json
 import secrets
 import requests
 
@@ -22,6 +21,7 @@ def getShowID(top250Data):
         if i["rank"] == 1 or 50 or 100 or 200:
             showID = i["id"]
             showIDs.append(showID)
+            print(showID)
     return showIDs
 
 
@@ -36,6 +36,9 @@ def getRankings(showIDs):
 
 def writeToOutput(rankingData, top250Data):
     with open('top250.txt', 'w') as f:
+        for i in rankingData:
+            print(i)
+
         for i in top250Data['items']:
             output_data = f'{i["rank"]}) {i["fullTitle"]} \n \t id: {i["id"]} \n'
             f.write(output_data)
