@@ -1,12 +1,16 @@
 import secrets
 import requests
+import sqlite3
 
 
 def main():
-    top250Data = getTop250Tv()
-    showIDs = getShowID(top250Data)
-    ratingData = getRatings(showIDs)
-    writeToOutput(ratingData, top250Data)
+    # top250Data = getTop250Tv()
+    # showIDs = getShowID(top250Data)
+    # ratingData = getRatings(showIDs)
+    # writeToOutput(ratingData, top250Data)
+    conn, curs = dbConnect()
+    createDataBase(curs)
+    fillHeadlineData(curs)
 
 
 def getTop250Tv():
@@ -38,14 +42,71 @@ def getRatings(showIDs):
 
 
 def writeToOutput(ratingData, top250Data):
-    with open('top250.txt', 'w') as f:
+    with open('ratingData.txt', 'w') as f:
         for i in ratingData:
             output_data = f'{i} \n'
             f.write(output_data)
 
+    with open('top250.txt', 'w') as f:
         for i in top250Data['items']:
-            output_data = f'{i["rank"]}) {i["fullTitle"]} \n \t id: {i["id"]} \n'
+            output_data = f'{i["id"]} | {i["title"]} | {i["fullTitle"]} | {i["year"]}, | {i["crew"]} |  ' \
+                          f'{i["imDbRating"]} | {i["imDbRatingCount"]}\n'
             f.write(output_data)
+
+
+def dbConnect():
+    conn = sqlite3.connect('imDataBase.db')
+    curs = conn.cursor()
+    return conn, curs
+
+
+def createDataBase(curs: sqlite3.Cursor):
+    curs.execute('''CREATE TABLE IF NOT EXISTS "headlineData" (
+                        "id"	INTEGER,
+                        "title"	TEXT,
+                        "fullTitle"	TEXT,
+                        "year"	INTEGER,
+                        "crew"	BLOB,
+                        "imdbRating"	NUMERIC,
+                        "imdbRatingCount"	NUMERIC,
+                        PRIMARY KEY("id"));''')
+    curs.execute('''CREATE TABLE IF NOT EXISTS "ratingData" (
+                        "id"	INTEGER,
+                        "totalRating"	NUMERIC,
+                        "totalRatingVotes"	INTEGER,
+                        "tenRatingPercent"	NUMERIC,
+                        "tenRatingVotes"	INTEGER,
+                        "nineRatingPercent"	REAL,
+                        "nineRatingVotes"	INTEGER,
+                        "eightRatingPercent"	NUMERIC,
+                        "eightRatingVotes"	INTEGER,
+                        "sevenRatingPercent"	NUMERIC,
+                        "sevenRatingVotes"	INTEGER,
+                        "sixRatingPercent"	NUMERIC,
+                        "sixRatingVotes"	INTEGER,
+                        "fiveRatingPercent"	NUMERIC,
+                        "fiveRatingVotes"	INTEGER,
+                        "fourRatingPercent"	NUMERIC,
+                        "fourRatingVotes"	INTEGER,
+                        "threeRatingPercent"	NUMERIC,
+                        "threeRatingVotes"	INTEGER,
+                        "twoRatingPercent"	NUMERIC,
+                        "twoRatingVotes"	INTEGER,
+                        "oneRatingPercent"	NUMERIC,
+                        "oneRatingVotes"	INTEGER,
+                        PRIMARY KEY("id"));''')
+
+
+def fillHeadlineData(curs: sqlite3.Cursor):
+    dataDict = {}
+
+    dataFile = open("top250.txt", 'r')
+    for line in dataFile:
+        key, title, fullTitle, year, crew, imdbRating, imdbRatingCount = line.split(" | ")
+        dataDict[key] = {"title": {title.strip()}, "fullTitle": {fullTitle.strip()}, "year": {year.strip()},
+                         "crew": {crew.strip()}, "imdbRating": {imdbRating.strip()},
+                         "imdbRatingCount": {imdbRatingCount.strip()}}
+    print(dataDict)
 
 
 main()
