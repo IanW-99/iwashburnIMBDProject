@@ -18,7 +18,7 @@ def main():
 
 
 def getTop250Tv():
-    response = requests.get(f"https://imdb-api.com/en/API/Top250TVs/{secrets.imbdKey}")
+    response = requests.get(f"https://imdb-api.com/en/API/Top250TVs/{secrets.imdbKey}")
     try:
         json_data = response.json()
         return json_data
