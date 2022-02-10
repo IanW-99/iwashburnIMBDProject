@@ -11,10 +11,10 @@ def main():
     # ratingData = getRatings(showIDs)
     # writeToOutput(ratingData, top250Data)
     top250Dict, ratingDict = createDictionaries()
-    # conn, curs = dbConnect()
-    # createDataBase(curs)
-    # fillHeadlineData(conn, curs, top250Dict)
-    # fillRatingData(conn, curs)
+    conn, curs = dbConnect()
+    createDataBase(curs)
+    fillHeadlineData(conn, curs, top250Dict)
+    fillRatingData(conn, curs, ratingDict)
 
 
 def getTop250Tv():
@@ -153,23 +153,39 @@ def createDictionaries():
 
 
 def fillHeadlineData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Dict):
-    # curs.execute('''INSERT OR IGNORE INTO headlineData (id, title, fullTitle, year, crew, imdbRating,
-    # imdbRatingCount) VALUES (?,?,?,?,?,?,?)''', (line.strip().split(" | ")))
-    conn.commit()
+    for key in top250Dict:
+        insert_statement = '''INSERT OR IGNORE INTO headlineData (id, title, fullTitle, year, crew, imdbRating,
+                            imdbRatingCount) VALUES (?,?,?,?,?,?,?)'''
+
+        data = key, top250Dict[key]["title"], top250Dict[key]["fullTitle"], top250Dict[key]["year"], top250Dict[key][
+            "crew"], top250Dict[key]["imdbRating"], top250Dict[key]["imdbRatingCount"]
+        curs.execute(insert_statement, data)
+        conn.commit()
 
 
-def fillRatingData(conn: sqlite3.Connection, curs: sqlite3.Cursor):
-    with open('ratingData.txt', 'r') as dataFile:
-        for line in dataFile:
-            if len(line.strip().split(" | ")) == 23:
-                curs.execute('''INSERT OR IGNORE INTO ratingData (id, totalRating, totalRatingVotes, \
-                tenRatingPercent, tenRatingVotes, nineRatingPercent, nineRatingVotes, \
-                eightRatingPercent, eightRatingVotes, sevenRatingPercent, sevenRatingVotes, \
-                sixRatingPercent, sixRatingVotes, fiveRatingPercent, fiveRatingVotes, \
-                fourRatingPercent, fourRatingVotes, threeRatingPercent, threeRatingVotes, \
-                twoRatingPercent, twoRatingVotes, oneRatingPercent, oneRatingVotes) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,
-                ?,?,?,?,?,?,?,?,?)''', (line.strip().split(" | ")))
-                conn.commit()
+def fillRatingData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingDict):
+    for key in ratingDict:
+        insert_statement = '''INSERT OR IGNORE INTO ratingData (id, totalRating, totalRatingVotes, \
+        tenRatingPercent, tenRatingVotes, nineRatingPercent, nineRatingVotes, \
+        eightRatingPercent, eightRatingVotes, sevenRatingPercent, sevenRatingVotes, \
+        sixRatingPercent, sixRatingVotes, fiveRatingPercent, fiveRatingVotes, \
+        fourRatingPercent, fourRatingVotes, threeRatingPercent, threeRatingVotes, \
+        twoRatingPercent, twoRatingVotes, oneRatingPercent, oneRatingVotes) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,
+        ?,?,?,?,?,?,?,?,?)'''
+
+        data = key, ratingDict[key]["totalRating"], ratingDict[key]["totalRatingVotes"], \
+            ratingDict[key]["tenRatingPercent"], ratingDict[key]["tenRatingVotes"], \
+            ratingDict[key]["nineRatingPercent"], ratingDict[key]["nineRatingVotes"], \
+            ratingDict[key]["eightRatingPercent"], ratingDict[key]["eightRatingVotes"], \
+            ratingDict[key]["sevenRatingPercent"], ratingDict[key]["sevenRatingVotes"], \
+            ratingDict[key]["sixRatingPercent"], ratingDict[key]["sixRatingVotes"], \
+            ratingDict[key]["fiveRatingPercent"], ratingDict[key]["fiveRatingVotes"], \
+            ratingDict[key]["fourRatingPercent"], ratingDict[key]["fourRatingVotes"], \
+            ratingDict[key]["threeRatingPercent"], ratingDict[key]["threeRatingVotes"], \
+            ratingDict[key]["twoRatingPercent"], ratingDict[key]["twoRatingVotes"], \
+            ratingDict[key]["oneRatingPercent"], ratingDict[key]["oneRatingVotes"]
+        curs.execute(insert_statement, data)
+        conn.commit()
 
 
 main()
