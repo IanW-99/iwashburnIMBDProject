@@ -1,4 +1,4 @@
-import secrets
+from secrets import imdbKey
 import requests
 import sqlite3
 
@@ -18,7 +18,7 @@ def main():
 
 
 def getTop250Tv():
-    response = requests.get(f"https://imdb-api.com/en/API/Top250TVs/{secrets.imdbKey}")
+    response = requests.get(f"https://imdb-api.com/en/API/Top250TVs/{imdbKey}")
     try:
         json_data = response.json()
         return json_data
