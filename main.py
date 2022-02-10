@@ -55,7 +55,7 @@ def writeToOutput(ratingData, top250Data):
             if i["ratings"] is not None:
                 for j in i["ratings"]:
                     output_data += f' | {j["percent"]} | {j["votes"]}'
-                output_data += f'\n'
+                output_data += '\n'
                 f.write(output_data)
 
     with open('top250.txt', 'w') as f:
