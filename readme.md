@@ -1,2 +1,5 @@
 Ian Washburn
-Sprint 1 of this project will gather data via the IMBD API on the top 250 tv series. It will write the rankings of the top 250 shows along with the user ratings of 5 specific shows to top250.txt
+Sprint 2 will grab information of tv shows from the imdb database api and store 
+them into the database 'imDataBase.db'. There are two automated tests that will test
+to make sure that all the items are received from the api and that they are successfully
+stored in the database.
