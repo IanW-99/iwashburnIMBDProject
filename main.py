@@ -1,4 +1,4 @@
-from secrets import imdbKey
+import secrets
 import requests
 import sqlite3
 
@@ -18,7 +18,7 @@ def main():
 
 
 def getTop250Tv():
-    response = requests.get(f"https://imdb-api.com/en/API/Top250TVs/{imdbKey}")
+    response = requests.get(f"https://imdb-api.com/en/API/Top250TVs/{secrets.imdbKey}")
     try:
         json_data = response.json()
         return json_data
@@ -38,10 +38,10 @@ def getShowID(top250Data):
 def getRatings(showIDs):
     user_ratings = []
     for showID in showIDs:
-        response = requests.get(f"https://imdb-api.com/en/API/UserRatings/{imdbKey}/{showID}")
+        response = requests.get(f"https://imdb-api.com/en/API/UserRatings/{secrets.imdbKey}/{showID}")
         json_data = response.json()
         user_ratings.append(json_data)
-    wotRatings = requests.get(f"https://imdb-api.com/en/API/UserRatings/{imdbKey}/tt0331080")
+    wotRatings = requests.get(f"https://imdb-api.com/en/API/UserRatings/{secrets.imdbKey}/tt0331080")
     wot_data = wotRatings.json()
     user_ratings.append(wot_data)
 
