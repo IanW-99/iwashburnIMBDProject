@@ -11,7 +11,7 @@ def main():
     # ratingData = getRatings(showIDs)
     # writeToOutput(ratingData, top250Data)
     top250Dict, ratingDict = createDictionaries()
-    conn, curs = dbConnect()
+    conn, curs = dbConnect('imDataBase.db')
     createDataBase(curs)
     fillHeadlineData(conn, curs, top250Dict)
     fillRatingData(conn, curs, ratingDict)
@@ -64,8 +64,8 @@ def writeToOutput(ratingData, top250Data):
             f.write(output_data)
 
 
-def dbConnect():
-    conn = sqlite3.connect('imDataBase.db')
+def dbConnect(filename):
+    conn = sqlite3.connect(filename)
     curs = conn.cursor()
     return conn, curs
 
