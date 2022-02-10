@@ -6,10 +6,10 @@ import sqlite3
 # comment to test workflow
 
 def main():
-    # top250Data = getTop250Tv()
-    # showIDs = getShowID(top250Data)
-    # ratingData = getRatings(showIDs)
-    # writeToOutput(ratingData, top250Data)
+    top250Data = getTop250Tv()
+    showIDs = getShowID(top250Data)
+    ratingData = getRatings(showIDs)
+    writeToOutput(ratingData, top250Data)
     top250Dict, ratingDict = createDictionaries()
     conn, curs = dbConnect('imDataBase.db')
     createDataBase(curs)
@@ -52,10 +52,11 @@ def writeToOutput(ratingData, top250Data):
     with open('ratingData.txt', 'w') as f:
         for i in ratingData:
             output_data = f'{i["imDbId"]} | {i["totalRating"]} | {i["totalRatingVotes"]}'
-            for j in i["ratings"]:
-                output_data += f' | {j["percent"]} | {j["votes"]}'
-            output_data += f'\n'
-            f.write(output_data)
+            if i["ratings"] is not None:
+                for j in i["ratings"]:
+                    output_data += f' | {j["percent"]} | {j["votes"]}'
+                output_data += f'\n'
+                f.write(output_data)
 
     with open('top250.txt', 'w') as f:
         for i in top250Data['items']:
