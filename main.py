@@ -10,15 +10,20 @@ def main():
     # showIDs = getShowID(top250Data)
     # ratingData = getRatings(showIDs)
     # writeToOutput(ratingData, top250Data)
-    conn, curs = dbConnect()
-    createDataBase(curs)
-    fillHeadlineData(curs)
+    top250Dict, ratingDict = createDictionaries()
+    # conn, curs = dbConnect()
+    # createDataBase(curs)
+    # fillHeadlineData(conn, curs, top250Dict)
+    # fillRatingData(conn, curs)
 
 
 def getTop250Tv():
     response = requests.get(f"https://imdb-api.com/en/API/Top250TVs/{secrets.imbdKey}")
-    json_data = response.json()
-    return json_data
+    try:
+        json_data = response.json()
+        return json_data
+    except ValueError:
+        print('No Response from API')
 
 
 def getShowID(top250Data):
@@ -31,28 +36,31 @@ def getShowID(top250Data):
 
 
 def getRatings(showIDs):
-    user_rankings = []
+    user_ratings = []
     for showID in showIDs:
         response = requests.get(f"https://imdb-api.com/en/API/UserRatings/{secrets.imbdKey}/{showID}")
         json_data = response.json()
-        user_rankings.append(json_data)
+        user_ratings.append(json_data)
     wotRatings = requests.get(f"https://imdb-api.com/en/API/UserRatings/{secrets.imbdKey}/tt0331080")
     wot_data = wotRatings.json()
-    user_rankings.append(wot_data)
+    user_ratings.append(wot_data)
 
-    return user_rankings
+    return user_ratings
 
 
 def writeToOutput(ratingData, top250Data):
     with open('ratingData.txt', 'w') as f:
         for i in ratingData:
-            output_data = f'{i} \n'
+            output_data = f'{i["imDbId"]} | {i["totalRating"]} | {i["totalRatingVotes"]}'
+            for j in i["ratings"]:
+                output_data += f' | {j["percent"]} | {j["votes"]}'
+            output_data += f'\n'
             f.write(output_data)
 
     with open('top250.txt', 'w') as f:
         for i in top250Data['items']:
-            output_data = f'{i["id"]} | {i["title"]} | {i["fullTitle"]} | {i["year"]}, | {i["crew"]} |  ' \
-                          f'{i["imDbRating"]} | {i["imDbRatingCount"]}\n'
+            output_data = f'{i["id"]} | {i["title"]} | {i["fullTitle"]} | {i["year"]} | {i["crew"]} |  ' \
+                          f'{i["imDbRating"]} | {i["imDbRatingCount"]} \n'
             f.write(output_data)
 
 
@@ -64,25 +72,25 @@ def dbConnect():
 
 def createDataBase(curs: sqlite3.Cursor):
     curs.execute('''CREATE TABLE IF NOT EXISTS "headlineData" (
-                        "id"	INTEGER,
-                        "title"	TEXT,
+                        "id"	    TEXT,
+                        "title"	    TEXT,
                         "fullTitle"	TEXT,
-                        "year"	INTEGER,
-                        "crew"	BLOB,
-                        "imdbRating"	NUMERIC,
-                        "imdbRatingCount"	NUMERIC,
+                        "year"	    TEXT,
+                        "crew"	    TEXT,
+                        "imdbRating"TEXT,
+                        "imdbRatingCount"TEXT,
                         PRIMARY KEY("id"));''')
     curs.execute('''CREATE TABLE IF NOT EXISTS "ratingData" (
-                        "id"	INTEGER,
-                        "totalRating"	NUMERIC,
+                        "id"    TEXT,
+                        "totalRating"	    NUMERIC,
                         "totalRatingVotes"	INTEGER,
                         "tenRatingPercent"	NUMERIC,
                         "tenRatingVotes"	INTEGER,
-                        "nineRatingPercent"	REAL,
+                        "nineRatingPercent"	NUMERIC,
                         "nineRatingVotes"	INTEGER,
-                        "eightRatingPercent"	NUMERIC,
+                        "eightRatingPercent"NUMERIC,
                         "eightRatingVotes"	INTEGER,
-                        "sevenRatingPercent"	NUMERIC,
+                        "sevenRatingPercent"NUMERIC,
                         "sevenRatingVotes"	INTEGER,
                         "sixRatingPercent"	NUMERIC,
                         "sixRatingVotes"	INTEGER,
@@ -90,7 +98,7 @@ def createDataBase(curs: sqlite3.Cursor):
                         "fiveRatingVotes"	INTEGER,
                         "fourRatingPercent"	NUMERIC,
                         "fourRatingVotes"	INTEGER,
-                        "threeRatingPercent"	NUMERIC,
+                        "threeRatingPercent"NUMERIC,
                         "threeRatingVotes"	INTEGER,
                         "twoRatingPercent"	NUMERIC,
                         "twoRatingVotes"	INTEGER,
@@ -99,16 +107,69 @@ def createDataBase(curs: sqlite3.Cursor):
                         PRIMARY KEY("id"));''')
 
 
-def fillHeadlineData(curs: sqlite3.Cursor):
-    dataDict = {}
+def createDictionaries():
+    top250Dict = {}
+    ratingDict = {}
 
-    dataFile = open("top250.txt", 'r')
-    for line in dataFile:
-        key, title, fullTitle, year, crew, imdbRating, imdbRatingCount = line.split(" | ")
-        dataDict[key] = {"title": {title.strip()}, "fullTitle": {fullTitle.strip()}, "year": {year.strip()},
-                         "crew": {crew.strip()}, "imdbRating": {imdbRating.strip()},
-                         "imdbRatingCount": {imdbRatingCount.strip()}}
-    print(dataDict)
+    with open("top250.txt", 'r') as dataFile:
+        for line in dataFile:
+            parsedLine = line.strip().split(" | ")
+            top250Dict[parsedLine[0]] = {}
+            top250Dict[parsedLine[0]]["title"] = parsedLine[1]
+            top250Dict[parsedLine[0]]["fullTitle"] = parsedLine[2]
+            top250Dict[parsedLine[0]]["year"] = parsedLine[3]
+            top250Dict[parsedLine[0]]["crew"] = parsedLine[4]
+            top250Dict[parsedLine[0]]["imdbRating"] = parsedLine[5]
+            top250Dict[parsedLine[0]]["imdbRatingCount"] = parsedLine[6]
+
+    with open("ratingData.txt", 'r') as dataFile:
+        for line in dataFile:
+            parsedLine = line.strip().split(" | ")
+            if len(parsedLine) == 23:
+                ratingDict[parsedLine[0]] = {}
+                ratingDict[parsedLine[0]]["totalRating"] = parsedLine[1]
+                ratingDict[parsedLine[0]]["totalRatingVotes"] = parsedLine[2]
+                ratingDict[parsedLine[0]]["tenRatingPercent"] = parsedLine[3]
+                ratingDict[parsedLine[0]]["tenRatingVotes"] = parsedLine[4]
+                ratingDict[parsedLine[0]]["nineRatingPercent"] = parsedLine[5]
+                ratingDict[parsedLine[0]]["nineRatingVotes"] = parsedLine[6]
+                ratingDict[parsedLine[0]]["eightRatingPercent"] = parsedLine[7]
+                ratingDict[parsedLine[0]]["eightRatingVotes"] = parsedLine[8]
+                ratingDict[parsedLine[0]]["sevenRatingPercent"] = parsedLine[9]
+                ratingDict[parsedLine[0]]["sevenRatingVotes"] = parsedLine[10]
+                ratingDict[parsedLine[0]]["sixRatingPercent"] = parsedLine[11]
+                ratingDict[parsedLine[0]]["sixRatingVotes"] = parsedLine[12]
+                ratingDict[parsedLine[0]]["fiveRatingPercent"] = parsedLine[13]
+                ratingDict[parsedLine[0]]["fiveRatingVotes"] = parsedLine[14]
+                ratingDict[parsedLine[0]]["fourRatingPercent"] = parsedLine[15]
+                ratingDict[parsedLine[0]]["fourRatingVotes"] = parsedLine[16]
+                ratingDict[parsedLine[0]]["threeRatingPercent"] = parsedLine[17]
+                ratingDict[parsedLine[0]]["threeRatingVotes"] = parsedLine[18]
+                ratingDict[parsedLine[0]]["twoRatingPercent"] = parsedLine[19]
+                ratingDict[parsedLine[0]]["twoRatingVotes"] = parsedLine[20]
+                ratingDict[parsedLine[0]]["oneRatingPercent"] = parsedLine[21]
+                ratingDict[parsedLine[0]]["oneRatingVotes"] = parsedLine[22]
+    return top250Dict, ratingDict
+
+
+def fillHeadlineData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Dict):
+    # curs.execute('''INSERT OR IGNORE INTO headlineData (id, title, fullTitle, year, crew, imdbRating,
+    # imdbRatingCount) VALUES (?,?,?,?,?,?,?)''', (line.strip().split(" | ")))
+    conn.commit()
+
+
+def fillRatingData(conn: sqlite3.Connection, curs: sqlite3.Cursor):
+    with open('ratingData.txt', 'r') as dataFile:
+        for line in dataFile:
+            if len(line.strip().split(" | ")) == 23:
+                curs.execute('''INSERT OR IGNORE INTO ratingData (id, totalRating, totalRatingVotes, \
+                tenRatingPercent, tenRatingVotes, nineRatingPercent, nineRatingVotes, \
+                eightRatingPercent, eightRatingVotes, sevenRatingPercent, sevenRatingVotes, \
+                sixRatingPercent, sixRatingVotes, fiveRatingPercent, fiveRatingVotes, \
+                fourRatingPercent, fourRatingVotes, threeRatingPercent, threeRatingVotes, \
+                twoRatingPercent, twoRatingVotes, oneRatingPercent, oneRatingVotes) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,
+                ?,?,?,?,?,?,?,?,?)''', (line.strip().split(" | ")))
+                conn.commit()
 
 
 main()
