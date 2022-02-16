@@ -1,0 +1,250 @@
+tt5491994 | 1 | Planet Earth II | Planet Earth II (2016) | 2016 | David Attenborough, Gordon Buchanan |  9.5 | 110359 
+tt0795176 | 2 | Planet Earth | Planet Earth (2006) | 2006 | Sigourney Weaver, David Attenborough |  9.4 | 178288 
+tt0903747 | 3 | Breaking Bad | Breaking Bad (2008) | 2008 | Bryan Cranston, Aaron Paul |  9.4 | 1668377 
+tt0185906 | 4 | Band of Brothers | Band of Brothers (2001) | 2001 | Scott Grimes, Damian Lewis |  9.4 | 415696 
+tt7366338 | 5 | Chernobyl | Chernobyl (2019) | 2019 | Jessie Buckley, Jared Harris |  9.3 | 654645 
+tt0306414 | 6 | The Wire | The Wire (2002) | 2002 | Dominic West, Lance Reddick |  9.3 | 317630 
+tt6769208 | 7 | Blue Planet II | Blue Planet II (2017) | 2017 | David Attenborough, Peter Drost |  9.3 | 38645 
+tt9253866 | 8 | Our Planet | Our Planet (2019) | 2019 | David Attenborough |  9.2 | 40476 
+tt2395695 | 9 | Cosmos: A Spacetime Odyssey | Cosmos: A Spacetime Odyssey (2014) | 2014 | Neil deGrasse Tyson, Christopher Emerson |  9.2 | 118330 
+tt0417299 | 10 | Avatar: The Last Airbender | Avatar: The Last Airbender (2005) | 2005 | Dee Bradley Baker, Zach Tyler Eisen |  9.2 | 287662 
+tt0081846 | 11 | Cosmos | Cosmos (1980) | 1980 | Carl Sagan, Jaromír Hanzlík |  9.2 | 39905 
+tt0141842 | 12 | The Sopranos | The Sopranos (1999) | 1999 | James Gandolfini, Lorraine Bracco |  9.2 | 362047 
+tt0944947 | 13 | Game of Thrones | Game of Thrones (2011) | 2011 | Emilia Clarke, Peter Dinklage |  9.2 | 1952363 
+tt2861424 | 14 | Rick and Morty | Rick and Morty (2013) | 2013 | Justin Roiland, Chris Parnell |  9.1 | 460621 
+tt0071075 | 15 | The World at War | The World at War (1973) | 1973 | Laurence Olivier, Albert Speer |  9.1 | 24788 
+tt8420184 | 16 | The Last Dance | The Last Dance (2020) | 2020 | Michael Jordan, Phil Jackson |  9.1 | 106211 
+tt1533395 | 17 | Life | Life (2009) | 2009 | Oprah Winfrey, David Attenborough |  9.1 | 40155 
+tt1355642 | 18 | Fullmetal Alchemist: Brotherhood | Fullmetal Alchemist: Brotherhood (2009) | 2009 | Kent Williams, Iemasa Kayumi |  9.0 | 151427 
+tt1475582 | 19 | Sherlock | Sherlock (2010) | 2010 | Benedict Cumberbatch, Martin Freeman |  9.0 | 878727 
+tt1877514 | 20 | The Vietnam War | The Vietnam War (2017) | 2017 | Peter Coyote, Huy Duc |  9.0 | 23413 
+tt11126994 | 21 | Arcane | Arcane (2021) | 2021 | Hailee Steinfeld, Kevin Alejandro |  9.0 | 155675 
+tt12392504 | 22 | Scam 1992: The Harshad Mehta Story | Scam 1992: The Harshad Mehta Story (2020) | 2020 | Pratik Gandhi, Shreya Dhanwanthary |  9.0 | 136567 
+tt0052520 | 23 | The Twilight Zone | The Twilight Zone (1959) | 1959 | Rod Serling, Robert McCord |  9.0 | 79414 
+tt9735318 | 24 | The Beatles: Get Back | The Beatles: Get Back (2021) | 2021 | The Beatles, John Lennon |  9.0 | 17408 
+tt0296310 | 25 | The Blue Planet | The Blue Planet (2001) | 2001 | David Attenborough, Pierce Brosnan |  9.0 | 38217 
+tt0103359 | 26 | Batman: The Animated Series | Batman: The Animated Series (1992) | 1992 | Kevin Conroy, Loren Lester |  9.0 | 97327 
+tt1806234 | 27 | Human Planet | Human Planet (2011) | 2011 | John Hurt, Roger Munns |  8.9 | 25724 
+tt0303461 | 28 | Firefly | Firefly (2002) | 2002 | Nathan Fillion, Gina Torres |  8.9 | 257233 
+tt2092588 | 29 | Frozen Planet | Frozen Planet (2011) | 2011 | David Attenborough, Alec Baldwin |  8.9 | 29602 
+tt7920978 | 30 | Persona | Persona (2018) | 2018 | Haluk Bilginer, Cansu Dere |  8.9 | 38532 
+tt10541088 | 31 | Clarkson's Farm | Clarkson's Farm (2021) | 2021 | Jeremy Clarkson, Kaleb Cooper |  8.9 | 30326 
+tt0877057 | 32 | Death Note | Death Note (2006) | 2006 | Mamoru Miyano, Brad Swaile |  8.9 | 292507 
+tt0092337 | 33 | Dekalog | Dekalog (1989) | 1989 | Artur Barcis, Olgierd Lukaszewicz |  8.9 | 24829 
+tt2560140 | 34 | Attack on Titan | Attack on Titan (2013) | 2013 | Yûki Kaji, Marina Inoue |  8.9 | 323088 
+tt2356777 | 35 | True Detective | True Detective (2014) | 2014 | Vince Vaughn, Colin Farrell |  8.9 | 537978 
+tt0098769 | 36 | The Civil War | The Civil War (1990) | 1990 | David McCullough, Sam Waterston |  8.9 | 15817 
+tt0213338 | 37 | Cowboy Bebop | Cowboy Bebop (1998) | 1998 | Kôichi Yamadera, Unshô Ishizuka |  8.9 | 109726 
+tt2098220 | 38 | Hunter x Hunter | Hunter x Hunter (2011) | 2011 | Issei Futamata, Megumi Han |  8.9 | 83221 
+tt2802850 | 39 | Fargo | Fargo (2014) | 2014 | Billy Bob Thornton, Martin Freeman |  8.9 | 357353 
+tt0386676 | 40 | The Office | The Office (2005) | 2005 | Steve Carell, Jenna Fischer |  8.9 | 517255 
+tt7137906 | 41 | When They See Us | When They See Us (2019) | 2019 | Asante Blackk, Caleel Harris |  8.8 | 111729 
+tt2571774 | 42 | Africa | Africa (2013) | 2013 | David Attenborough, Simon Blakeney |  8.8 | 15617 
+tt1508238 | 43 | Apocalypse: The Second World War | Apocalypse: The Second World War (2009) | 2009 | Mathieu Kassovitz, Martin Sheen |  8.8 | 11896 
+tt0081912 | 44 | Only Fools and Horses | Only Fools and Horses (1981) | 1981 | David Jason, Nicholas Lyndhurst |  8.8 | 49838 
+tt4742876 | 45 | TVF Pitchers | TVF Pitchers (2015) | 2015 | Naveen Kasturia, Arunabh Kumar |  8.8 | 65411 
+tt3530232 | 46 | Last Week Tonight with John Oliver | Last Week Tonight with John Oliver (2014) | 2014 | John Oliver, David Kaye |  8.8 | 85227 
+tt1865718 | 47 | Gravity Falls | Gravity Falls (2012) | 2012 | Jason Ritter, Alex Hirsch |  8.8 | 93370 
+tt0098904 | 48 | Seinfeld | Seinfeld (1989) | 1989 | Jerry Seinfeld, Julia Louis-Dreyfus |  8.8 | 294535 
+tt0081834 | 49 | Das Boot | Das Boot (1985) | 1985 | Jürgen Prochnow, Herbert Grönemeyer |  8.8 | 28891 
+tt2297757 | 50 | Nathan for You | Nathan for You (2013) | 2013 | Nathan Fielder, Anthony Filosa |  8.8 | 24936 
+tt0063929 | 51 | Monty Python's Flying Circus | Monty Python's Flying Circus (1969) | 1969 | Graham Chapman, John Cleese |  8.8 | 72240 
+tt13991232 | 52 | 1883 | 1883 (2021) | 2021 | Sam Elliott, Tim McGraw |  8.8 | 28796 
+tt0108778 | 53 | Friends | Friends (1994) | 1994 | Jennifer Aniston, Courteney Cox |  8.8 | 935293 
+tt0112130 | 54 | Pride and Prejudice | Pride and Prejudice (1995) | 1995 | Colin Firth, Jennifer Ehle |  8.8 | 81951 
+tt2085059 | 55 | Black Mirror | Black Mirror (2011) | 2011 | Daniel Lapaine, Hannah John-Kamen |  8.7 | 504551 
+tt0098936 | 56 | Twin Peaks | Twin Peaks (1990) | 1990 | Kyle MacLachlan, Michael Ontkean |  8.7 | 189806 
+tt3718778 | 57 | Over the Garden Wall | Over the Garden Wall (2014) | 2014 | Elijah Wood, Collin Dean |  8.7 | 50078 
+tt9432978 | 58 | Kota Factory | Kota Factory (2019) | 2019 | Mayur More, Jitendra Kumar |  8.7 | 66140 
+tt7660850 | 59 | Succession | Succession (2018) | 2018 | Nicholas Braun, Brian Cox |  8.7 | 115966 
+tt0072500 | 60 | Fawlty Towers | Fawlty Towers (1975) | 1975 | John Cleese, Prunella Scales |  8.7 | 90302 
+tt0472954 | 61 | It's Always Sunny in Philadelphia | It's Always Sunny in Philadelphia (2004) | 2004 | Charlie Day, Glenn Howerton |  8.7 | 211992 
+tt3032476 | 62 | Better Call Saul | Better Call Saul (2015) | 2015 | Bob Odenkirk, Rhea Seehorn |  8.7 | 379215 
+tt0096548 | 63 | Blackadder Goes Forth | Blackadder Goes Forth (1989) | 1989 | Rowan Atkinson, Tony Robinson |  8.7 | 51435 
+tt2707408 | 64 | Narcos | Narcos (2015) | 2015 | Pedro Pascal, Wagner Moura |  8.7 | 397816 
+tt10986410 | 65 | Ted Lasso | Ted Lasso (2020) | 2020 | Jason Sudeikis, Brett Goldstein |  8.7 | 165315 
+tt0193676 | 66 | Freaks and Geeks | Freaks and Geeks (1999) | 1999 | Linda Cardellini, John Francis Daley |  8.7 | 137874 
+tt0353049 | 67 | Chappelle's Show | Chappelle's Show (2003) | 2003 | Dave Chappelle, Donnell Rawlings |  8.7 | 61086 
+tt8111088 | 68 | The Mandalorian | The Mandalorian (2019) | 2019 | Pedro Pascal, Carl Weathers |  8.7 | 405152 
+tt0200276 | 69 | The West Wing | The West Wing (1999) | 1999 | Martin Sheen, Rob Lowe |  8.7 | 71860 
+tt2442560 | 70 | Peaky Blinders | Peaky Blinders (2013) | 2013 | Cillian Murphy, Paul Anderson |  8.7 | 454426 
+tt1910272 | 71 | Steins;Gate | Steins;Gate (2011) | 2011 | Mamoru Miyano, Asami Imai |  8.7 | 56004 
+tt3398228 | 72 | BoJack Horseman | BoJack Horseman (2014) | 2014 | Will Arnett, Amy Sedaris |  8.7 | 138601 
+tt5753856 | 73 | Dark | Dark (2017) | 2017 | Louis Hofmann, Karoline Eichhorn |  8.7 | 344993 
+tt0264235 | 74 | Curb Your Enthusiasm | Curb Your Enthusiasm (2000) | 2000 | Larry David, Cheryl Hines |  8.7 | 121403 
+tt4508902 | 75 | One Punch Man | One Punch Man (2015) | 2015 | Makoto Furukawa, Kaito Ishikawa |  8.7 | 143519 
+tt0121220 | 76 | Dragon Ball Z | Dragon Ball Z (1989) | 1989 | Jôji Yanami, Kyle Hebert |  8.7 | 76110 
+tt10233448 | 77 | Vinland Saga | Vinland Saga (2019) | 2019 | Ryan Bartley, Kellen Goff |  8.7 | 27946 
+tt0384766 | 78 | Rome | Rome (2005) | 2005 | Kevin McKidd, Ray Stevenson |  8.7 | 165231 
+tt0214341 | 79 | Dragon Ball Z | Dragon Ball Z (1989) | 1989 | Doc Harris, Christopher Sabat |  8.7 | 123613 
+tt0074006 | 80 | I, Claudius | I, Claudius (1976) | 1976 | Derek Jacobi, John Hurt |  8.7 | 16954 
+tt5687612 | 81 | Fleabag | Fleabag (2016) | 2016 | Phoebe Waller-Bridge, Sian Clifford |  8.7 | 133704 
+tt0118421 | 82 | Oz | Oz (1997) | 1997 | Ernie Hudson, J.K. Simmons |  8.7 | 95905 
+tt6741278 | 83 | Invincible | Invincible (2021) | 2021 | Steven Yeun, J.K. Simmons |  8.7 | 107154 
+tt1831164 | 84 | Leyla and Mecnun | Leyla and Mecnun (2011) | 2011 | Ali Atay, Serkan Keskin |  8.7 | 92623 
+tt0367279 | 85 | Arrested Development | Arrested Development (2003) | 2003 | Jason Bateman, Michael Cera |  8.7 | 294125 
+tt0248654 | 86 | Six Feet Under | Six Feet Under (2001) | 2001 | Peter Krause, Michael C. Hall |  8.6 | 130446 
+tt0086661 | 87 | The Adventures of Sherlock Holmes | The Adventures of Sherlock Holmes (1984) | 1984 | Jeremy Brett, David Burke |  8.6 | 21581 
+tt0121955 | 88 | South Park | South Park (1997) | 1997 | Trey Parker, Matt Stone |  8.6 | 354095 
+tt4574334 | 89 | Stranger Things | Stranger Things (2016) | 2016 | Millie Bobby Brown, Finn Wolfhard |  8.6 | 963160 
+tt5788792 | 90 | The Marvelous Mrs. Maisel | The Marvelous Mrs. Maisel (2017) | 2017 | Rachel Brosnahan, Alex Borstein |  8.6 | 98557 
+tt1190634 | 91 | The Boys | The Boys (2019) | 2019 | Karl Urban, Jack Quaid |  8.6 | 345330 
+tt0459159 | 92 | The Thick of It | The Thick of It (2005) | 2005 | Chris Addison, James Smith |  8.6 | 22632 
+tt0407362 | 93 | Battlestar Galactica | Battlestar Galactica (2004) | 2004 | Edward James Olmos, Mary McDonnell |  8.6 | 161399 
+tt6025022 | 94 | Justice League Unlimited | Justice League Unlimited (2004) | 2004 | George Newbern, Kevin Conroy |  8.6 | 14416 
+tt1856010 | 95 | House of Cards | House of Cards (2013) | 2013 | Kevin Spacey, Michel Gill |  8.6 | 490081 
+tt0412142 | 96 | House | House (2004) | 2004 | Hugh Laurie, Omar Epps |  8.6 | 442925 
+tt0318871 | 97 | Berserk | Berserk (1997) | 1997 | Marc Diraison, Nobutoshi Canna |  8.6 | 34925 
+tt0388629 | 98 | One Piece | One Piece (1999) | 1999 | Mayumi Tanaka, Tony Beck |  8.6 | 103711 
+tt0286486 | 99 | The Shield | The Shield (2002) | 2002 | Michael Chiklis, Michael Jace |  8.6 | 78111 
+tt0096697 | 100 | The Simpsons | The Simpsons (1989) | 1989 | Dan Castellaneta, Nancy Cartwright |  8.6 | 390162 
+tt4786824 | 101 | The Crown | The Crown (2016) | 2016 | Claire Foy, Olivia Colman |  8.6 | 186520 
+tt14392248 | 102 | Aspirants | Aspirants (2021) | 2021 | Naveen Kasturia, Shivankit Singh Parihar |  8.6 | 291326 
+tt0090509 | 103 | The Return of Sherlock Holmes | The Return of Sherlock Holmes (1986) | 1986 | Jeremy Brett, Edward Hardwicke |  8.6 | 11796 
+tt2303687 | 104 | Line of Duty | Line of Duty (2012) | 2012 | Martin Compston, Vicky McClure |  8.6 | 53798 
+tt0158417 | 105 | Mahabharat | Mahabharat (1988) | 1988 | Harish Bhimani, Nitish Bharadwaj |  8.6 | 16594 
+tt1606375 | 106 | Downton Abbey | Downton Abbey (2010) | 2010 | Hugh Bonneville, Phyllis Logan |  8.6 | 192094 
+tt5712554 | 107 | The Grand Tour | The Grand Tour (2016) | 2016 | Jeremy Clarkson, James May |  8.6 | 71009 
+tt4299972 | 108 | The Jinx: The Life and Deaths of Robert Durst | The Jinx: The Life and Deaths of Robert Durst (2015) | 2015 | Andrew Jarecki, Robert Durst |  8.6 | 44085 
+tt0268093 | 109 | Ramayan | Ramayan (1987) | 1987 | Arun Govil, Deepika Chikhalia |  8.6 | 18731 
+tt0092455 | 110 | Star Trek: The Next Generation | Star Trek: The Next Generation (1987) | 1987 | Patrick Stewart, Brent Spiner |  8.6 | 113810 
+tt9140342 | 111 | It's a Sin | It's a Sin (2021) | 2021 | Olly Alexander, Nathaniel Curtis |  8.6 | 27725 
+tt0348914 | 112 | Deadwood | Deadwood (2004) | 2004 | Timothy Olyphant, Ian McShane |  8.6 | 102728 
+tt1628033 | 113 | Top Gear | Top Gear (2002) | 2002 | Jeremy Clarkson, Richard Hammond |  8.6 | 114735 
+tt4288182 | 114 | Atlanta | Atlanta (2016) | 2016 | Donald Glover, Brian Tyree Henry |  8.6 | 61771 
+tt0096639 | 115 | Lonesome Dove | Lonesome Dove (1989) | 1989 | Robert Duvall, Tommy Lee Jones |  8.6 | 22299 
+tt1641384 | 116 | Young Justice | Young Justice (2010) | 2010 | Nolan North, Danica McKellar |  8.6 | 38093 
+tt3398540 | 117 | Haikyuu!! | Haikyuu!! (2014) | 2014 | Ayumu Murase, Kaito Ishikawa |  8.6 | 20418 
+tt9174558 | 118 | Dopesick | Dopesick (2021) | 2021 | Michael Keaton, Peter Sarsgaard |  8.6 | 38103 
+tt0804503 | 119 | Mad Men | Mad Men (2007) | 2007 | Jon Hamm, Elisabeth Moss |  8.6 | 227608 
+tt0994314 | 120 | Code Geass | Code Geass (2006) | 2006 | Jun Fukuyama, Takahiro Sakurai |  8.6 | 62204 
+tt1733785 | 121 | The Bridge | The Bridge (2011) | 2011 | Sofia Helin, Rafael Pettersson |  8.6 | 65841 
+tt1518542 | 122 | Sarabhai V/S Sarabhai | Sarabhai V/S Sarabhai (2004) | 2004 | Satish Shah, Ratna Pathak Shah |  8.6 | 16388 
+tt9335498 | 123 | Demon Slayer: Kimetsu no Yaiba | Demon Slayer: Kimetsu no Yaiba (2019) | 2019 | Natsuki Hanae, Yoshitsugu Matsuoka |  8.6 | 78557 
+tt8289930 | 124 | Formula 1: Drive to Survive | Formula 1: Drive to Survive (2019) | 2019 | Lewis Hamilton, Daniel Ricciardo |  8.6 | 32457 
+tt4236770 | 125 | Yellowstone | Yellowstone (2018) | 2018 | Kevin Costner, Luke Grimes |  8.6 | 97908 
+tt0434706 | 126 | Monster | Monster (2004) | 2004 | Hidenobu Kiuchi, Liam O'Brien |  8.6 | 26379 
+tt0088484 | 127 | Blackadder II | Blackadder II (1986) | 1986 | Rowan Atkinson, Tony Robinson |  8.6 | 45496 
+tt0387764 | 128 | Peep Show | Peep Show (2003) | 2003 | David Mitchell, Robert Webb |  8.6 | 57864 
+tt0106179 | 129 | The X-Files | The X-Files (1993) | 1993 | David Duchovny, Gillian Anderson |  8.6 | 214771 
+tt1266020 | 130 | Parks and Recreation | Parks and Recreation (2009) | 2009 | Amy Poehler, Jim O'Heir |  8.6 | 242544 
+tt2049116 | 131 | Gomorrah | Gomorrah (2014) | 2014 | Salvatore Esposito, Marco D'Amore |  8.6 | 37243 
+tt0758745 | 132 | Friday Night Lights | Friday Night Lights (2006) | 2006 | Kyle Chandler, Connie Britton |  8.6 | 63267 
+tt5290382 | 133 | Mindhunter | Mindhunter (2017) | 2017 | Jonathan Groff, Holt McCallany |  8.6 | 260730 
+tt0314979 | 134 | Battlestar Galactica | Battlestar Galactica (2003) | 2003 | Edward James Olmos, Mary McDonnell |  8.6 | 73448 
+tt5421602 | 135 | Anne with an E | Anne with an E (2017) | 2017 | Amybeth McNulty, Geraldine James |  8.6 | 49058 
+tt0111958 | 136 | Father Ted | Father Ted (1995) | 1995 | Dermot Morgan, Ardal O'Hanlon |  8.6 | 39091 
+tt4063800 | 137 | The Bureau | The Bureau (2015) | 2015 | Mathieu Kassovitz, Florence Loiret Caille |  8.6 | 10607 
+tt12343534 | 138 | Jujutsu Kaisen | Jujutsu Kaisen (2020) | 2020 | Junya Enoki, Adam McArthur |  8.5 | 42747 
+tt0773262 | 139 | Dexter | Dexter (2006) | 2006 | Michael C. Hall, Jennifer Carpenter |  8.5 | 705532 
+tt6763664 | 140 | The Haunting of Hill House | The Haunting of Hill House (2018) | 2018 | Michiel Huisman, Carla Gugino |  8.5 | 221207 
+tt0053488 | 141 | The Bugs Bunny Show | The Bugs Bunny Show (1960) | 1960 | Mel Blanc, June Foray |  8.5 | 32892 
+tt0092324 | 142 | Blackadder the Third | Blackadder the Third (1987) | 1987 | Rowan Atkinson, Tony Robinson |  8.5 | 43183 
+tt3322312 | 143 | Daredevil | Daredevil (2015) | 2015 | Charlie Cox, Vincent D'Onofrio |  8.5 | 408205 
+tt0475784 | 144 | Westworld | Westworld (2016) | 2016 | Evan Rachel Wood, Jeffrey Wright |  8.5 | 467117 
+tt10530900 | 145 | Gullak | Gullak (2019) | 2019 | Jameel Khan, Geetanjali Kulkarni |  8.5 | 11531 
+tt12004706 | 146 | Panchayat | Panchayat (2020) | 2020 | Jitendra Kumar, Raghuvir Yadav |  8.5 | 48656 
+tt5555260 | 147 | This Is Us | This Is Us (2016) | 2016 | Milo Ventimiglia, Mandy Moore |  8.5 | 126610 
+tt1486217 | 148 | Archer | Archer (2009) | 2009 | H. Jon Benjamin, Judy Greer |  8.5 | 148871 
+tt10048342 | 149 | The Queen's Gambit | The Queen's Gambit (2020) | 2020 | Anya Taylor-Joy, Chloe Pirrie |  8.5 | 390346 
+tt10850932 | 150 | Crash Landing on You | Crash Landing on You (2019) | 2019 | Hyun Bin, Son Ye-jin |  8.5 | 22782 
+tt1870479 | 151 | The Newsroom | The Newsroom (2012) | 2012 | Jeff Daniels, Emily Mortimer |  8.5 | 111890 
+tt0080306 | 152 | Yes Minister | Yes Minister (1980) | 1980 | Paul Eddington, Nigel Hawthorne |  8.5 | 14166 
+tt0203082 | 153 | Rurouni Kenshin: Trust and Betrayal | Rurouni Kenshin: Trust and Betrayal (1999) | 1999 | Mayo Suzukaze, Junko Iwao |  8.5 | 14381 
+tt8595766 | 154 | Yeh Meri Family | Yeh Meri Family (2018) | 2018 | Vishesh Bansal, Mona Singh |  8.5 | 22892 
+tt0094525 | 155 | Poirot | Poirot (1989) | 1989 | David Suchet, Hugh Fraser |  8.5 | 42912 
+tt1795096 | 156 | Behzat Ç.: Bir Ankara Polisiyesi | Behzat Ç.: Bir Ankara Polisiyesi (2010) | 2010 | Erdal Besikçioglu, Inanç Konukçu |  8.5 | 29114 
+tt0380136 | 157 | QI | QI (2003) | 2003 | Alan Davies, Stephen Fry |  8.5 | 31111 
+tt9544034 | 158 | The Family Man | The Family Man (2019) | 2019 | Manoj Bajpayee, Samantha Ruth Prabhu |  8.5 | 80340 
+tt1513168 | 159 | Through the Wormhole | Through the Wormhole (2010) | 2010 | Morgan Freeman, Sean Carroll |  8.5 | 17541 
+tt1489428 | 160 | Justified | Justified (2010) | 2010 | Timothy Olyphant, Nick Searcy |  8.5 | 95321 
+tt7908628 | 161 | What We Do in the Shadows | What We Do in the Shadows (2019) | 2019 | Kayvan Novak, Matt Berry |  8.5 | 61687 
+tt0096657 | 162 | Mr. Bean | Mr. Bean (1990) | 1990 | Rowan Atkinson, Robin Driscoll |  8.5 | 112823 
+tt0988824 | 163 | Naruto: Shippûden | Naruto: Shippûden (2007) | 2007 | Junko Takeuchi, Maile Flanagan |  8.5 | 110810 
+tt5189670 | 164 | Making a Murderer | Making a Murderer (2015) | 2015 | Steven Avery, Dolores Avery |  8.5 | 92350 
+tt0417349 | 165 | North & South | North & South (2004) | 2004 | Daniela Denby-Ashe, Richard Armitage |  8.5 | 31763 
+tt0275137 | 166 | Justice League | Justice League (2001) | 2001 | Carl Lumbly, Phil LaMarr |  8.5 | 44768 
+tt0187664 | 167 | Spaced | Spaced (1999) | 1999 | Simon Pegg, Jessica Hynes |  8.5 | 53488 
+tt0112159 | 168 | Neon Genesis Evangelion | Neon Genesis Evangelion (1995) | 1995 | Megumi Ogata, Megumi Hayashibara |  8.5 | 62529 
+tt0423731 | 169 | Samurai Champloo | Samurai Champloo (2004) | 2004 | Kazuya Nakai, Ginpei Sato |  8.5 | 45876 
+tt0979432 | 170 | Boardwalk Empire | Boardwalk Empire (2010) | 2010 | Steve Buscemi, Kelly Macdonald |  8.5 | 183065 
+tt0120570 | 171 | From the Earth to the Moon | From the Earth to the Moon (1998) | 1998 | Tom Hanks, Nick Searcy |  8.5 | 11980 
+tt5897304 | 172 | Mob Psycho 100 | Mob Psycho 100 (2016) | 2016 | Setsuo Ito, Takahiro Sakurai |  8.5 | 25073 
+tt2244495 | 173 | The Eric Andre Show | The Eric Andre Show (2012) | 2012 | Eric André, Hannibal Buress |  8.5 | 16626 
+tt7562112 | 174 | Pose | Pose (2018) | 2018 | Michaela Jaé (MJ) Rodriguez, Dominique Jackson |  8.5 | 27226 
+tt0403778 | 175 | Long Way Round | Long Way Round (2004) | 2004 | Ewan McGregor, Charley Boorman |  8.5 | 13737 
+tt4093826 | 176 | Twin Peaks | Twin Peaks (2017) | 2017 | Kyle MacLachlan, Sheryl Lee |  8.5 | 64218 
+tt1305826 | 177 | Adventure Time | Adventure Time (2010) | 2010 | John DiMaggio, Jeremy Shada |  8.5 | 87680 
+tt0088509 | 178 | Dragon Ball | Dragon Ball (1986) | 1986 | Masako Nozawa, Jôji Yanami |  8.5 | 54136 
+tt0863046 | 179 | Flight of the Conchords | Flight of the Conchords (2007) | 2007 | Jemaine Clement, Bret McKenzie |  8.5 | 58783 
+tt0086831 | 180 | Yes, Prime Minister | Yes, Prime Minister (1986) | 1986 | Paul Eddington, Nigel Hawthorne |  8.5 | 10984 
+tt0280249 | 181 | Dragon Ball | Dragon Ball (1995) | 1995 | Brice Armstrong, Steve Olson |  8.5 | 57953 
+tt4158110 | 182 | Mr. Robot | Mr. Robot (2015) | 2015 | Rami Malek, Christian Slater |  8.5 | 367930 
+tt0487831 | 183 | The IT Crowd | The IT Crowd (2006) | 2006 | Chris O'Dowd, Richard Ayoade |  8.5 | 145405 
+tt7221388 | 184 | Cobra Kai | Cobra Kai (2018) | 2018 | Ralph Macchio, William Zabka |  8.5 | 158810 
+tt4647692 | 185 | Letterkenny | Letterkenny (2016) | 2016 | Jared Keeso, Nathan Dales |  8.5 | 20164 
+tt0094517 | 186 | Mystery Science Theater 3000 | Mystery Science Theater 3000 (1988) | 1988 | Joel Hodgson, Michael J. Nelson |  8.5 | 24145 
+tt6108262 | 187 | Black Sun | Black Sun (2017) | 2017 | Andrija Kuzmanovic, Marija Bergam |  8.5 | 11088 
+tt0237123 | 188 | Coupling | Coupling (2000) | 2000 | Jack Davenport, Gina Bellman |  8.5 | 44766 
+tt4082744 | 189 | Detectorists | Detectorists (2014) | 2014 | Mackenzie Crook, Toby Jones |  8.5 | 13449 
+tt0047708 | 190 | Alfred Hitchcock Presents | Alfred Hitchcock Presents (1955) | 1955 | Alfred Hitchcock, Harry Tyler |  8.5 | 16605 
+tt0118273 | 191 | Brass Eye | Brass Eye (1997) | 1997 | Christopher Morris, Mark Heap |  8.5 | 10460 
+tt2701582 | 192 | Endeavour | Endeavour (2012) | 2012 | Shaun Evans, Roger Allam |  8.5 | 23666 
+tt0106028 | 193 | Homicide: Life on the Street | Homicide: Life on the Street (1993) | 1993 | Richard Belzer, Clark Johnson |  8.5 | 12457 
+tt0421357 | 194 | Fullmetal Alchemist | Fullmetal Alchemist (2003) | 2003 | Vic Mignogna, Aaron Dismuke |  8.5 | 67953 
+tt5288312 | 195 | Skam | Skam (2015) | 2015 | Josefine Frida Pettersen, Iman Meskini |  8.5 | 32047 
+tt7472896 | 196 | Mr Inbetween | Mr Inbetween (2018) | 2018 | Scott Ryan, Chika Yasumura |  8.5 | 14405 
+tt0436992 | 197 | Doctor Who | Doctor Who (2005) | 2005 | Jodie Whittaker, Peter Capaldi |  8.5 | 215668 
+tt2575988 | 198 | Silicon Valley | Silicon Valley (2014) | 2014 | Thomas Middleditch, T.J. Miller |  8.5 | 141051 
+tt3230854 | 199 | The Expanse | The Expanse (2015) | 2015 | Steven Strait, Dominique Tipper |  8.5 | 141905 
+tt2100976 | 200 | Impractical Jokers | Impractical Jokers (2011) | 2011 | Brian Quinn, James Murray |  8.5 | 37822 
+tt1534360 | 201 | Ezel | Ezel (2009) | 2009 | Kenan Imirzalioglu, Cansu Dere |  8.5 | 30980 
+tt1492966 | 202 | Louie | Louie (2010) | 2010 | Louis C.K., Hadley Delany |  8.5 | 77490 
+tt0995832 | 203 | Generation Kill | Generation Kill (2008) | 2008 | Alexander Skarsgård, James Ransone |  8.5 | 51576 
+tt2243973 | 204 | Hannibal | Hannibal (2013) | 2013 | Hugh Dancy, Mads Mikkelsen |  8.5 | 244768 
+tt1758429 | 205 | Spartacus: Gods of the Arena | Spartacus: Gods of the Arena (2011) | 2011 | John Hannah, Manu Bennett |  8.5 | 133845 
+tt1586680 | 206 | Shameless | Shameless (2011) | 2011 | Emmy Rossum, William H. Macy |  8.5 | 226016 
+tt0290978 | 207 | The Office | The Office (2001) | 2001 | Ricky Gervais, Martin Freeman |  8.4 | 107906 
+tt0278238 | 208 | Samurai Jack | Samurai Jack (2001) | 2001 | Phil LaMarr, Mako |  8.4 | 50709 
+tt4295140 | 209 | Chef's Table | Chef's Table (2015) | 2015 | Massimo Bottura, Francis Mallmann |  8.4 | 14925 
+tt2401256 | 210 | The Night Of | The Night Of (2016) | 2016 | Riz Ahmed, John Turturro |  8.4 | 140864 
+tt0163507 | 211 | Whose Line Is It Anyway? | Whose Line Is It Anyway? (1998) | 1998 | Drew Carey, Colin Mochrie |  8.4 | 42367 
+tt1124373 | 212 | Sons of Anarchy | Sons of Anarchy (2008) | 2008 | Charlie Hunnam, Katey Sagal |  8.4 | 283884 
+tt0129690 | 213 | I'm Alan Partridge | I'm Alan Partridge (1997) | 1997 | Steve Coogan, Simon Greenall |  8.4 | 20032 
+tt1442449 | 214 | Spartacus | Spartacus (2010) | 2010 | Andy Whitfield, Lucy Lawless |  8.4 | 235056 
+tt3920596 | 215 | Big Little Lies | Big Little Lies (2017) | 2017 | Reese Witherspoon, Nicole Kidman |  8.4 | 184116 
+tt3895150 | 216 | Your Lie in April | Your Lie in April (2014) | 2014 | Natsuki Hanae, Risa Taneda |  8.4 | 25168 
+tt7278862 | 217 | My Brilliant Friend | My Brilliant Friend (2018) | 2018 | Alba Rohrwacher, Margherita Mazzucco |  8.4 | 12408 
+tt0262150 | 218 | Black Books | Black Books (2000) | 2000 | Dylan Moran, Bill Bailey |  8.4 | 57334 
+tt10155688 | 219 | Mare of Easttown | Mare of Easttown (2021) | 2021 | Kate Winslet, Julianne Nicholson |  8.4 | 134276 
+tt3526078 | 220 | Schitt's Creek | Schitt's Creek (2015) | 2015 | Eugene Levy, Catherine O'Hara |  8.4 | 108280 
+tt5249462 | 221 | Erased | Erased (2016) | 2016 | Ben Diskin, Tao Tsuchiya |  8.4 | 40836 
+tt6958022 | 222 | The Defiant Ones | The Defiant Ones (2017) | 2017 | Bono, Stevie Nicks |  8.4 | 13695 
+tt0472027 | 223 | John Adams | John Adams (2008) | 2008 | Paul Giamatti, Laura Linney |  8.4 | 31514 
+tt11301642 | 224 | Ethos | Ethos (2020) | 2020 | Öykü Karayel, Fatih Artman |  8.4 | 25535 
+tt7658402 | 225 | Harley Quinn | Harley Quinn (2019) | 2019 | Kaley Cuoco, Lake Bell |  8.4 | 21841 
+tt2937900 | 226 | The Knick | The Knick (2014) | 2014 | André Holland, Clive Owen |  8.4 | 47146 
+tt12451520 | 227 | It's Okay to Not Be Okay | It's Okay to Not Be Okay (2020) | 2020 | Kim Soo-hyun, Seo Ye-Ji |  8.4 | 19259 
+tt9398466 | 228 | Delhi Crime | Delhi Crime (2019) | 2019 | Shefali Shah, Rajesh Tailang |  8.4 | 18225 
+tt1227926 | 229 | Dr. Horrible's Sing-Along Blog | Dr. Horrible's Sing-Along Blog (2008) | 2008 | Neil Patrick Harris, Nathan Fillion |  8.4 | 43010 
+tt1883092 | 230 | Generation War | Generation War (2013) | 2013 | Volker Bruch, Tom Schilling |  8.4 | 28848 
+tt1439629 | 231 | Community | Community (2009) | 2009 | Joel McHale, Danny Pudi |  8.4 | 247019 
+tt2674806 | 232 | Inside No. 9 | Inside No. 9 (2014) | 2014 | Reece Shearsmith, Steve Pemberton |  8.4 | 15557 
+tt9561862 | 233 | Love, Death & Robots | Love, Death & Robots (2019) | 2019 | Scott Whyte, Nolan North |  8.4 | 131630 
+tt1710308 | 234 | Regular Show | Regular Show (2009) | 2009 | J.G. Quintel, William Salyers |  8.4 | 38311 
+tt0118266 | 235 | The New Batman Adventures | The New Batman Adventures (1997) | 1997 | Kevin Conroy, Tara Strong |  8.4 | 16574 
+tt5675620 | 236 | The Punisher | The Punisher (2017) | 2017 | Jon Bernthal, Amber Rose Revah |  8.4 | 213355 
+tt5425186 | 237 | Horace and Pete | Horace and Pete (2016) | 2016 | Louis C.K., Steve Buscemi |  8.4 | 16195 
+tt0149460 | 238 | Futurama | Futurama (1999) | 1999 | Billy West, John DiMaggio |  8.4 | 226970 
+tt0061287 | 239 | The Prisoner | The Prisoner (1967) | 1967 | Patrick McGoohan, Angelo Muscat |  8.4 | 13644 
+tt0417373 | 240 | The Venture Bros. | The Venture Bros. (2003) | 2003 | Christopher McCulloch, James Urbaniak |  8.4 | 25240 
+tt2433738 | 241 | Wentworth | Wentworth (2013) | 2013 | Kate Atkinson, Katrina Milosevic |  8.4 | 21298 
+tt0075520 | 242 | Jesus of Nazareth | Jesus of Nazareth (1977) | 1977 | Robert Powell, Olivia Hussey |  8.4 | 21608 
+tt7927936 | 243 | Flames | Flames (2018) | 2018 | Ritvik Sahore, Tanya Maniktala |  8.4 | 28037 
+tt1298820 | 244 | Clannad: After Story | Clannad: After Story (2008) | 2008 | Yûichi Nakamura, David Matranga |  8.4 | 10529 
+tt1984119 | 245 | Feud: Bette and Joan | Feud: Bette and Joan (2017) | 2017 | Susan Sarandon, Jessica Lange |  8.4 | 18629 
+tt0103584 | 246 | X-Men: The Animated Series | X-Men: The Animated Series (1992) | 1992 | Cedric Smith, Cal Dodd |  8.4 | 41031 
+tt0070644 | 247 | Scenes from a Marriage | Scenes from a Marriage (1973) | 1973 | Liv Ullmann, Erland Josephson |  8.4 | 16192 
+tt0421291 | 248 | Avrupa Yakasi | Avrupa Yakasi (2004) | 2004 | Gülse Birsel, Levent Üzümcü |  8.4 | 17895 
+tt8398600 | 249 | After Life | After Life (2019) | 2019 | Ricky Gervais, Tom Basden |  8.4 | 120253 
+tt1474684 | 250 | Luther | Luther (2010) | 2010 | Idris Elba, Dermot Crowley |  8.4 | 131896 

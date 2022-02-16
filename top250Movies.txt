@@ -1,0 +1,250 @@
+tt0111161 | 1 | The Shawshank Redemption | The Shawshank Redemption (1994) | 1994 | Frank Darabont (dir.), Tim Robbins, Morgan Freeman |  9.2 | 2545583 
+tt0068646 | 2 | The Godfather | The Godfather (1972) | 1972 | Francis Ford Coppola (dir.), Marlon Brando, Al Pacino |  9.1 | 1751153 
+tt0071562 | 3 | The Godfather: Part II | The Godfather: Part II (1974) | 1974 | Francis Ford Coppola (dir.), Al Pacino, Robert De Niro |  9.0 | 1214441 
+tt0468569 | 4 | The Dark Knight | The Dark Knight (2008) | 2008 | Christopher Nolan (dir.), Christian Bale, Heath Ledger |  9.0 | 2495885 
+tt0050083 | 5 | 12 Angry Men | 12 Angry Men (1957) | 1957 | Sidney Lumet (dir.), Henry Fonda, Lee J. Cobb |  8.9 | 752202 
+tt0108052 | 6 | Schindler's List | Schindler's List (1993) | 1993 | Steven Spielberg (dir.), Liam Neeson, Ralph Fiennes |  8.9 | 1299389 
+tt0167260 | 7 | The Lord of the Rings: The Return of the King | The Lord of the Rings: The Return of the King (2003) | 2003 | Peter Jackson (dir.), Elijah Wood, Viggo Mortensen |  8.9 | 1754717 
+tt0110912 | 8 | Pulp Fiction | Pulp Fiction (1994) | 1994 | Quentin Tarantino (dir.), John Travolta, Uma Thurman |  8.8 | 1958034 
+tt0060196 | 9 | The Good, the Bad and the Ugly | The Good, the Bad and the Ugly (1966) | 1966 | Sergio Leone (dir.), Clint Eastwood, Eli Wallach |  8.8 | 734400 
+tt0120737 | 10 | The Lord of the Rings: The Fellowship of the Ring | The Lord of the Rings: The Fellowship of the Ring (2001) | 2001 | Peter Jackson (dir.), Elijah Wood, Ian McKellen |  8.8 | 1776487 
+tt0137523 | 11 | Fight Club | Fight Club (1999) | 1999 | David Fincher (dir.), Brad Pitt, Edward Norton |  8.7 | 2003714 
+tt0109830 | 12 | Forrest Gump | Forrest Gump (1994) | 1994 | Robert Zemeckis (dir.), Tom Hanks, Robin Wright |  8.7 | 1964202 
+tt1375666 | 13 | Inception | Inception (2010) | 2010 | Christopher Nolan (dir.), Leonardo DiCaprio, Joseph Gordon-Levitt |  8.7 | 2235696 
+tt0167261 | 14 | The Lord of the Rings: The Two Towers | The Lord of the Rings: The Two Towers (2002) | 2002 | Peter Jackson (dir.), Elijah Wood, Ian McKellen |  8.7 | 1585418 
+tt0080684 | 15 | Star Wars: Episode V - The Empire Strikes Back | Star Wars: Episode V - The Empire Strikes Back (1980) | 1980 | Irvin Kershner (dir.), Mark Hamill, Harrison Ford |  8.7 | 1234158 
+tt0133093 | 16 | The Matrix | The Matrix (1999) | 1999 | Lana Wachowski (dir.), Keanu Reeves, Laurence Fishburne |  8.7 | 1836413 
+tt0099685 | 17 | Goodfellas | Goodfellas (1990) | 1990 | Martin Scorsese (dir.), Robert De Niro, Ray Liotta |  8.6 | 1100076 
+tt0073486 | 18 | One Flew Over the Cuckoo's Nest | One Flew Over the Cuckoo's Nest (1975) | 1975 | Milos Forman (dir.), Jack Nicholson, Louise Fletcher |  8.6 | 973058 
+tt0047478 | 19 | Seven Samurai | Seven Samurai (1954) | 1954 | Akira Kurosawa (dir.), Toshirô Mifune, Takashi Shimura |  8.6 | 335657 
+tt0114369 | 20 | Se7en | Se7en (1995) | 1995 | David Fincher (dir.), Morgan Freeman, Brad Pitt |  8.6 | 1560872 
+tt0102926 | 21 | The Silence of the Lambs | The Silence of the Lambs (1991) | 1991 | Jonathan Demme (dir.), Jodie Foster, Anthony Hopkins |  8.6 | 1367116 
+tt0317248 | 22 | City of God | City of God (2002) | 2002 | Fernando Meirelles (dir.), Alexandre Rodrigues, Leandro Firmino |  8.6 | 734677 
+tt0118799 | 23 | Life Is Beautiful | Life Is Beautiful (1997) | 1997 | Roberto Benigni (dir.), Roberto Benigni, Nicoletta Braschi |  8.6 | 668428 
+tt0038650 | 24 | It's a Wonderful Life | It's a Wonderful Life (1946) | 1946 | Frank Capra (dir.), James Stewart, Donna Reed |  8.6 | 439951 
+tt0120815 | 25 | Saving Private Ryan | Saving Private Ryan (1998) | 1998 | Steven Spielberg (dir.), Tom Hanks, Matt Damon |  8.6 | 1327828 
+tt0076759 | 26 | Star Wars: Episode IV - A New Hope | Star Wars: Episode IV - A New Hope (1977) | 1977 | George Lucas (dir.), Mark Hamill, Harrison Ford |  8.5 | 1305665 
+tt0816692 | 27 | Interstellar | Interstellar (2014) | 2014 | Christopher Nolan (dir.), Matthew McConaughey, Anne Hathaway |  8.5 | 1690635 
+tt0245429 | 28 | Spirited Away | Spirited Away (2001) | 2001 | Hayao Miyazaki (dir.), Daveigh Chase, Suzanne Pleshette |  8.5 | 718682 
+tt0120689 | 29 | The Green Mile | The Green Mile (1999) | 1999 | Frank Darabont (dir.), Tom Hanks, Michael Clarke Duncan |  8.5 | 1238125 
+tt10872600 | 30 | Spider-Man: No Way Home | Spider-Man: No Way Home (2021) | 2021 | Jon Watts (dir.), Tom Holland, Zendaya |  8.5 | 461178 
+tt6751668 | 31 | Parasite | Parasite (2019) | 2019 | Bong Joon Ho (dir.), Kang-ho Song, Sun-kyun Lee |  8.5 | 717879 
+tt0110413 | 32 | Léon: The Professional | Léon: The Professional (1994) | 1994 | Luc Besson (dir.), Jean Reno, Gary Oldman |  8.5 | 1111759 
+tt0056058 | 33 | Hara-Kiri | Hara-Kiri (1962) | 1962 | Masaki Kobayashi (dir.), Tatsuya Nakadai, Akira Ishihama |  8.5 | 52344 
+tt0253474 | 34 | The Pianist | The Pianist (2002) | 2002 | Roman Polanski (dir.), Adrien Brody, Thomas Kretschmann |  8.5 | 793666 
+tt0103064 | 35 | Terminator 2: Judgment Day | Terminator 2: Judgment Day (1991) | 1991 | James Cameron (dir.), Arnold Schwarzenegger, Linda Hamilton |  8.5 | 1056224 
+tt0088763 | 36 | Back to the Future | Back to the Future (1985) | 1985 | Robert Zemeckis (dir.), Michael J. Fox, Christopher Lloyd |  8.5 | 1143916 
+tt0114814 | 37 | The Usual Suspects | The Usual Suspects (1995) | 1995 | Bryan Singer (dir.), Kevin Spacey, Gabriel Byrne |  8.5 | 1050060 
+tt0054215 | 38 | Psycho | Psycho (1960) | 1960 | Alfred Hitchcock (dir.), Anthony Perkins, Janet Leigh |  8.5 | 645680 
+tt0110357 | 39 | The Lion King | The Lion King (1994) | 1994 | Roger Allers (dir.), Matthew Broderick, Jeremy Irons |  8.5 | 1009851 
+tt0027977 | 40 | Modern Times | Modern Times (1936) | 1936 | Charles Chaplin (dir.), Charles Chaplin, Paulette Goddard |  8.5 | 234386 
+tt0095327 | 41 | Grave of the Fireflies | Grave of the Fireflies (1988) | 1988 | Isao Takahata (dir.), Tsutomu Tatsumi, Ayano Shiraishi |  8.5 | 261719 
+tt0120586 | 42 | American History X | American History X (1998) | 1998 | Tony Kaye (dir.), Edward Norton, Edward Furlong |  8.5 | 1086314 
+tt2582802 | 43 | Whiplash | Whiplash (2014) | 2014 | Damien Chazelle (dir.), Miles Teller, J.K. Simmons |  8.5 | 791844 
+tt0172495 | 44 | Gladiator | Gladiator (2000) | 2000 | Ridley Scott (dir.), Russell Crowe, Joaquin Phoenix |  8.5 | 1435442 
+tt0407887 | 45 | The Departed | The Departed (2006) | 2006 | Martin Scorsese (dir.), Leonardo DiCaprio, Matt Damon |  8.5 | 1270120 
+tt0021749 | 46 | City Lights | City Lights (1931) | 1931 | Charles Chaplin (dir.), Charles Chaplin, Virginia Cherrill |  8.5 | 179802 
+tt1675434 | 47 | The Intouchables | The Intouchables (2011) | 2011 | Olivier Nakache (dir.), François Cluzet, Omar Sy |  8.5 | 819863 
+tt0482571 | 48 | The Prestige | The Prestige (2006) | 2006 | Christopher Nolan (dir.), Christian Bale, Hugh Jackman |  8.5 | 1277127 
+tt0034583 | 49 | Casablanca | Casablanca (1942) | 1942 | Michael Curtiz (dir.), Humphrey Bogart, Ingrid Bergman |  8.4 | 553892 
+tt0064116 | 50 | Once Upon a Time in the West | Once Upon a Time in the West (1968) | 1968 | Sergio Leone (dir.), Henry Fonda, Charles Bronson |  8.4 | 320325 
+tt0047396 | 51 | Rear Window | Rear Window (1954) | 1954 | Alfred Hitchcock (dir.), James Stewart, Grace Kelly |  8.4 | 475524 
+tt0095765 | 52 | Cinema Paradiso | Cinema Paradiso (1988) | 1988 | Giuseppe Tornatore (dir.), Philippe Noiret, Enzo Cannavale |  8.4 | 251460 
+tt0078748 | 53 | Alien | Alien (1979) | 1979 | Ridley Scott (dir.), Sigourney Weaver, Tom Skerritt |  8.4 | 843146 
+tt0078788 | 54 | Apocalypse Now | Apocalypse Now (1979) | 1979 | Francis Ford Coppola (dir.), Martin Sheen, Marlon Brando |  8.4 | 643618 
+tt0209144 | 55 | Memento | Memento (2000) | 2000 | Christopher Nolan (dir.), Guy Pearce, Carrie-Anne Moss |  8.4 | 1193988 
+tt0082971 | 56 | Indiana Jones and the Raiders of the Lost Ark | Indiana Jones and the Raiders of the Lost Ark (1981) | 1981 | Steven Spielberg (dir.), Harrison Ford, Karen Allen |  8.4 | 934407 
+tt0032553 | 57 | The Great Dictator | The Great Dictator (1940) | 1940 | Charles Chaplin (dir.), Charles Chaplin, Paulette Goddard |  8.4 | 217779 
+tt1853728 | 58 | Django Unchained | Django Unchained (2012) | 2012 | Quentin Tarantino (dir.), Jamie Foxx, Christoph Waltz |  8.4 | 1471118 
+tt0405094 | 59 | The Lives of Others | The Lives of Others (2006) | 2006 | Florian Henckel von Donnersmarck (dir.), Ulrich Mühe, Martina Gedeck |  8.4 | 379761 
+tt0050825 | 60 | Paths of Glory | Paths of Glory (1957) | 1957 | Stanley Kubrick (dir.), Kirk Douglas, Ralph Meeker |  8.4 | 191120 
+tt0043014 | 61 | Sunset Blvd. | Sunset Blvd. (1950) | 1950 | Billy Wilder (dir.), William Holden, Gloria Swanson |  8.4 | 215324 
+tt0910970 | 62 | WALL·E | WALL·E (2008) | 2008 | Andrew Stanton (dir.), Ben Burtt, Elissa Knight |  8.4 | 1069228 
+tt4154756 | 63 | Avengers: Infinity War | Avengers: Infinity War (2018) | 2018 | Anthony Russo (dir.), Robert Downey Jr., Chris Hemsworth |  8.4 | 981563 
+tt0051201 | 64 | Witness for the Prosecution | Witness for the Prosecution (1957) | 1957 | Billy Wilder (dir.), Tyrone Power, Marlene Dietrich |  8.4 | 120316 
+tt4633694 | 65 | Spider-Man: Into the Spider-Verse | Spider-Man: Into the Spider-Verse (2018) | 2018 | Bob Persichetti (dir.), Shameik Moore, Jake Johnson |  8.4 | 470693 
+tt0081505 | 66 | The Shining | The Shining (1980) | 1980 | Stanley Kubrick (dir.), Jack Nicholson, Shelley Duvall |  8.4 | 971052 
+tt0057012 | 67 | Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb | Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1964) | 1964 | Stanley Kubrick (dir.), Peter Sellers, George C. Scott |  8.4 | 475489 
+tt0119698 | 68 | Princess Mononoke | Princess Mononoke (1997) | 1997 | Hayao Miyazaki (dir.), Yôji Matsuda, Yuriko Ishida |  8.3 | 376017 
+tt0364569 | 69 | Oldboy | Oldboy (2003) | 2003 | Park Chan-wook (dir.), Choi Min-sik, Yoo Ji-Tae |  8.3 | 554894 
+tt7286456 | 70 | Joker | Joker (2019) | 2019 | Todd Phillips (dir.), Joaquin Phoenix, Robert De Niro |  8.3 | 1144677 
+tt5311514 | 71 | Your Name. | Your Name. (2016) | 2016 | Makoto Shinkai (dir.), Ryûnosuke Kamiki, Mone Kamishiraishi |  8.3 | 241357 
+tt2380307 | 72 | Coco | Coco (2017) | 2017 | Lee Unkrich (dir.), Anthony Gonzalez, Gael García Bernal |  8.3 | 462208 
+tt1345836 | 73 | The Dark Knight Rises | The Dark Knight Rises (2012) | 2012 | Christopher Nolan (dir.), Christian Bale, Tom Hardy |  8.3 | 1618095 
+tt0090605 | 74 | Aliens | Aliens (1986) | 1986 | James Cameron (dir.), Sigourney Weaver, Michael Biehn |  8.3 | 692465 
+tt0087843 | 75 | Once Upon a Time in America | Once Upon a Time in America (1984) | 1984 | Sergio Leone (dir.), Robert De Niro, James Woods |  8.3 | 338343 
+tt4154796 | 76 | Avengers: Endgame | Avengers: Endgame (2019) | 2019 | Anthony Russo (dir.), Robert Downey Jr., Chris Evans |  8.3 | 1013888 
+tt8267604 | 77 | Capernaum | Capernaum (2018) | 2018 | Nadine Labaki (dir.), Zain Al Rafeea, Yordanos Shiferaw |  8.3 | 81930 
+tt0082096 | 78 | Das Boot | Das Boot (1981) | 1981 | Wolfgang Petersen (dir.), Jürgen Prochnow, Herbert Grönemeyer |  8.3 | 244955 
+tt0057565 | 79 | High and Low | High and Low (1963) | 1963 | Akira Kurosawa (dir.), Toshirô Mifune, Yutaka Sada |  8.3 | 41697 
+tt1187043 | 80 | 3 Idiots | 3 Idiots (2009) | 2009 | Rajkumar Hirani (dir.), Aamir Khan, Madhavan |  8.3 | 378740 
+tt0114709 | 81 | Toy Story | Toy Story (1995) | 1995 | John Lasseter (dir.), Tom Hanks, Tim Allen |  8.3 | 950466 
+tt0086879 | 82 | Amadeus | Amadeus (1984) | 1984 | Milos Forman (dir.), F. Murray Abraham, Tom Hulce |  8.3 | 389652 
+tt0169547 | 83 | American Beauty | American Beauty (1999) | 1999 | Sam Mendes (dir.), Kevin Spacey, Annette Bening |  8.3 | 1122451 
+tt0112573 | 84 | Braveheart | Braveheart (1995) | 1995 | Mel Gibson (dir.), Mel Gibson, Sophie Marceau |  8.3 | 1007029 
+tt0361748 | 85 | Inglourious Basterds | Inglourious Basterds (2009) | 2009 | Quentin Tarantino (dir.), Brad Pitt, Diane Kruger |  8.3 | 1372794 
+tt0119217 | 86 | Good Will Hunting | Good Will Hunting (1997) | 1997 | Gus Van Sant (dir.), Robin Williams, Matt Damon |  8.3 | 924799 
+tt8503618 | 87 | Hamilton | Hamilton (2020) | 2020 | Thomas Kail (dir.), Lin-Manuel Miranda, Phillipa Soo |  8.3 | 82832 
+tt0091251 | 88 | Come and See | Come and See (1985) | 1985 | Elem Klimov (dir.), Aleksey Kravchenko, Olga Mironova |  8.3 | 72175 
+tt0086190 | 89 | Star Wars: Episode VI - Return of the Jedi | Star Wars: Episode VI - Return of the Jedi (1983) | 1983 | Richard Marquand (dir.), Mark Hamill, Harrison Ford |  8.3 | 1008849 
+tt0062622 | 90 | 2001: A Space Odyssey | 2001: A Space Odyssey (1968) | 1968 | Stanley Kubrick (dir.), Keir Dullea, Gary Lockwood |  8.3 | 644138 
+tt0105236 | 91 | Reservoir Dogs | Reservoir Dogs (1992) | 1992 | Quentin Tarantino (dir.), Harvey Keitel, Tim Roth |  8.3 | 979089 
+tt0986264 | 92 | Like Stars on Earth | Like Stars on Earth (2007) | 2007 | Aamir Khan (dir.), Darsheel Safary, Aamir Khan |  8.3 | 185662 
+tt0052357 | 93 | Vertigo | Vertigo (1958) | 1958 | Alfred Hitchcock (dir.), James Stewart, Kim Novak |  8.3 | 390483 
+tt0022100 | 94 | M | M (1931) | 1931 | Fritz Lang (dir.), Peter Lorre, Ellen Widmann |  8.3 | 153695 
+tt2106476 | 95 | The Hunt | The Hunt (2012) | 2012 | Thomas Vinterberg (dir.), Mads Mikkelsen, Thomas Bo Larsen |  8.3 | 314290 
+tt0033467 | 96 | Citizen Kane | Citizen Kane (1941) | 1941 | Orson Welles (dir.), Orson Welles, Joseph Cotten |  8.3 | 430338 
+tt0045152 | 97 | Singin' in the Rain | Singin' in the Rain (1952) | 1952 | Stanley Donen (dir.), Gene Kelly, Donald O'Connor |  8.3 | 234162 
+tt0180093 | 98 | Requiem for a Dream | Requiem for a Dream (2000) | 2000 | Darren Aronofsky (dir.), Ellen Burstyn, Jared Leto |  8.3 | 811426 
+tt0053125 | 99 | North by Northwest | North by Northwest (1959) | 1959 | Alfred Hitchcock (dir.), Cary Grant, Eva Marie Saint |  8.3 | 318548 
+tt0044741 | 100 | Ikiru | Ikiru (1952) | 1952 | Akira Kurosawa (dir.), Takashi Shimura, Nobuo Kaneko |  8.3 | 75736 
+tt0338013 | 101 | Eternal Sunshine of the Spotless Mind | Eternal Sunshine of the Spotless Mind (2004) | 2004 | Michel Gondry (dir.), Jim Carrey, Kate Winslet |  8.3 | 968586 
+tt0040522 | 102 | Bicycle Thieves | Bicycle Thieves (1948) | 1948 | Vittorio De Sica (dir.), Lamberto Maggiorani, Enzo Staiola |  8.3 | 159034 
+tt0056172 | 103 | Lawrence of Arabia | Lawrence of Arabia (1962) | 1962 | David Lean (dir.), Peter O'Toole, Alec Guinness |  8.3 | 285086 
+tt0012349 | 104 | The Kid | The Kid (1921) | 1921 | Charles Chaplin (dir.), Charles Chaplin, Edna Purviance |  8.2 | 123129 
+tt0093058 | 105 | Full Metal Jacket | Full Metal Jacket (1987) | 1987 | Stanley Kubrick (dir.), Matthew Modine, R. Lee Ermey |  8.2 | 715698 
+tt1255953 | 106 | Incendies | Incendies (2010) | 2010 | Denis Villeneuve (dir.), Lubna Azabal, Mélissa Désormeaux-Poulin |  8.2 | 169120 
+tt5074352 | 107 | Dangal | Dangal (2016) | 2016 | Nitesh Tiwari (dir.), Aamir Khan, Sakshi Tanwar |  8.2 | 178296 
+tt0053604 | 108 | The Apartment | The Apartment (1960) | 1960 | Billy Wilder (dir.), Jack Lemmon, Shirley MacLaine |  8.2 | 176083 
+tt0036775 | 109 | Double Indemnity | Double Indemnity (1944) | 1944 | Billy Wilder (dir.), Fred MacMurray, Barbara Stanwyck |  8.2 | 152811 
+tt0017136 | 110 | Metropolis | Metropolis (1927) | 1927 | Fritz Lang (dir.), Brigitte Helm, Alfred Abel |  8.2 | 169955 
+tt0066921 | 111 | A Clockwork Orange | A Clockwork Orange (1971) | 1971 | Stanley Kubrick (dir.), Malcolm McDowell, Patrick Magee |  8.2 | 801449 
+tt0075314 | 112 | Taxi Driver | Taxi Driver (1976) | 1976 | Martin Scorsese (dir.), Robert De Niro, Jodie Foster |  8.2 | 783555 
+tt10272386 | 113 | The Father | The Father (2020) | 2020 | Florian Zeller (dir.), Anthony Hopkins, Olivia Colman |  8.2 | 124539 
+tt0070735 | 114 | The Sting | The Sting (1973) | 1973 | George Roy Hill (dir.), Paul Newman, Robert Redford |  8.2 | 254920 
+tt1832382 | 115 | A Separation | A Separation (2011) | 2011 | Asghar Farhadi (dir.), Payman Maadi, Leila Hatami |  8.2 | 238640 
+tt0086250 | 116 | Scarface | Scarface (1983) | 1983 | Brian De Palma (dir.), Al Pacino, Michelle Pfeiffer |  8.2 | 799324 
+tt0208092 | 117 | Snatch | Snatch (2000) | 2000 | Guy Ritchie (dir.), Jason Statham, Brad Pitt |  8.2 | 828159 
+tt8579674 | 118 | 1917 | 1917 (2019) | 2019 | Sam Mendes (dir.), Dean-Charles Chapman, George MacKay |  8.2 | 531921 
+tt0211915 | 119 | Amélie | Amélie (2001) | 2001 | Jean-Pierre Jeunet (dir.), Audrey Tautou, Mathieu Kassovitz |  8.2 | 736730 
+tt0056592 | 120 | To Kill a Mockingbird | To Kill a Mockingbird (1962) | 1962 | Robert Mulligan (dir.), Gregory Peck, John Megna |  8.2 | 309052 
+tt0435761 | 121 | Toy Story 3 | Toy Story 3 (2010) | 2010 | Lee Unkrich (dir.), Tom Hanks, Tim Allen |  8.2 | 803525 
+tt0059578 | 122 | For a Few Dollars More | For a Few Dollars More (1965) | 1965 | Sergio Leone (dir.), Clint Eastwood, Lee Van Cleef |  8.2 | 248771 
+tt1049413 | 123 | Up | Up (2009) | 2009 | Pete Docter (dir.), Edward Asner, Jordan Nagai |  8.2 | 1000414 
+tt0048473 | 124 | Pather Panchali | Pather Panchali (1955) | 1955 | Satyajit Ray (dir.), Kanu Bannerjee, Karuna Bannerjee |  8.2 | 30560 
+tt0097576 | 125 | Indiana Jones and the Last Crusade | Indiana Jones and the Last Crusade (1989) | 1989 | Steven Spielberg (dir.), Harrison Ford, Sean Connery |  8.2 | 730965 
+tt0113277 | 126 | Heat | Heat (1995) | 1995 | Michael Mann (dir.), Al Pacino, Robert De Niro |  8.2 | 625317 
+tt0119488 | 127 | L.A. Confidential | L.A. Confidential (1997) | 1997 | Curtis Hanson (dir.), Kevin Spacey, Russell Crowe |  8.2 | 565058 
+tt0089881 | 128 | Ran | Ran (1985) | 1985 | Akira Kurosawa (dir.), Tatsuya Nakadai, Akira Terao |  8.2 | 121972 
+tt0095016 | 129 | Die Hard | Die Hard (1988) | 1988 | John McTiernan (dir.), Bruce Willis, Alan Rickman |  8.2 | 848924 
+tt0055630 | 130 | Yojimbo | Yojimbo (1961) | 1961 | Akira Kurosawa (dir.), Toshirô Mifune, Eijirô Tôno |  8.2 | 119610 
+tt6966692 | 131 | Green Book | Green Book (2018) | 2018 | Peter Farrelly (dir.), Viggo Mortensen, Mahershala Ali |  8.2 | 450789 
+tt0042876 | 132 | Rashomon | Rashomon (1950) | 1950 | Akira Kurosawa (dir.), Toshirô Mifune, Machiko Kyô |  8.2 | 163611 
+tt0363163 | 133 | Downfall | Downfall (2004) | 2004 | Oliver Hirschbiegel (dir.), Bruno Ganz, Alexandra Maria Lara |  8.2 | 347186 
+tt0042192 | 134 | All About Eve | All About Eve (1950) | 1950 | Joseph L. Mankiewicz (dir.), Bette Davis, Anne Baxter |  8.2 | 128300 
+tt0071853 | 135 | Monty Python and the Holy Grail | Monty Python and the Holy Grail (1975) | 1975 | Terry Gilliam (dir.), Graham Chapman, John Cleese |  8.2 | 526668 
+tt0053291 | 136 | Some Like It Hot | Some Like It Hot (1959) | 1959 | Billy Wilder (dir.), Marilyn Monroe, Tony Curtis |  8.2 | 259483 
+tt0372784 | 137 | Batman Begins | Batman Begins (2005) | 2005 | Christopher Nolan (dir.), Christian Bale, Michael Caine |  8.2 | 1393175 
+tt15097216 | 138 | Jai Bhim | Jai Bhim (2021) | 2021 | T.J. Gnanavel (dir.), Suriya, Lijo Mol Jose |  8.2 | 174538 
+tt0105695 | 139 | Unforgiven | Unforgiven (1992) | 1992 | Clint Eastwood (dir.), Clint Eastwood, Gene Hackman |  8.2 | 399702 
+tt0118849 | 140 | Children of Heaven | Children of Heaven (1997) | 1997 | Majid Majidi (dir.), Mohammad Amir Naji, Amir Farrokh Hashemian |  8.2 | 72536 
+tt0347149 | 141 | Howl's Moving Castle | Howl's Moving Castle (2004) | 2004 | Hayao Miyazaki (dir.), Chieko Baishô, Takuya Kimura |  8.2 | 371583 
+tt0993846 | 142 | The Wolf of Wall Street | The Wolf of Wall Street (2013) | 2013 | Martin Scorsese (dir.), Leonardo DiCaprio, Jonah Hill |  8.2 | 1315083 
+tt0055031 | 143 | Judgment at Nuremberg | Judgment at Nuremberg (1961) | 1961 | Stanley Kramer (dir.), Spencer Tracy, Burt Lancaster |  8.2 | 75274 
+tt0469494 | 144 | There Will Be Blood | There Will Be Blood (2007) | 2007 | Paul Thomas Anderson (dir.), Daniel Day-Lewis, Paul Dano |  8.2 | 560884 
+tt0112641 | 145 | Casino | Casino (1995) | 1995 | Martin Scorsese (dir.), Robert De Niro, Sharon Stone |  8.2 | 499757 
+tt0057115 | 146 | The Great Escape | The Great Escape (1963) | 1963 | John Sturges (dir.), Steve McQueen, James Garner |  8.2 | 238542 
+tt0040897 | 147 | The Treasure of the Sierra Madre | The Treasure of the Sierra Madre (1948) | 1948 | John Huston (dir.), Humphrey Bogart, Walter Huston |  8.2 | 121926 
+tt0457430 | 148 | Pan's Labyrinth | Pan's Labyrinth (2006) | 2006 | Guillermo del Toro (dir.), Ivana Baquero, Ariadna Gil |  8.1 | 650037 
+tt0268978 | 149 | A Beautiful Mind | A Beautiful Mind (2001) | 2001 | Ron Howard (dir.), Russell Crowe, Ed Harris |  8.1 | 900091 
+tt1305806 | 150 | The Secret in Their Eyes | The Secret in Their Eyes (2009) | 2009 | Juan José Campanella (dir.), Ricardo Darín, Soledad Villamil |  8.1 | 204559 
+tt0081398 | 151 | Raging Bull | Raging Bull (1980) | 1980 | Martin Scorsese (dir.), Robert De Niro, Cathy Moriarty |  8.1 | 342299 
+tt0071315 | 152 | Chinatown | Chinatown (1974) | 1974 | Roman Polanski (dir.), Jack Nicholson, Faye Dunaway |  8.1 | 315846 
+tt0096283 | 153 | My Neighbor Totoro | My Neighbor Totoro (1988) | 1988 | Hayao Miyazaki (dir.), Hitoshi Takagi, Noriko Hidaka |  8.1 | 321684 
+tt1130884 | 154 | Shutter Island | Shutter Island (2010) | 2010 | Martin Scorsese (dir.), Leonardo DiCaprio, Emily Mortimer |  8.1 | 1236787 
+tt0120735 | 155 | Lock, Stock and Two Smoking Barrels | Lock, Stock and Two Smoking Barrels (1998) | 1998 | Guy Ritchie (dir.), Jason Flemyng, Dexter Fletcher |  8.1 | 565846 
+tt0477348 | 156 | No Country for Old Men | No Country for Old Men (2007) | 2007 | Ethan Coen (dir.), Tommy Lee Jones, Javier Bardem |  8.1 | 927558 
+tt4729430 | 157 | Klaus | Klaus (2019) | 2019 | Sergio Pablos (dir.), Jason Schwartzman, J.K. Simmons |  8.1 | 138310 
+tt0046912 | 158 | Dial M for Murder | Dial M for Murder (1954) | 1954 | Alfred Hitchcock (dir.), Ray Milland, Grace Kelly |  8.1 | 170457 
+tt0084787 | 159 | The Thing | The Thing (1982) | 1982 | John Carpenter (dir.), Kurt Russell, Wilford Brimley |  8.1 | 403844 
+tt0015864 | 160 | The Gold Rush | The Gold Rush (1925) | 1925 | Charles Chaplin (dir.), Charles Chaplin, Mack Swain |  8.1 | 108621 
+tt5027774 | 161 | Three Billboards Outside Ebbing, Missouri | Three Billboards Outside Ebbing, Missouri (2017) | 2017 | Martin McDonagh (dir.), Frances McDormand, Woody Harrelson |  8.1 | 482149 
+tt0050976 | 162 | The Seventh Seal | The Seventh Seal (1957) | 1957 | Ingmar Bergman (dir.), Max von Sydow, Gunnar Björnstrand |  8.1 | 179651 
+tt0080678 | 163 | The Elephant Man | The Elephant Man (1980) | 1980 | David Lynch (dir.), Anthony Hopkins, John Hurt |  8.1 | 234656 
+tt0167404 | 164 | The Sixth Sense | The Sixth Sense (1999) | 1999 | M. Night Shyamalan (dir.), Bruce Willis, Haley Joel Osment |  8.1 | 959074 
+tt0071411 | 165 | Dersu Uzala | Dersu Uzala (1975) | 1975 | Akira Kurosawa (dir.), Maksim Munzuk, Yuriy Solomin |  8.1 | 27314 
+tt0107290 | 166 | Jurassic Park | Jurassic Park (1993) | 1993 | Steven Spielberg (dir.), Sam Neill, Laura Dern |  8.1 | 932577 
+tt0120382 | 167 | The Truman Show | The Truman Show (1998) | 1998 | Peter Weir (dir.), Jim Carrey, Ed Harris |  8.1 | 1018943 
+tt0050986 | 168 | Wild Strawberries | Wild Strawberries (1957) | 1957 | Ingmar Bergman (dir.), Victor Sjöström, Bibi Andersson |  8.1 | 104469 
+tt0041959 | 169 | The Third Man | The Third Man (1949) | 1949 | Carol Reed (dir.), Orson Welles, Joseph Cotten |  8.1 | 168091 
+tt0353969 | 170 | Memories of Murder | Memories of Murder (2003) | 2003 | Bong Joon Ho (dir.), Kang-ho Song, Kim Sang-kyung |  8.1 | 167918 
+tt0434409 | 171 | V for Vendetta | V for Vendetta (2005) | 2005 | James McTeigue (dir.), Hugo Weaving, Natalie Portman |  8.1 | 1088185 
+tt0083658 | 172 | Blade Runner | Blade Runner (1982) | 1982 | Ridley Scott (dir.), Harrison Ford, Rutger Hauer |  8.1 | 740176 
+tt0117951 | 173 | Trainspotting | Trainspotting (1996) | 1996 | Danny Boyle (dir.), Ewan McGregor, Ewen Bremner |  8.1 | 667485 
+tt0116282 | 174 | Fargo | Fargo (1996) | 1996 | Joel Coen (dir.), William H. Macy, Frances McDormand |  8.1 | 656926 
+tt0050212 | 175 | The Bridge on the River Kwai | The Bridge on the River Kwai (1957) | 1957 | David Lean (dir.), William Holden, Alec Guinness |  8.1 | 215060 
+tt2096673 | 176 | Inside Out | Inside Out (2015) | 2015 | Pete Docter (dir.), Amy Poehler, Bill Hader |  8.1 | 675698 
+tt0266543 | 177 | Finding Nemo | Finding Nemo (2003) | 2003 | Andrew Stanton (dir.), Albert Brooks, Ellen DeGeneres |  8.1 | 1005280 
+tt0266697 | 178 | Kill Bill: Vol. 1 | Kill Bill: Vol. 1 (2003) | 2003 | Quentin Tarantino (dir.), Uma Thurman, David Carradine |  8.1 | 1070900 
+tt1291584 | 179 | Warrior | Warrior (2011) | 2011 | Gavin O'Connor (dir.), Tom Hardy, Nick Nolte |  8.1 | 458385 
+tt0031381 | 180 | Gone with the Wind | Gone with the Wind (1939) | 1939 | Victor Fleming (dir.), Clark Gable, Vivien Leigh |  8.1 | 307069 
+tt0046438 | 181 | Tokyo Story | Tokyo Story (1953) | 1953 | Yasujirô Ozu (dir.), Chishû Ryû, Chieko Higashiyama |  8.1 | 59472 
+tt0047296 | 182 | On the Waterfront | On the Waterfront (1954) | 1954 | Elia Kazan (dir.), Marlon Brando, Karl Malden |  8.1 | 151175 
+tt0476735 | 183 | My Father and My Son | My Father and My Son (2005) | 2005 | Cagan Irmak (dir.), Eser Sariyar, Çetin Tekindor |  8.1 | 84760 
+tt1392214 | 184 | Prisoners | Prisoners (2013) | 2013 | Denis Villeneuve (dir.), Hugh Jackman, Jake Gyllenhaal |  8.1 | 664367 
+tt3011894 | 185 | Wild Tales | Wild Tales (2014) | 2014 | Damián Szifron (dir.), Darío Grandinetti, María Marull |  8.1 | 191209 
+tt2278388 | 186 | The Grand Budapest Hotel | The Grand Budapest Hotel (2014) | 2014 | Wes Anderson (dir.), Ralph Fiennes, F. Murray Abraham |  8.1 | 769513 
+tt0079944 | 187 | Stalker | Stalker (1979) | 1979 | Andrei Tarkovsky (dir.), Alisa Freyndlikh, Aleksandr Kaydanovskiy |  8.1 | 129874 
+tt0077416 | 188 | The Deer Hunter | The Deer Hunter (1978) | 1978 | Michael Cimino (dir.), Robert De Niro, Christopher Walken |  8.1 | 330466 
+tt0017925 | 189 | The General | The General (1926) | 1926 | Clyde Bruckman (dir.), Buster Keaton, Marion Mack |  8.1 | 88824 
+tt1205489 | 190 | Gran Torino | Gran Torino (2008) | 2008 | Clint Eastwood (dir.), Clint Eastwood, Bee Vang |  8.1 | 754967 
+tt0060827 | 191 | Persona | Persona (1966) | 1966 | Ingmar Bergman (dir.), Bibi Andersson, Liv Ullmann |  8.1 | 113925 
+tt0015324 | 192 | Sherlock Jr. | Sherlock Jr. (1924) | 1924 | Buster Keaton (dir.), Buster Keaton, Kathryn McGuire |  8.1 | 47628 
+tt0112471 | 193 | Before Sunrise | Before Sunrise (1995) | 1995 | Richard Linklater (dir.), Ethan Hawke, Julie Delpy |  8.1 | 294451 
+tt0264464 | 194 | Catch Me If You Can | Catch Me If You Can (2002) | 2002 | Steven Spielberg (dir.), Leonardo DiCaprio, Tom Hanks |  8.1 | 921166 
+tt0978762 | 195 | Mary and Max | Mary and Max (2009) | 2009 | Adam Elliot (dir.), Toni Collette, Philip Seymour Hoffman |  8.1 | 173499 
+tt0031679 | 196 | Mr. Smith Goes to Washington | Mr. Smith Goes to Washington (1939) | 1939 | Frank Capra (dir.), James Stewart, Jean Arthur |  8.1 | 113389 
+tt0072684 | 197 | Barry Lyndon | Barry Lyndon (1975) | 1975 | Stanley Kubrick (dir.), Ryan O'Neal, Marisa Berenson |  8.1 | 162101 
+tt0107207 | 198 | In the Name of the Father | In the Name of the Father (1993) | 1993 | Jim Sheridan (dir.), Daniel Day-Lewis, Pete Postlethwaite |  8.1 | 169475 
+tt2119532 | 199 | Hacksaw Ridge | Hacksaw Ridge (2016) | 2016 | Mel Gibson (dir.), Andrew Garfield, Sam Worthington |  8.1 | 490004 
+tt2267998 | 200 | Gone Girl | Gone Girl (2014) | 2014 | David Fincher (dir.), Ben Affleck, Rosamund Pike |  8.1 | 936757 
+tt3170832 | 201 | Room | Room (2015) | 2015 | Lenny Abrahamson (dir.), Brie Larson, Jacob Tremblay |  8.1 | 403296 
+tt0065234 | 202 | Z | Z (1969) | 1969 | Costa-Gavras (dir.), Yves Montand, Irene Papas |  8.1 | 27568 
+tt8108198 | 203 | Andhadhun | Andhadhun (2018) | 2018 | Sriram Raghavan (dir.), Ayushmann Khurrana, Tabu |  8.1 | 87452 
+tt0019254 | 204 | The Passion of Joan of Arc | The Passion of Joan of Arc (1928) | 1928 | Carl Theodor Dreyer (dir.), Maria Falconetti, Eugene Silvain |  8.1 | 52781 
+tt1160419 | 205 | Dune | Dune (2021) | 2021 | Denis Villeneuve (dir.), Timothée Chalamet, Rebecca Ferguson |  8.1 | 485617 
+tt1950186 | 206 | Ford v Ferrari | Ford v Ferrari (2019) | 2019 | James Mangold (dir.), Matt Damon, Christian Bale |  8.1 | 355497 
+tt2024544 | 207 | 12 Years a Slave | 12 Years a Slave (2013) | 2013 | Steve McQueen (dir.), Chiwetel Ejiofor, Michael Kenneth Williams |  8.1 | 678297 
+tt0035446 | 208 | To Be or Not to Be | To Be or Not to Be (1942) | 1942 | Ernst Lubitsch (dir.), Carole Lombard, Jack Benny |  8.1 | 35296 
+tt0118715 | 209 | The Big Lebowski | The Big Lebowski (1998) | 1998 | Joel Coen (dir.), Jeff Bridges, John Goodman |  8.1 | 782243 
+tt0097165 | 210 | Dead Poets Society | Dead Poets Society (1989) | 1989 | Peter Weir (dir.), Robin Williams, Robert Sean Leonard |  8.1 | 463738 
+tt1201607 | 211 | Harry Potter and the Deathly Hallows: Part 2 | Harry Potter and the Deathly Hallows: Part 2 (2011) | 2011 | David Yates (dir.), Daniel Radcliffe, Emma Watson |  8.1 | 832055 
+tt0052618 | 212 | Ben-Hur | Ben-Hur (1959) | 1959 | William Wyler (dir.), Charlton Heston, Jack Hawkins |  8.1 | 232746 
+tt0892769 | 213 | How to Train Your Dragon | How to Train Your Dragon (2010) | 2010 | Dean DeBlois (dir.), Jay Baruchel, Gerard Butler |  8.1 | 710135 
+tt1392190 | 214 | Mad Max: Fury Road | Mad Max: Fury Road (2015) | 2015 | George Miller (dir.), Tom Hardy, Charlize Theron |  8.1 | 954105 
+tt0077711 | 215 | Autumn Sonata | Autumn Sonata (1978) | 1978 | Ingmar Bergman (dir.), Ingrid Bergman, Liv Ullmann |  8.1 | 33089 
+tt0405159 | 216 | Million Dollar Baby | Million Dollar Baby (2004) | 2004 | Clint Eastwood (dir.), Hilary Swank, Clint Eastwood |  8.1 | 668934 
+tt0046268 | 217 | The Wages of Fear | The Wages of Fear (1953) | 1953 | Henri-Georges Clouzot (dir.), Yves Montand, Charles Vanel |  8.1 | 59415 
+tt0092005 | 218 | Stand by Me | Stand by Me (1986) | 1986 | Rob Reiner (dir.), Wil Wheaton, River Phoenix |  8.1 | 388099 
+tt0074958 | 219 | Network | Network (1976) | 1976 | Sidney Lumet (dir.), Faye Dunaway, William Holden |  8.1 | 155183 
+tt4016934 | 220 | The Handmaiden | The Handmaiden (2016) | 2016 | Park Chan-wook (dir.), Kim Min-hee, Ha Jung-woo |  8.1 | 134753 
+tt3315342 | 221 | Logan | Logan (2017) | 2017 | James Mangold (dir.), Hugh Jackman, Patrick Stewart |  8.1 | 713722 
+tt1954470 | 222 | Gangs of Wasseypur | Gangs of Wasseypur (2012) | 2012 | Anurag Kashyap (dir.), Manoj Bajpayee, Richa Chadha |  8.1 | 92600 
+tt0113247 | 223 | La Haine | La Haine (1995) | 1995 | Mathieu Kassovitz (dir.), Vincent Cassel, Hubert Koundé |  8.1 | 165406 
+tt5323662 | 224 | A Silent Voice: The Movie | A Silent Voice: The Movie (2016) | 2016 | Naoko Yamada (dir.), Miyu Irino, Saori Hayami |  8.1 | 71623 
+tt0061512 | 225 | Cool Hand Luke | Cool Hand Luke (1967) | 1967 | Stuart Rosenberg (dir.), Paul Newman, George Kennedy |  8.0 | 172982 
+tt1028532 | 226 | Hachi: A Dog's Tale | Hachi: A Dog's Tale (2009) | 2009 | Lasse Hallström (dir.), Richard Gere, Joan Allen |  8.0 | 273767 
+tt0053198 | 227 | The 400 Blows | The 400 Blows (1959) | 1959 | François Truffaut (dir.), Jean-Pierre Léaud, Albert Rémy |  8.0 | 114173 
+tt0091763 | 228 | Platoon | Platoon (1986) | 1986 | Oliver Stone (dir.), Charlie Sheen, Tom Berenger |  8.0 | 402436 
+tt1895587 | 229 | Spotlight | Spotlight (2015) | 2015 | Tom McCarthy (dir.), Mark Ruffalo, Michael Keaton |  8.0 | 453663 
+tt0198781 | 230 | Monsters, Inc. | Monsters, Inc. (2001) | 2001 | Pete Docter (dir.), Billy Crystal, John Goodman |  8.0 | 871634 
+tt0032976 | 231 | Rebecca | Rebecca (1940) | 1940 | Alfred Hitchcock (dir.), Laurence Olivier, Joan Fontaine |  8.0 | 133673 
+tt0079470 | 232 | Life of Brian | Life of Brian (1979) | 1979 | Terry Jones (dir.), Graham Chapman, John Cleese |  8.0 | 388937 
+tt0116231 | 233 | The Bandit | The Bandit (1996) | 1996 | Yavuz Turgul (dir.), Sener Sen, Ugur Yücel |  8.0 | 69152 
+tt0118694 | 234 | In the Mood for Love | In the Mood for Love (2000) | 2000 | Kar-Wai Wong (dir.), Tony Chiu-Wai Leung, Maggie Cheung |  8.0 | 142529 
+tt0395169 | 235 | Hotel Rwanda | Hotel Rwanda (2004) | 2004 | Terry George (dir.), Don Cheadle, Sophie Okonedo |  8.0 | 348443 
+tt1979320 | 236 | Rush | Rush (2013) | 2013 | Ron Howard (dir.), Daniel Brühl, Chris Hemsworth |  8.0 | 463006 
+tt0075148 | 237 | Rocky | Rocky (1976) | 1976 | John G. Avildsen (dir.), Sylvester Stallone, Talia Shire |  8.0 | 552805 
+tt0245712 | 238 | Amores perros | Amores perros (2000) | 2000 | Alejandro G. Iñárritu (dir.), Emilio Echevarría, Gael García Bernal |  8.0 | 235526 
+tt11032374 | 239 | Demon Slayer: Mugen Train | Demon Slayer: Mugen Train (2020) | 2020 | Haruo Sotozaki (dir.), Natsuki Hanae, Akari Kitô |  8.0 | 48073 
+tt0758758 | 240 | Into the Wild | Into the Wild (2007) | 2007 | Sean Penn (dir.), Emile Hirsch, Vince Vaughn |  8.0 | 606232 
+tt0087544 | 241 | Nausicaä of the Valley of the Wind | Nausicaä of the Valley of the Wind (1984) | 1984 | Hayao Miyazaki (dir.), Sumi Shimamoto, Mahito Tsujimura |  8.0 | 164465 
+tt3417422 | 242 | Drishyam | Drishyam (2013) | 2013 | Jeethu Joseph (dir.), Mohanlal, Meena |  8.0 | 39706 
+tt0381681 | 243 | Before Sunset | Before Sunset (2004) | 2004 | Richard Linklater (dir.), Ethan Hawke, Julie Delpy |  8.0 | 253851 
+tt0025316 | 244 | It Happened One Night | It Happened One Night (1934) | 1934 | Frank Capra (dir.), Clark Gable, Claudette Colbert |  8.0 | 101053 
+tt10431500 | 245 | Miracle in Cell No. 7 | Miracle in Cell No. 7 (2019) | 2019 | Mehmet Ada Öztekin (dir.), Aras Bulut Iynemli, Nisa Sofiya Aksongur |  8.0 | 45627 
+tt0058946 | 246 | The Battle of Algiers | The Battle of Algiers (1966) | 1966 | Gillo Pontecorvo (dir.), Brahim Hadjadj, Jean Martin |  8.0 | 58317 
+tt0050783 | 247 | Nights of Cabiria | Nights of Cabiria (1957) | 1957 | Federico Fellini (dir.), Giulietta Masina, François Périer |  8.0 | 47609 
+tt0242519 | 248 | Hera Pheri | Hera Pheri (2000) | 2000 | Priyadarshan (dir.), Akshay Kumar, Suniel Shetty |  8.0 | 64013 
+tt0060107 | 249 | Andrei Rublev | Andrei Rublev (1966) | 1966 | Andrei Tarkovsky (dir.), Anatoliy Solonitsyn, Ivan Lapikov |  8.0 | 52319 
+tt0083922 | 250 | Fanny and Alexander | Fanny and Alexander (1982) | 1982 | Ingmar Bergman (dir.), Bertil Guve, Pernilla Allwin |  8.0 | 62664 
