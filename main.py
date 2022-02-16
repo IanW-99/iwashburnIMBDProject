@@ -3,15 +3,15 @@ import requests
 import sqlite3
 
 
-#here to fail build in flake8
+# here to fail build in flake8
 
 def main():
-    top250Data = getTop250Tv()
-    showIDs = getShowID(top250Data)
-    ratingData = getRatings(showIDs)
-    mostPopularTvData = getMostPopularTv()
-    writeToOutput(ratingData, top250Data, mostPopularTvData)
-    top250Dict, ratingDict = createDictionaries()
+    #top250Data = getTop250Tv()
+    #showIDs = getShowID(top250Data)
+    #ratingData = getRatings(showIDs)
+    #mostPopularTvData = getMostPopularTv()
+    #writeToOutput(ratingData, top250Data, mostPopularTvData)
+    top250Dict, ratingDict, mostPopularTvDict = createDictionaries()
     conn, curs = dbConnect('imDataBase.db')
     createDataBase(curs)
     fillHeadlineData(conn, curs, top250Dict)
@@ -138,6 +138,7 @@ def createDataBase(curs: sqlite3.Cursor):
 def createDictionaries():
     top250Dict = {}
     ratingDict = {}
+    mostPopularTvDict = {}
 
     with open("top250.txt", 'r') as dataFile:
         for line in dataFile:
@@ -177,7 +178,22 @@ def createDictionaries():
                 ratingDict[parsedLine[0]]["twoRatingVotes"] = parsedLine[20]
                 ratingDict[parsedLine[0]]["oneRatingPercent"] = parsedLine[21]
                 ratingDict[parsedLine[0]]["oneRatingVotes"] = parsedLine[22]
-    return top250Dict, ratingDict
+
+    with open('mostPopularTv.txt', 'r') as dataFile:
+        for line in dataFile:
+            parsedLine = line.strip().split(" | ")
+            if len(parsedLine) == 9:
+                mostPopularTvDict[parsedLine[0]] = {}
+                mostPopularTvDict[parsedLine[0]]["rank"] = parsedLine[1]
+                mostPopularTvDict[parsedLine[0]]["rankUpDown"] = parsedLine[2]
+                mostPopularTvDict[parsedLine[0]]["title"] = parsedLine[3]
+                mostPopularTvDict[parsedLine[0]]["fullTitle"] = parsedLine[4]
+                mostPopularTvDict[parsedLine[0]]["year"] = parsedLine[5]
+                mostPopularTvDict[parsedLine[0]]["crew"] = parsedLine[6]
+                mostPopularTvDict[parsedLine[0]]["imdbRating"] = parsedLine[7]
+                mostPopularTvDict[parsedLine[0]]["imdbRatingCount"] = parsedLine[8]
+
+    return top250Dict, ratingDict, mostPopularTvDict
 
 
 def fillHeadlineData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Dict):
@@ -202,16 +218,16 @@ def fillRatingData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingDict):
         ?,?,?,?,?,?,?,?,?)'''
 
         data = key, ratingDict[key]["totalRating"], ratingDict[key]["totalRatingVotes"], \
-               ratingDict[key]["tenRatingPercent"], ratingDict[key]["tenRatingVotes"], \
-               ratingDict[key]["nineRatingPercent"], ratingDict[key]["nineRatingVotes"], \
-               ratingDict[key]["eightRatingPercent"], ratingDict[key]["eightRatingVotes"], \
-               ratingDict[key]["sevenRatingPercent"], ratingDict[key]["sevenRatingVotes"], \
-               ratingDict[key]["sixRatingPercent"], ratingDict[key]["sixRatingVotes"], \
-               ratingDict[key]["fiveRatingPercent"], ratingDict[key]["fiveRatingVotes"], \
-               ratingDict[key]["fourRatingPercent"], ratingDict[key]["fourRatingVotes"], \
-               ratingDict[key]["threeRatingPercent"], ratingDict[key]["threeRatingVotes"], \
-               ratingDict[key]["twoRatingPercent"], ratingDict[key]["twoRatingVotes"], \
-               ratingDict[key]["oneRatingPercent"], ratingDict[key]["oneRatingVotes"]
+            ratingDict[key]["tenRatingPercent"], ratingDict[key]["tenRatingVotes"], \
+            ratingDict[key]["nineRatingPercent"], ratingDict[key]["nineRatingVotes"], \
+            ratingDict[key]["eightRatingPercent"], ratingDict[key]["eightRatingVotes"], \
+            ratingDict[key]["sevenRatingPercent"], ratingDict[key]["sevenRatingVotes"], \
+            ratingDict[key]["sixRatingPercent"], ratingDict[key]["sixRatingVotes"], \
+            ratingDict[key]["fiveRatingPercent"], ratingDict[key]["fiveRatingVotes"], \
+            ratingDict[key]["fourRatingPercent"], ratingDict[key]["fourRatingVotes"], \
+            ratingDict[key]["threeRatingPercent"], ratingDict[key]["threeRatingVotes"], \
+            ratingDict[key]["twoRatingPercent"], ratingDict[key]["twoRatingVotes"], \
+            ratingDict[key]["oneRatingPercent"], ratingDict[key]["oneRatingVotes"]
         curs.execute(insert_statement, data)
         conn.commit()
 
