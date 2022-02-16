@@ -3,7 +3,6 @@ import requests
 import sqlite3
 
 
-# here to fail build in flake8
 
 def main():
     #top250Data = getTop250Tv()
@@ -16,6 +15,7 @@ def main():
     createDataBase(curs)
     fillHeadlineData(conn, curs, top250Dict)
     fillRatingData(conn, curs, ratingDict)
+    fillMostPopularTvData(conn, curs, mostPopularTvDict)
 
 
 def getTop250Tv():
@@ -228,6 +228,19 @@ def fillRatingData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingDict):
             ratingDict[key]["threeRatingPercent"], ratingDict[key]["threeRatingVotes"], \
             ratingDict[key]["twoRatingPercent"], ratingDict[key]["twoRatingVotes"], \
             ratingDict[key]["oneRatingPercent"], ratingDict[key]["oneRatingVotes"]
+        curs.execute(insert_statement, data)
+        conn.commit()
+
+
+def fillMostPopularTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, mostPopularTvDict):
+    for key in mostPopularTvDict:
+        insert_statement = '''INSERT OR IGNORE INTO topTvData(id, rank, rankUpDown, title, fullTitle, year, crew,
+         imdbRating, imdbRatingCount) VALUES (?,?,?,?,?,?,?,?,?)'''
+
+        data = key, mostPopularTvDict[key]["rank"], mostPopularTvDict[key]["rankUpDown"], \
+            mostPopularTvDict[key]["title"], mostPopularTvDict[key]["fullTitle"], mostPopularTvDict[key]["year"], \
+            mostPopularTvDict[key]["crew"], mostPopularTvDict[key]["imdbRating"], \
+            mostPopularTvDict[key]["imdbRatingCount"]
         curs.execute(insert_statement, data)
         conn.commit()
 
