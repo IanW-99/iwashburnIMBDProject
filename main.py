@@ -3,16 +3,19 @@ import requests
 import sqlite3
 
 
+#here to fail build in flake8
+
 def main():
-    #top250Data = getTop250Tv()
-    #showIDs = getShowID(top250Data)
-    #ratingData = getRatings(showIDs)
-    #writeToOutput(ratingData, top250Data)
-    #top250Dict, ratingDict = createDictionaries()
+    top250Data = getTop250Tv()
+    showIDs = getShowID(top250Data)
+    ratingData = getRatings(showIDs)
+    mostPopularTvData = getMostPopularTv()
+    writeToOutput(ratingData, top250Data, mostPopularTvData)
+    top250Dict, ratingDict = createDictionaries()
     conn, curs = dbConnect('imDataBase.db')
     createDataBase(curs)
-    #fillHeadlineData(conn, curs, top250Dict)
-    #fillRatingData(conn, curs, ratingDict)
+    fillHeadlineData(conn, curs, top250Dict)
+    fillRatingData(conn, curs, ratingDict)
 
 
 def getTop250Tv():
@@ -46,7 +49,16 @@ def getRatings(showIDs):
     return user_ratings
 
 
-def writeToOutput(ratingData, top250Data):
+def getMostPopularTv():
+    response = requests.get(f"https://imdb-api.com/en/API/MostPopularTVs/{secrets.imdbKey}")
+    try:
+        json_data = response.json()
+        return json_data
+    except ValueError:
+        print('No Response from API')
+
+
+def writeToOutput(ratingData, top250Data, mostPopularTvData):
     with open('ratingData.txt', 'w') as f:
         for i in ratingData:
             output_data = f'{i["imDbId"]} | {i["totalRating"]} | {i["totalRatingVotes"]}'
@@ -60,6 +72,12 @@ def writeToOutput(ratingData, top250Data):
         for i in top250Data['items']:
             output_data = f'{i["id"]} | {i["title"]} | {i["fullTitle"]} | {i["year"]} | {i["crew"]} |  ' \
                           f'{i["imDbRating"]} | {i["imDbRatingCount"]} \n'
+            f.write(output_data)
+
+    with open('mostPopularTv.txt', 'w') as f:
+        for i in mostPopularTvData['items']:
+            output_data = f'{i["id"]} | {i["rank"]} | {i["rankUpDown"]} | {i["title"]} | {i["fullTitle"]} | ' \
+                          f'{i["year"]} | {i["crew"]} | {i["imDbRating"]} | {i["imDbRatingCount"]} \n'
             f.write(output_data)
 
 
