@@ -3,18 +3,16 @@ import requests
 import sqlite3
 
 
-# comment to test workflow 2
-
 def main():
-    top250Data = getTop250Tv()
-    showIDs = getShowID(top250Data)
-    ratingData = getRatings(showIDs)
-    writeToOutput(ratingData, top250Data)
-    top250Dict, ratingDict = createDictionaries()
+    #top250Data = getTop250Tv()
+    #showIDs = getShowID(top250Data)
+    #ratingData = getRatings(showIDs)
+    #writeToOutput(ratingData, top250Data)
+    #top250Dict, ratingDict = createDictionaries()
     conn, curs = dbConnect('imDataBase.db')
     createDataBase(curs)
-    fillHeadlineData(conn, curs, top250Dict)
-    fillRatingData(conn, curs, ratingDict)
+    #fillHeadlineData(conn, curs, top250Dict)
+    #fillRatingData(conn, curs, ratingDict)
 
 
 def getTop250Tv():
@@ -106,6 +104,17 @@ def createDataBase(curs: sqlite3.Cursor):
                         "oneRatingPercent"	NUMERIC,
                         "oneRatingVotes"	INTEGER,
                         PRIMARY KEY("id"));''')
+    curs.execute('''CREATE TABLE IF NOT EXISTS "topTvData" (
+                        "id"	        TEXT,
+                        "rank"	        TEXT,
+                        "rankUpDown"	TEXT,
+                        "title"	        TEXT,
+                        "fullTitle"	    TEXT,
+                        "year"	        TEXT,
+                        "crew"	        TEXT,
+                        "imdbRating"	TEXT,
+                        "imdbRatingCount"TEXT, 
+                        PRIMARY KEY("id"));''')
 
 
 def createDictionaries():
@@ -175,16 +184,16 @@ def fillRatingData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingDict):
         ?,?,?,?,?,?,?,?,?)'''
 
         data = key, ratingDict[key]["totalRating"], ratingDict[key]["totalRatingVotes"], \
-            ratingDict[key]["tenRatingPercent"], ratingDict[key]["tenRatingVotes"], \
-            ratingDict[key]["nineRatingPercent"], ratingDict[key]["nineRatingVotes"], \
-            ratingDict[key]["eightRatingPercent"], ratingDict[key]["eightRatingVotes"], \
-            ratingDict[key]["sevenRatingPercent"], ratingDict[key]["sevenRatingVotes"], \
-            ratingDict[key]["sixRatingPercent"], ratingDict[key]["sixRatingVotes"], \
-            ratingDict[key]["fiveRatingPercent"], ratingDict[key]["fiveRatingVotes"], \
-            ratingDict[key]["fourRatingPercent"], ratingDict[key]["fourRatingVotes"], \
-            ratingDict[key]["threeRatingPercent"], ratingDict[key]["threeRatingVotes"], \
-            ratingDict[key]["twoRatingPercent"], ratingDict[key]["twoRatingVotes"], \
-            ratingDict[key]["oneRatingPercent"], ratingDict[key]["oneRatingVotes"]
+               ratingDict[key]["tenRatingPercent"], ratingDict[key]["tenRatingVotes"], \
+               ratingDict[key]["nineRatingPercent"], ratingDict[key]["nineRatingVotes"], \
+               ratingDict[key]["eightRatingPercent"], ratingDict[key]["eightRatingVotes"], \
+               ratingDict[key]["sevenRatingPercent"], ratingDict[key]["sevenRatingVotes"], \
+               ratingDict[key]["sixRatingPercent"], ratingDict[key]["sixRatingVotes"], \
+               ratingDict[key]["fiveRatingPercent"], ratingDict[key]["fiveRatingVotes"], \
+               ratingDict[key]["fourRatingPercent"], ratingDict[key]["fourRatingVotes"], \
+               ratingDict[key]["threeRatingPercent"], ratingDict[key]["threeRatingVotes"], \
+               ratingDict[key]["twoRatingPercent"], ratingDict[key]["twoRatingVotes"], \
+               ratingDict[key]["oneRatingPercent"], ratingDict[key]["oneRatingVotes"]
         curs.execute(insert_statement, data)
         conn.commit()
 
