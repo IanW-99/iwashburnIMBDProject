@@ -157,15 +157,15 @@ def createDataBase(curs: sqlite3.Cursor):
                         "oneRatingVotes"	INTEGER,
                         PRIMARY KEY("id"));''')
     curs.execute('''CREATE TABLE IF NOT EXISTS "topTvData" (
-                        "id"	        TEXT,
-                        "rank"	        TEXT,
-                        "rankUpDown"	TEXT,
-                        "title"	        TEXT,
-                        "fullTitle"	    TEXT,
-                        "year"	        TEXT,
-                        "crew"	        TEXT,
-                        "imdbRating"	TEXT,
-                        "imdbRatingCount"TEXT, 
+                        "id"	        TEXT, 
+                        "rank"	        TEXT, 
+                        "rankUpDown"	TEXT, 
+                        "title"	        TEXT, 
+                        "fullTitle"	    TEXT, 
+                        "year"	        TEXT, 
+                        "crew"	        TEXT, 
+                        "imdbRating"	TEXT, 
+                        "imdbRatingCount"TEXT,  
                         PRIMARY KEY("id"));''')
     curs.execute('''CREATE TABLE IF NOT EXISTS "top250MoviesData" (
                             "id"	    TEXT,
@@ -186,7 +186,7 @@ def createDataBase(curs: sqlite3.Cursor):
                             "year"	        TEXT,
                             "crew"	        TEXT,
                             "imdbRating"	TEXT,
-                            "imdbRatingCount"TEXT, 
+                            "imdbRatingCount"TEXT,  
                             PRIMARY KEY("id"));''')
 
 
@@ -277,7 +277,7 @@ def createDictionaries():
                 mostPopularMoviesDict[parsedLine[0]]["imdbRating"] = parsedLine[7]
                 mostPopularMoviesDict[parsedLine[0]]["imdbRatingCount"] = parsedLine[8]
 
-    return top250TvDict, ratingDict, mostPopularTvDict, top250MoviesDict,mostPopularMoviesDict
+    return top250TvDict, ratingDict, mostPopularTvDict, top250MoviesDict, mostPopularMoviesDict
 
 
 def fillTop250TvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Dict):
