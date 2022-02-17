@@ -2,23 +2,23 @@ import secrets
 import requests
 import sqlite3
 
-#comment to fail build
-
 
 def main():
-    #top250TvData = getTop250Tv()
-    #showIDs = getShowID(top250TvData)
-    #ratingData = getRatings(showIDs)
-    #mostPopularTvData = getMostPopularTv()
-    #top250MoviesData = getTop250Movies()
-    #writeToOutput(ratingData, top250TvData, mostPopularTvData, top250MoviesData)
-    top250TvDict, ratingDict, mostPopularTvDict, top250MoviesDict = createDictionaries()
+    top250TvData = getTop250Tv()
+    showIDs = getShowID(top250TvData)
+    ratingData = getRatings(showIDs)
+    mostPopularTvData = getMostPopularTv()
+    top250MoviesData = getTop250Movies()
+    mostPopularMoviesData = getMostPopularMovies()
+    writeToOutput(ratingData, top250TvData, mostPopularTvData, top250MoviesData, mostPopularMoviesData)
+    top250TvDict, ratingDict, mostPopularTvDict, top250MoviesDict, mostPopularMoviesDict = createDictionaries()
     conn, curs = dbConnect('imDataBase.db')
     createDataBase(curs)
     fillTop250TvData(conn, curs, top250TvDict)
     fillRatingData(conn, curs, ratingDict)
     fillMostPopularTvData(conn, curs, mostPopularTvDict)
     fillTop250MovieData(conn, curs, top250MoviesDict)
+    fillMostPopularMoviesData(conn, curs, mostPopularMoviesDict)
 
 
 def getTop250Tv():
@@ -70,7 +70,16 @@ def getTop250Movies():
         print('No Response from API')
 
 
-def writeToOutput(ratingData, top250TvData, mostPopularTvData, top250MoviesData):
+def getMostPopularMovies():
+    response = requests.get(f"https://imdb-api.com/en/API/MostPopularMovies/{secrets.imdbKey}")
+    try:
+        json_data = response.json()
+        return json_data
+    except ValueError:
+        print('No Response from API')
+
+
+def writeToOutput(ratingData, top250TvData, mostPopularTvData, top250MoviesData, mostPopularMoviesData):
     with open('ratingData.txt', 'w') as f:
         for i in ratingData:
             output_data = f'{i["imDbId"]} | {i["totalRating"]} | {i["totalRatingVotes"]}'
@@ -96,6 +105,12 @@ def writeToOutput(ratingData, top250TvData, mostPopularTvData, top250MoviesData)
         for i in top250MoviesData['items']:
             output_data = f'{i["id"]} | {i["rank"]} | {i["title"]} | {i["fullTitle"]} | {i["year"]} | {i["crew"]} |  ' \
                           f'{i["imDbRating"]} | {i["imDbRatingCount"]} \n'
+            f.write(output_data)
+
+    with open('mostPopularMovies.txt', 'w') as f:
+        for i in mostPopularMoviesData['items']:
+            output_data = f'{i["id"]} | {i["rank"]} | {i["rankUpDown"]} | {i["title"]} | {i["fullTitle"]} | ' \
+                          f'{i["year"]} | {i["crew"]} | {i["imDbRating"]} | {i["imDbRatingCount"]} \n'
             f.write(output_data)
 
 
@@ -162,6 +177,17 @@ def createDataBase(curs: sqlite3.Cursor):
                             "imdbRating"TEXT,
                             "imdbRatingCount"TEXT,
                             PRIMARY KEY("id"));''')
+    curs.execute('''CREATE TABLE IF NOT EXISTS "topMoviesData" (
+                            "id"	        TEXT,
+                            "rank"	        TEXT,
+                            "rankUpDown"	TEXT,
+                            "title"	        TEXT,
+                            "fullTitle"	    TEXT,
+                            "year"	        TEXT,
+                            "crew"	        TEXT,
+                            "imdbRating"	TEXT,
+                            "imdbRatingCount"TEXT, 
+                            PRIMARY KEY("id"));''')
 
 
 def createDictionaries():
@@ -169,6 +195,7 @@ def createDictionaries():
     ratingDict = {}
     mostPopularTvDict = {}
     top250MoviesDict = {}
+    mostPopularMoviesDict = {}
 
     with open("top250Tv.txt", 'r') as dataFile:
         for line in dataFile:
@@ -236,7 +263,21 @@ def createDictionaries():
             top250MoviesDict[parsedLine[0]]["imdbRating"] = parsedLine[6]
             top250MoviesDict[parsedLine[0]]["imdbRatingCount"] = parsedLine[7]
 
-    return top250TvDict, ratingDict, mostPopularTvDict, top250MoviesDict
+    with open('mostPopularMovies.txt', 'r') as dataFile:
+        for line in dataFile:
+            parsedLine = line.strip().split(" | ")
+            if len(parsedLine) == 9:
+                mostPopularMoviesDict[parsedLine[0]] = {}
+                mostPopularMoviesDict[parsedLine[0]]["rank"] = parsedLine[1]
+                mostPopularMoviesDict[parsedLine[0]]["rankUpDown"] = parsedLine[2]
+                mostPopularMoviesDict[parsedLine[0]]["title"] = parsedLine[3]
+                mostPopularMoviesDict[parsedLine[0]]["fullTitle"] = parsedLine[4]
+                mostPopularMoviesDict[parsedLine[0]]["year"] = parsedLine[5]
+                mostPopularMoviesDict[parsedLine[0]]["crew"] = parsedLine[6]
+                mostPopularMoviesDict[parsedLine[0]]["imdbRating"] = parsedLine[7]
+                mostPopularMoviesDict[parsedLine[0]]["imdbRatingCount"] = parsedLine[8]
+
+    return top250TvDict, ratingDict, mostPopularTvDict, top250MoviesDict,mostPopularMoviesDict
 
 
 def fillTop250TvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Dict):
@@ -291,12 +332,25 @@ def fillMostPopularTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, mostPo
 
 def fillTop250MovieData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250MoviesDict):
     for key in top250MoviesDict:
-        insert_statement = '''INSERT OR IGNORE INTO top250MoviesData (id, rank, title, fullTitle, year, crew, imdbRating,
-                            imdbRatingCount) VALUES (?,?,?,?,?,?,?,?)'''
+        insert_statement = '''INSERT OR IGNORE INTO top250MoviesData (id, rank, title, fullTitle, year, crew, 
+                            imdbRating, imdbRatingCount) VALUES (?,?,?,?,?,?,?,?)'''
 
         data = key, top250MoviesDict[key]["rank"], top250MoviesDict[key]["title"], top250MoviesDict[key]["fullTitle"], \
             top250MoviesDict[key]["year"], top250MoviesDict[key]["crew"], \
             top250MoviesDict[key]["imdbRating"], top250MoviesDict[key]["imdbRatingCount"]
+        curs.execute(insert_statement, data)
+        conn.commit()
+
+
+def fillMostPopularMoviesData(conn: sqlite3.Connection, curs: sqlite3.Cursor, mostPopularMoviesDict):
+    for key in mostPopularMoviesDict:
+        insert_statement = '''INSERT OR IGNORE INTO topMoviesData(id, rank, rankUpDown, title, fullTitle, year, crew,
+         imdbRating, imdbRatingCount) VALUES (?,?,?,?,?,?,?,?,?)'''
+
+        data = key, mostPopularMoviesDict[key]["rank"], mostPopularMoviesDict[key]["rankUpDown"], \
+            mostPopularMoviesDict[key]["title"], mostPopularMoviesDict[key]["fullTitle"], \
+            mostPopularMoviesDict[key]["year"], mostPopularMoviesDict[key]["crew"], \
+            mostPopularMoviesDict[key]["imdbRating"], mostPopularMoviesDict[key]["imdbRatingCount"]
         curs.execute(insert_statement, data)
         conn.commit()
 

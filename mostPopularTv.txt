@@ -1,100 +1,100 @@
-tt9288030 | 1 | +7 | Reacher | Reacher (2022) | 2022 | Alan Ritchson, Malcolm Goodwin | 8.4 | 46509 
-tt13668894 | 2 | 0 | The Book of Boba Fett | The Book of Boba Fett (2021) | 2021 | Temuera Morrison, Ming-Na Wen | 7.6 | 77654 
-tt8772296 | 3 | +1 | Euphoria | Euphoria (2019) | 2019 | Zendaya, Hunter Schafer | 8.4 | 119033 
-tt13659418 | 4 | -3 | Pam & Tommy | Pam & Tommy (2022) | 2022 | Lily James, Sebastian Stan | 7.5 | 8548 
-tt2560140 | 5 | +2 | Attack on Titan | Attack on Titan (2013) | 2013 | Yûki Kaji, Marina Inoue | 9.0 | 323088 
-tt5071412 | 6 | -1 | Ozark | Ozark (2017) | 2017 | Jason Bateman, Laura Linney | 8.5 | 252347 
-tt13146488 | 7 | +2 | Peacemaker | Peacemaker (2022) | 2022 | John Cena, Danielle Brooks | 8.5 | 39085 
-tt13315324 | 8 | -5 | The Woman in the House Across the Street from the Girl in the Window | The Woman in the House Across the Street from the Girl in the Window (2022) | 2022 | Kristen Bell, Tom Riley | 6.4 | 26045 
-tt13991232 | 9 | +1 | 1883 | 1883 (2021) | 2021 | Sam Elliott, Tim McGraw | 9.0 | 28796 
-tt9077540 | 10 | +40 | Sweet Magnolias | Sweet Magnolias (2020) | 2020 | JoAnna Garcia Swisher, Brooke Elliott | 7.5 | 14972 
-tt14169960 | 11 | -5 | All of Us Are Dead | All of Us Are Dead (2022) | 2022 | Ji-hu Park, Chan-Young Yoon | 7.6 | 25563 
-tt8740976 | 12 | +146 | Inventing Anna | Inventing Anna (2022) | 2022 | Anna Chlumsky, Julia Garner | 6.8 | 6994 
-tt15264192 | 13 | +15 | Murderville | Murderville (2022) | 2022 | Will Arnett, Haneefah Wood | 7.0 | 5909 
-tt4236770 | 14 | 0 | Yellowstone | Yellowstone (2018) | 2018 | Kevin Costner, Luke Grimes | 8.8 | 97908 
-tt9335498 | 15 | +22 | Demon Slayer: Kimetsu no Yaiba | Demon Slayer: Kimetsu no Yaiba (2019) | 2019 | Natsuki Hanae, Yoshitsugu Matsuoka | 8.7 | 78557 
-tt4406178 | 16 | -4 | The Gilded Age | The Gilded Age (2022) | 2022 | Carrie Coon, Morgan Spector | 8.1 | 6905 
+tt9288030 | 1 | +7 | Reacher | Reacher (2022) | 2022 | Alan Ritchson, Malcolm Goodwin | 8.4 | 48472 
+tt13668894 | 2 | 0 | The Book of Boba Fett | The Book of Boba Fett (2021) | 2021 | Temuera Morrison, Ming-Na Wen | 7.6 | 79205 
+tt8772296 | 3 | +1 | Euphoria | Euphoria (2019) | 2019 | Zendaya, Hunter Schafer | 8.4 | 119651 
+tt13659418 | 4 | -3 | Pam & Tommy | Pam & Tommy (2022) | 2022 | Lily James, Sebastian Stan | 7.5 | 8886 
+tt2560140 | 5 | +2 | Attack on Titan | Attack on Titan (2013) | 2013 | Yûki Kaji, Marina Inoue | 9.0 | 323489 
+tt5071412 | 6 | -1 | Ozark | Ozark (2017) | 2017 | Jason Bateman, Laura Linney | 8.5 | 252740 
+tt13146488 | 7 | +2 | Peacemaker | Peacemaker (2022) | 2022 | John Cena, Danielle Brooks | 8.5 | 39816 
+tt13315324 | 8 | -5 | The Woman in the House Across the Street from the Girl in the Window | The Woman in the House Across the Street from the Girl in the Window (2022) | 2022 | Kristen Bell, Tom Riley | 6.4 | 26575 
+tt13991232 | 9 | +1 | 1883 | 1883 (2021) | 2021 | Sam Elliott, Tim McGraw | 9.0 | 29138 
+tt9077540 | 10 | +40 | Sweet Magnolias | Sweet Magnolias (2020) | 2020 | JoAnna Garcia Swisher, Brooke Elliott | 7.4 | 15114 
+tt14169960 | 11 | -5 | All of Us Are Dead | All of Us Are Dead (2022) | 2022 | Ji-hu Park, Chan-Young Yoon | 7.6 | 26204 
+tt8740976 | 12 | +146 | Inventing Anna | Inventing Anna (2022) | 2022 | Anna Chlumsky, Julia Garner | 6.8 | 8572 
+tt15264192 | 13 | +15 | Murderville | Murderville (2022) | 2022 | Will Arnett, Haneefah Wood | 7.0 | 6160 
+tt4236770 | 14 | 0 | Yellowstone | Yellowstone (2018) | 2018 | Kevin Costner, Luke Grimes | 8.8 | 98116 
+tt9335498 | 15 | +22 | Demon Slayer: Kimetsu no Yaiba | Demon Slayer: Kimetsu no Yaiba (2019) | 2019 | Natsuki Hanae, Yoshitsugu Matsuoka | 8.7 | 78805 
+tt4406178 | 16 | -4 | The Gilded Age | The Gilded Age (2022) | 2022 | Carrie Coon, Morgan Spector | 8.1 | 7150 
 tt11311302 | 17 | +231 | Vikings: Valhalla | Vikings: Valhalla (2022) | 2022 | Pollyanna McIntosh, Frida Gustavsson |  | 0 
-tt8111088 | 18 | +2 | The Mandalorian | The Mandalorian (2019) | 2019 | Pedro Pascal, Carl Weathers | 8.8 | 405152 
-tt0944947 | 19 | 0 | Game of Thrones | Game of Thrones (2011) | 2011 | Emilia Clarke, Peter Dinklage | 9.2 | 1952363 
+tt8111088 | 18 | +2 | The Mandalorian | The Mandalorian (2019) | 2019 | Pedro Pascal, Carl Weathers | 8.8 | 405573 
+tt0944947 | 19 | 0 | Game of Thrones | Game of Thrones (2011) | 2011 | Emilia Clarke, Peter Dinklage | 9.2 | 1952776 
 tt7631058 | 20 | +16 | The Lord of the Rings: The Rings of Power | The Lord of the Rings: The Rings of Power (2022) | 2022 | Morfydd Clark, Peter Mullan |  | 0 
-tt9170108 | 21 | 0 | Raised by Wolves | Raised by Wolves (2020) | 2020 | Travis Fimmel, Amanda Collin | 7.5 | 65028 
-tt1520211 | 22 | 0 | The Walking Dead | The Walking Dead (2010) | 2010 | Andrew Lincoln, Norman Reedus | 8.1 | 929739 
-tt8634332 | 23 | 0 | The Righteous Gemstones | The Righteous Gemstones (2019) | 2019 | John Goodman, Danny McBride | 8.1 | 23916 
-tt11247158 | 24 | -6 | The Legend of Vox Machina | The Legend of Vox Machina (2022) | 2022 | Laura Bailey, Taliesin Jaffe | 8.7 | 8628 
-tt0386676 | 25 | +7 | The Office | The Office (2005) | 2005 | Steve Carell, Jenna Fischer | 8.9 | 517255 
-tt11041332 | 26 | -9 | Yellowjackets | Yellowjackets (2021) | 2021 | Melanie Lynskey, Tawny Cypress | 8.0 | 28521 
-tt7660850 | 27 | -1 | Succession | Succession (2018) | 2018 | Nicholas Braun, Brian Cox | 8.8 | 115966 
-tt6048596 | 28 | -12 | The Sinner | The Sinner (2017) | 2017 | Bill Pullman, Jessica Hecht | 7.9 | 112565 
-tt2442560 | 29 | +4 | Peaky Blinders | Peaky Blinders (2013) | 2013 | Cillian Murphy, Paul Anderson | 8.8 | 454426 
-tt5180504 | 30 | -6 | The Witcher | The Witcher (2019) | 2019 | Henry Cavill, Freya Allan | 8.2 | 451881 
-tt13365348 | 31 | -16 | Archive 81 | Archive 81 (2022) | 2022 | Mamoudou Athie, Dina Shihabi | 7.4 | 32688 
-tt0903747 | 32 | +2 | Breaking Bad | Breaking Bad (2008) | 2008 | Bryan Cranston, Aaron Paul | 9.4 | 1668377 
-tt12026710 | 33 | +8 | Suspicion | Suspicion (2022) | 2022 | Elizabeth Henstridge, Kunal Nayyar | 6.7 | 1123 
-tt11859542 | 34 | -21 | In from the Cold | In from the Cold (2022) | 2022 | Margarita Levieva, Cillian O'Sullivan | 6.2 | 4593 
-tt3032476 | 35 | +22 | Better Call Saul | Better Call Saul (2015) | 2015 | Bob Odenkirk, Rhea Seehorn | 8.8 | 379215 
-tt0413573 | 36 | +3 | Grey's Anatomy | Grey's Anatomy (2005) | 2005 | Ellen Pompeo, Chandra Wilson | 7.5 | 287501 
-tt7826108 | 37 | +15 | Raising Dion | Raising Dion (2019) | 2019 | Alisha Wainwright, Ja'Siah Young | 7.2 | 12511 
-tt8398600 | 38 | -8 | After Life | After Life (2019) | 2019 | Ricky Gervais, Tom Basden | 8.5 | 120253 
-tt2306299 | 39 | +16 | Vikings | Vikings (2013) | 2013 | Katheryn Winnick, Gustaf Skarsgård | 8.5 | 493322 
-tt13819960 | 40 | -13 | And Just Like That... | And Just Like That... (2021) | 2021 | Sarah Jessica Parker, Cynthia Nixon | 5.5 | 22660 
-tt5555260 | 41 | -3 | This Is Us | This Is Us (2016) | 2016 | Milo Ventimiglia, Mandy Moore | 8.6 | 126610 
-tt4270492 | 42 | -2 | Billions | Billions (2016) | 2016 | Paul Giamatti, Damian Lewis | 8.4 | 87444 
-tt0472954 | 43 | +1 | It's Always Sunny in Philadelphia | It's Always Sunny in Philadelphia (2004) | 2004 | Charlie Day, Glenn Howerton | 8.8 | 211992 
+tt9170108 | 21 | 0 | Raised by Wolves | Raised by Wolves (2020) | 2020 | Travis Fimmel, Amanda Collin | 7.5 | 65147 
+tt1520211 | 22 | 0 | The Walking Dead | The Walking Dead (2010) | 2010 | Andrew Lincoln, Norman Reedus | 8.1 | 929936 
+tt8634332 | 23 | 0 | The Righteous Gemstones | The Righteous Gemstones (2019) | 2019 | John Goodman, Danny McBride | 8.1 | 24023 
+tt11247158 | 24 | -6 | The Legend of Vox Machina | The Legend of Vox Machina (2022) | 2022 | Laura Bailey, Taliesin Jaffe | 8.7 | 8835 
+tt0386676 | 25 | +7 | The Office | The Office (2005) | 2005 | Steve Carell, Jenna Fischer | 8.9 | 517575 
+tt11041332 | 26 | -9 | Yellowjackets | Yellowjackets (2021) | 2021 | Melanie Lynskey, Tawny Cypress | 8.0 | 28708 
+tt7660850 | 27 | -1 | Succession | Succession (2018) | 2018 | Nicholas Braun, Brian Cox | 8.8 | 116153 
+tt6048596 | 28 | -12 | The Sinner | The Sinner (2017) | 2017 | Bill Pullman, Jessica Hecht | 7.9 | 112691 
+tt2442560 | 29 | +4 | Peaky Blinders | Peaky Blinders (2013) | 2013 | Cillian Murphy, Paul Anderson | 8.8 | 454708 
+tt5180504 | 30 | -6 | The Witcher | The Witcher (2019) | 2019 | Henry Cavill, Freya Allan | 8.2 | 452198 
+tt13365348 | 31 | -16 | Archive 81 | Archive 81 (2022) | 2022 | Mamoudou Athie, Dina Shihabi | 7.4 | 33039 
+tt0903747 | 32 | +2 | Breaking Bad | Breaking Bad (2008) | 2008 | Bryan Cranston, Aaron Paul | 9.4 | 1668872 
+tt12026710 | 33 | +8 | Suspicion | Suspicion (2022) | 2022 | Elizabeth Henstridge, Kunal Nayyar | 6.7 | 1166 
+tt11859542 | 34 | -21 | In from the Cold | In from the Cold (2022) | 2022 | Margarita Levieva, Cillian O'Sullivan | 6.2 | 4691 
+tt3032476 | 35 | +22 | Better Call Saul | Better Call Saul (2015) | 2015 | Bob Odenkirk, Rhea Seehorn | 8.8 | 379396 
+tt0413573 | 36 | +3 | Grey's Anatomy | Grey's Anatomy (2005) | 2005 | Ellen Pompeo, Chandra Wilson | 7.5 | 287583 
+tt7826108 | 37 | +15 | Raising Dion | Raising Dion (2019) | 2019 | Alisha Wainwright, Ja'Siah Young | 7.2 | 12596 
+tt8398600 | 38 | -8 | After Life | After Life (2019) | 2019 | Ricky Gervais, Tom Basden | 8.5 | 120464 
+tt2306299 | 39 | +16 | Vikings | Vikings (2013) | 2013 | Katheryn Winnick, Gustaf Skarsgård | 8.5 | 493489 
+tt13819960 | 40 | -13 | And Just Like That... | And Just Like That... (2021) | 2021 | Sarah Jessica Parker, Cynthia Nixon | 5.5 | 22767 
+tt5555260 | 41 | -3 | This Is Us | This Is Us (2016) | 2016 | Milo Ventimiglia, Mandy Moore | 8.6 | 126679 
+tt4270492 | 42 | -2 | Billions | Billions (2016) | 2016 | Paul Giamatti, Damian Lewis | 8.4 | 87516 
+tt0472954 | 43 | +1 | It's Always Sunny in Philadelphia | It's Always Sunny in Philadelphia (2004) | 2004 | Charlie Day, Glenn Howerton | 8.8 | 212071 
 tt8466564 | 44 | +186 | Obi-Wan Kenobi | Obi-Wan Kenobi (2022) | 2022 | Kumail Nanjiani, Hayden Christensen |  | 0 
-tt12614214 | 45 | -20 | The Afterparty | The Afterparty (2022) | 2022 | Tiffany Haddish, Sam Richardson | 7.2 | 2734 
-tt0460681 | 46 | +3 | Supernatural | Supernatural (2005) | 2005 | Jared Padalecki, Jensen Ackles | 8.4 | 422518 
-tt14500082 | 47 | -2 | How I Met Your Father | How I Met Your Father (2022) | 2022 | Hilary Duff, Christopher Lowell | 5.1 | 6916 
-tt0098904 | 48 | +5 | Seinfeld | Seinfeld (1989) | 1989 | Jerry Seinfeld, Julia Louis-Dreyfus | 8.8 | 294535 
-tt0364845 | 49 | -2 | NCIS | NCIS (2003) | 2003 | Mark Harmon, David McCallum | 7.7 | 137501 
-tt7221388 | 50 | -15 | Cobra Kai | Cobra Kai (2018) | 2018 | Ralph Macchio, William Zabka | 8.6 | 158810 
-tt10986410 | 51 | -9 | Ted Lasso | Ted Lasso (2020) | 2020 | Jason Sudeikis, Brett Goldstein | 8.8 | 165315 
-tt0452046 | 52 | +2 | Criminal Minds | Criminal Minds (2005) | 2005 | Matthew Gray Gubler, Kirsten Vangsness | 8.1 | 185065 
-tt11761194 | 53 | +197 | Power Book IV: Force | Power Book IV: Force (2022) | 2022 | Joseph Sikora, Anthony Fleming | 8.4 | 1012 
-tt6156584 | 54 | -11 | Snowpiercer | Snowpiercer (2020) | 2020 | Daveed Diggs, Mickey Sumner | 6.9 | 46911 
-tt2467372 | 55 | +33 | Brooklyn Nine-Nine | Brooklyn Nine-Nine (2013) | 2013 | Andy Samberg, Stephanie Beatriz | 8.4 | 284146 
-tt14412362 | 56 | 1,237 | Chloe | Chloe (2022) | 2022 | Erin Doherty, Billy Howle | 6.6 | 600 
-tt0108778 | 57 | +2 | Friends | Friends (1994) | 1994 | Jennifer Aniston, Courteney Cox | 8.8 | 935293 
-tt5171438 | 58 | +45 | Star Trek: Discovery | Star Trek: Discovery (2017) | 2017 | Sonequa Martin-Green, Doug Jones | 7.1 | 112598 
-tt11126994 | 59 | -8 | Arcane | Arcane (2021) | 2021 | Hailee Steinfeld, Kevin Alejandro | 9.1 | 155675 
-tt2861424 | 60 | +85 | Rick and Morty | Rick and Morty (2013) | 2013 | Justin Roiland, Chris Parnell | 9.2 | 460621 
-tt0898266 | 61 | +7 | The Big Bang Theory | The Big Bang Theory (2007) | 2007 | Johnny Galecki, Jim Parsons | 8.1 | 772787 
-tt0141842 | 62 | +1 | The Sopranos | The Sopranos (1999) | 1999 | James Gandolfini, Lorraine Bracco | 9.2 | 362047 
-tt3230854 | 63 | -15 | The Expanse | The Expanse (2015) | 2015 | Steven Strait, Dominique Tipper | 8.5 | 141905 
-tt8690918 | 64 | -3 | Resident Alien | Resident Alien (2021) | 2021 | Alan Tudyk, Sara Tomko | 8.2 | 31134 
-tt12540080 | 65 | +26 | Dark Desire | Dark Desire (2020) | 2020 | Erik Hayser, Jorge Poza | 6.5 | 6189 
-tt1219024 | 66 | 0 | Castle | Castle (2009) | 2009 | Nathan Fillion, Stana Katic | 8.1 | 155823 
-tt11899030 | 67 | -38 | The Responder | The Responder (2022) | 2022 | Martin Freeman, Romi Hyland-Rylands | 7.7 | 4672 
-tt2741602 | 68 | -10 | The Blacklist | The Blacklist (2013) | 2013 | James Spader, Megan Boone | 8.0 | 232412 
-tt0121955 | 69 | +11 | South Park | South Park (1997) | 1997 | Trey Parker, Matt Stone | 8.7 | 354095 
-tt5788792 | 70 | +66 | The Marvelous Mrs. Maisel | The Marvelous Mrs. Maisel (2017) | 2017 | Rachel Brosnahan, Alex Borstein | 8.7 | 98557 
-tt4574334 | 71 | 0 | Stranger Things | Stranger Things (2016) | 2016 | Millie Bobby Brown, Finn Wolfhard | 8.7 | 963160 
-tt1190634 | 72 | +7 | The Boys | The Boys (2019) | 2019 | Karl Urban, Jack Quaid | 8.7 | 345330 
-tt0773262 | 73 | -11 | Dexter | Dexter (2006) | 2006 | Michael C. Hall, Jennifer Carpenter | 8.6 | 705532 
-tt8421350 | 74 | -18 | Manifest | Manifest (2018) | 2018 | Melissa Roxburgh, Josh Dallas | 7.1 | 47842 
-tt3006802 | 75 | +3 | Outlander | Outlander (2014) | 2014 | Caitriona Balfe, Sam Heughan | 8.4 | 145487 
-tt16352098 | 76 | +763 | The Curse | The Curse (2022) | 2022 | Steve Stamp, Abraham Popoola | 6.9 | 571 
-tt1606375 | 77 | -4 | Downton Abbey | Downton Abbey (2010) | 2010 | Hugh Bonneville, Phyllis Logan | 8.7 | 192094 
-tt10574236 | 78 | -32 | Station Eleven | Station Eleven (2021) | 2021 | Mackenzie Davis, Himesh Patel | 7.7 | 15652 
-tt1043813 | 79 | +37 | Titans | Titans (2018) | 2018 | Brenton Thwaites, Anna Diop | 7.6 | 93385 
-tt4179452 | 80 | +12 | The Last Kingdom | The Last Kingdom (2015) | 2015 | Eliza Butterworth, Alexander Dreymon | 8.4 | 106665 
-tt3322312 | 81 | -9 | Daredevil | Daredevil (2015) | 2015 | Charlie Cox, Vincent D'Onofrio | 8.6 | 408205 
+tt12614214 | 45 | -20 | The Afterparty | The Afterparty (2022) | 2022 | Tiffany Haddish, Sam Richardson | 7.2 | 2802 
+tt0460681 | 46 | +3 | Supernatural | Supernatural (2005) | 2005 | Jared Padalecki, Jensen Ackles | 8.4 | 422593 
+tt14500082 | 47 | -2 | How I Met Your Father | How I Met Your Father (2022) | 2022 | Hilary Duff, Christopher Lowell | 5.1 | 7041 
+tt0098904 | 48 | +5 | Seinfeld | Seinfeld (1989) | 1989 | Jerry Seinfeld, Julia Louis-Dreyfus | 8.8 | 294661 
+tt0364845 | 49 | -2 | NCIS | NCIS (2003) | 2003 | Mark Harmon, David McCallum | 7.7 | 137546 
+tt7221388 | 50 | -15 | Cobra Kai | Cobra Kai (2018) | 2018 | Ralph Macchio, William Zabka | 8.6 | 158921 
+tt10986410 | 51 | -9 | Ted Lasso | Ted Lasso (2020) | 2020 | Jason Sudeikis, Brett Goldstein | 8.8 | 165502 
+tt0452046 | 52 | +2 | Criminal Minds | Criminal Minds (2005) | 2005 | Matthew Gray Gubler, Kirsten Vangsness | 8.1 | 185122 
+tt11761194 | 53 | +197 | Power Book IV: Force | Power Book IV: Force (2022) | 2022 | Joseph Sikora, Anthony Fleming | 8.4 | 1070 
+tt6156584 | 54 | -11 | Snowpiercer | Snowpiercer (2020) | 2020 | Daveed Diggs, Mickey Sumner | 6.9 | 47000 
+tt2467372 | 55 | +33 | Brooklyn Nine-Nine | Brooklyn Nine-Nine (2013) | 2013 | Andy Samberg, Stephanie Beatriz | 8.4 | 284289 
+tt14412362 | 56 | 1,237 | Chloe | Chloe (2022) | 2022 | Erin Doherty, Billy Howle | 6.6 | 667 
+tt0108778 | 57 | +2 | Friends | Friends (1994) | 1994 | Jennifer Aniston, Courteney Cox | 8.8 | 935507 
+tt5171438 | 58 | +45 | Star Trek: Discovery | Star Trek: Discovery (2017) | 2017 | Sonequa Martin-Green, Doug Jones | 7.1 | 112657 
+tt11126994 | 59 | -8 | Arcane | Arcane (2021) | 2021 | Hailee Steinfeld, Kevin Alejandro | 9.1 | 156045 
+tt2861424 | 60 | +85 | Rick and Morty | Rick and Morty (2013) | 2013 | Justin Roiland, Chris Parnell | 9.2 | 460814 
+tt0898266 | 61 | +7 | The Big Bang Theory | The Big Bang Theory (2007) | 2007 | Johnny Galecki, Jim Parsons | 8.1 | 772921 
+tt0141842 | 62 | +1 | The Sopranos | The Sopranos (1999) | 1999 | James Gandolfini, Lorraine Bracco | 9.2 | 362153 
+tt3230854 | 63 | -15 | The Expanse | The Expanse (2015) | 2015 | Steven Strait, Dominique Tipper | 8.5 | 141982 
+tt8690918 | 64 | -3 | Resident Alien | Resident Alien (2021) | 2021 | Alan Tudyk, Sara Tomko | 8.2 | 31206 
+tt12540080 | 65 | +26 | Dark Desire | Dark Desire (2020) | 2020 | Erik Hayser, Jorge Poza | 6.5 | 6224 
+tt1219024 | 66 | 0 | Castle | Castle (2009) | 2009 | Nathan Fillion, Stana Katic | 8.1 | 155881 
+tt11899030 | 67 | -38 | The Responder | The Responder (2022) | 2022 | Martin Freeman, Romi Hyland-Rylands | 7.7 | 4757 
+tt2741602 | 68 | -10 | The Blacklist | The Blacklist (2013) | 2013 | James Spader, Megan Boone | 8.0 | 232472 
+tt0121955 | 69 | +11 | South Park | South Park (1997) | 1997 | Trey Parker, Matt Stone | 8.7 | 354195 
+tt5788792 | 70 | +66 | The Marvelous Mrs. Maisel | The Marvelous Mrs. Maisel (2017) | 2017 | Rachel Brosnahan, Alex Borstein | 8.7 | 98653 
+tt4574334 | 71 | 0 | Stranger Things | Stranger Things (2016) | 2016 | Millie Bobby Brown, Finn Wolfhard | 8.7 | 963435 
+tt1190634 | 72 | +7 | The Boys | The Boys (2019) | 2019 | Karl Urban, Jack Quaid | 8.7 | 345557 
+tt0773262 | 73 | -11 | Dexter | Dexter (2006) | 2006 | Michael C. Hall, Jennifer Carpenter | 8.6 | 705622 
+tt8421350 | 74 | -18 | Manifest | Manifest (2018) | 2018 | Melissa Roxburgh, Josh Dallas | 7.1 | 47905 
+tt3006802 | 75 | +3 | Outlander | Outlander (2014) | 2014 | Caitriona Balfe, Sam Heughan | 8.4 | 145555 
+tt16352098 | 76 | +763 | The Curse | The Curse (2022) | 2022 | Steve Stamp, Abraham Popoola | 6.9 | 596 
+tt1606375 | 77 | -4 | Downton Abbey | Downton Abbey (2010) | 2010 | Hugh Bonneville, Phyllis Logan | 8.7 | 192187 
+tt10574236 | 78 | -32 | Station Eleven | Station Eleven (2021) | 2021 | Mackenzie Davis, Himesh Patel | 7.7 | 15762 
+tt1043813 | 79 | +37 | Titans | Titans (2018) | 2018 | Brenton Thwaites, Anna Diop | 7.6 | 93432 
+tt4179452 | 80 | +12 | The Last Kingdom | The Last Kingdom (2015) | 2015 | Eliza Butterworth, Alexander Dreymon | 8.4 | 106732 
+tt3322312 | 81 | -9 | Daredevil | Daredevil (2015) | 2015 | Charlie Cox, Vincent D'Onofrio | 8.6 | 408406 
 tt11198330 | 82 | +52 | House of the Dragon | House of the Dragon (2022) | 2022 | Paddy Considine, Olivia Cooke |  | 0 
-tt2177461 | 83 | -23 | A Discovery of Witches | A Discovery of Witches (2018) | 2018 | Matthew Goode, Teresa Palmer | 8.0 | 47820 
-tt0203259 | 84 | -9 | Law & Order: Special Victims Unit | Law & Order: Special Victims Unit (1999) | 1999 | Mariska Hargitay, Christopher Meloni | 8.0 | 97898 
-tt7462410 | 85 | -8 | The Wheel of Time | The Wheel of Time (2021) | 2021 | Rosamund Pike, Daniel Henney | 7.2 | 86815 
-tt2261391 | 86 | -5 | Chicago Fire | Chicago Fire (2012) | 2012 | Taylor Kinney, Christian Stolte | 8.0 | 52715 
+tt2177461 | 83 | -23 | A Discovery of Witches | A Discovery of Witches (2018) | 2018 | Matthew Goode, Teresa Palmer | 8.0 | 47880 
+tt0203259 | 84 | -9 | Law & Order: Special Victims Unit | Law & Order: Special Victims Unit (1999) | 1999 | Mariska Hargitay, Christopher Meloni | 8.0 | 97928 
+tt7462410 | 85 | -8 | The Wheel of Time | The Wheel of Time (2021) | 2021 | Rosamund Pike, Daniel Henney | 7.2 | 86989 
+tt2261391 | 86 | -5 | Chicago Fire | Chicago Fire (2012) | 2012 | Taylor Kinney, Christian Stolte | 8.0 | 52755 
 tt2934286 | 87 | -76 | Halo | Halo (2022) | 2022 | Pablo Schreiber, Natascha McElhone |  | 0 
-tt0458290 | 88 | +25 | Star Wars: The Clone Wars | Star Wars: The Clone Wars (2008) | 2008 | Tom Kane, Dee Bradley Baker | 8.3 | 81238 
-tt1888075 | 89 | +4 | Death in Paradise | Death in Paradise (2011) | 2011 | Elizabeth Bourgine, Don Warrington | 7.8 | 19006 
-tt14164730 | 90 | -23 | Dexter: New Blood | Dexter: New Blood (2021) | 2021 | Michael C. Hall, Jack Alcott | 8.3 | 73152 
-tt14637290 | 91 | 3,038 | The Privilege | The Privilege (2022) | 2022 | Felix Fuchssteiner (dir.), Max Schimmelpfennig, Lea van Acken | 4.6 | 1935 
-tt7661046 | 92 | +139 | Dollface | Dollface (2019) | 2019 | Kat Dennings, Brenda Song | 7.4 | 7123 
-tt6468322 | 93 | -11 | Money Heist | Money Heist (2017) | 2017 | Úrsula Corberó, Álvaro Morte | 8.2 | 445997 
-tt0460649 | 94 | -8 | How I Met Your Mother | How I Met Your Mother (2005) | 2005 | Josh Radnor, Jason Segel | 8.3 | 653453 
-tt0436992 | 95 | -8 | Doctor Who | Doctor Who (2005) | 2005 | Jodie Whittaker, Peter Capaldi | 8.6 | 215668 
-tt2201227 | 96 | -32 | Stay Close | Stay Close (2021) | 2021 | Cush Jumbo, Richard Armitage | 7.0 | 25080 
-tt2085059 | 97 | -2 | Black Mirror | Black Mirror (2011) | 2011 | Daniel Lapaine, Hannah John-Kamen | 8.8 | 504551 
-tt10732104 | 98 | +16 | Power Book II: Ghost | Power Book II: Ghost (2020) | 2020 | Michael Rainey Jr., Shane Johnson | 7.1 | 6521 
-tt8681148 | 99 | 1,083 | This Is Going to Hurt | This Is Going to Hurt (2022) | 2022 | Ben Whishaw, Ambika Mod | 8.6 | 1556 
-tt7587890 | 100 | -24 | The Rookie | The Rookie (2018) | 2018 | Nathan Fillion, Alyssa Diaz | 8.1 | 32530 
+tt0458290 | 88 | +25 | Star Wars: The Clone Wars | Star Wars: The Clone Wars (2008) | 2008 | Tom Kane, Dee Bradley Baker | 8.3 | 81320 
+tt1888075 | 89 | +4 | Death in Paradise | Death in Paradise (2011) | 2011 | Elizabeth Bourgine, Don Warrington | 7.8 | 19022 
+tt14164730 | 90 | -23 | Dexter: New Blood | Dexter: New Blood (2021) | 2021 | Michael C. Hall, Jack Alcott | 8.3 | 73301 
+tt14637290 | 91 | 3,038 | The Privilege | The Privilege (2022) | 2022 | Felix Fuchssteiner (dir.), Max Schimmelpfennig, Lea van Acken | 4.6 | 2076 
+tt7661046 | 92 | +139 | Dollface | Dollface (2019) | 2019 | Kat Dennings, Brenda Song | 7.4 | 7188 
+tt6468322 | 93 | -11 | Money Heist | Money Heist (2017) | 2017 | Úrsula Corberó, Álvaro Morte | 8.2 | 446181 
+tt0460649 | 94 | -8 | How I Met Your Mother | How I Met Your Mother (2005) | 2005 | Josh Radnor, Jason Segel | 8.3 | 653594 
+tt0436992 | 95 | -8 | Doctor Who | Doctor Who (2005) | 2005 | Jodie Whittaker, Peter Capaldi | 8.6 | 215698 
+tt2201227 | 96 | -32 | Stay Close | Stay Close (2021) | 2021 | Cush Jumbo, Richard Armitage | 7.0 | 25182 
+tt2085059 | 97 | -2 | Black Mirror | Black Mirror (2011) | 2011 | Daniel Lapaine, Hannah John-Kamen | 8.8 | 504721 
+tt10732104 | 98 | +16 | Power Book II: Ghost | Power Book II: Ghost (2020) | 2020 | Michael Rainey Jr., Shane Johnson | 7.1 | 6538 
+tt8681148 | 99 | 1,083 | This Is Going to Hurt | This Is Going to Hurt (2022) | 2022 | Ben Whishaw, Ambika Mod | 8.6 | 1762 
+tt7587890 | 100 | -24 | The Rookie | The Rookie (2018) | 2018 | Nathan Fillion, Alyssa Diaz | 8.1 | 32556 
