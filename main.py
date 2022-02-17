@@ -1,3 +1,5 @@
+import sys
+
 import secrets
 import requests
 import sqlite3
@@ -79,6 +81,31 @@ def getMostPopularMovies():
         return json_data
     except ValueError:
         print('No Response from API')
+
+
+def getMovieIDs(mostPopularMoviesDict):
+    rank1 = ('randomId', -sys.maxsize-1)
+    rank2 = ('randomId2', -sys.maxsize-1)
+    rank3 = ('randomId3', -sys.maxsize-1)
+    lowestRank = ('randomId4', sys.maxsize)
+
+    for key in mostPopularMoviesDict:
+        rankChange = int(key["rankUpDown"])
+        if rankChange > rank3[1]:
+            if rankChange > rank2[1]:
+                if rankChange > rank1[1]:
+                    rank3 = rank2
+                    rank2 = rank1
+                    rank1 = (key, rankChange)
+                else:
+                    rank3 = rank2
+                    rank2 = (key, rankChange)
+            else:
+                rank3 = (key, rankChange)
+        elif rankChange < lowestRank[1]:
+            lowestRank = (key, rankChange)
+    movieIds = [rank1[0], rank2[0], rank3[0], lowestRank[0]]
+    return movieIds
 
 
 def writeToOutput(ratingTvData, top250TvData, mostPopularTvData, top250MoviesData, mostPopularMoviesData):
