@@ -157,15 +157,15 @@ def createDataBase(curs: sqlite3.Cursor):
                         "oneRatingVotes"	INTEGER,
                         PRIMARY KEY("id"));''')
     curs.execute('''CREATE TABLE IF NOT EXISTS "topTvData" (
-                        "id"	        TEXT, 
-                        "rank"	        TEXT, 
-                        "rankUpDown"	TEXT, 
-                        "title"	        TEXT, 
-                        "fullTitle"	    TEXT, 
-                        "year"	        TEXT, 
-                        "crew"	        TEXT, 
-                        "imdbRating"	TEXT, 
-                        "imdbRatingCount"TEXT,  
+                        "id"	        TEXT,
+                        "rank"	        TEXT,
+                        "rankUpDown"	TEXT,
+                        "title"	        TEXT,
+                        "fullTitle"	    TEXT,
+                        "year"	        TEXT,
+                        "crew"	        TEXT,
+                        "imdbRating"	TEXT,
+                        "imdbRatingCount"TEXT,
                         PRIMARY KEY("id"));''')
     curs.execute('''CREATE TABLE IF NOT EXISTS "top250MoviesData" (
                             "id"	    TEXT,
@@ -186,7 +186,7 @@ def createDataBase(curs: sqlite3.Cursor):
                             "year"	        TEXT,
                             "crew"	        TEXT,
                             "imdbRating"	TEXT,
-                            "imdbRatingCount"TEXT,  
+                            "imdbRatingCount"TEXT,
                             PRIMARY KEY("id"));''')
 
 
@@ -332,7 +332,7 @@ def fillMostPopularTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, mostPo
 
 def fillTop250MovieData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250MoviesDict):
     for key in top250MoviesDict:
-        insert_statement = '''INSERT OR IGNORE INTO top250MoviesData (id, rank, title, fullTitle, year, crew, 
+        insert_statement = '''INSERT OR IGNORE INTO top250MoviesData (id, rank, title, fullTitle, year, crew,
                             imdbRating, imdbRatingCount) VALUES (?,?,?,?,?,?,?,?)'''
 
         data = key, top250MoviesDict[key]["rank"], top250MoviesDict[key]["title"], top250MoviesDict[key]["fullTitle"], \
