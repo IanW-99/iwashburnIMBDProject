@@ -3,19 +3,21 @@ import requests
 import sqlite3
 
 
+#comment to fail workflow
+
 def main():
     top250TvData = getTop250Tv()
     showIDs = getShowID(top250TvData)
-    ratingData = getRatings(showIDs)
+    ratingTvData = getRatings(showIDs)
     mostPopularTvData = getMostPopularTv()
     top250MoviesData = getTop250Movies()
     mostPopularMoviesData = getMostPopularMovies()
-    writeToOutput(ratingData, top250TvData, mostPopularTvData, top250MoviesData, mostPopularMoviesData)
+    writeToOutput(ratingTvData, top250TvData, mostPopularTvData, top250MoviesData, mostPopularMoviesData)
     top250TvDict, ratingDict, mostPopularTvDict, top250MoviesDict, mostPopularMoviesDict = createDictionaries()
     conn, curs = dbConnect('imDataBase.db')
     createDataBase(curs)
     fillTop250TvData(conn, curs, top250TvDict)
-    fillRatingData(conn, curs, ratingDict)
+    fillratingTvData(conn, curs, ratingDict)
     fillMostPopularTvData(conn, curs, mostPopularTvDict)
     fillTop250MovieData(conn, curs, top250MoviesDict)
     fillMostPopularMoviesData(conn, curs, mostPopularMoviesDict)
@@ -79,9 +81,9 @@ def getMostPopularMovies():
         print('No Response from API')
 
 
-def writeToOutput(ratingData, top250TvData, mostPopularTvData, top250MoviesData, mostPopularMoviesData):
-    with open('textFiles/ratingData.txt', 'w') as f:
-        for i in ratingData:
+def writeToOutput(ratingTvData, top250TvData, mostPopularTvData, top250MoviesData, mostPopularMoviesData):
+    with open('textFiles/ratingTvData.txt', 'w') as f:
+        for i in ratingTvData:
             output_data = f'{i["imDbId"]} | {i["totalRating"]} | {i["totalRatingVotes"]}'
             if i["ratings"] is not None:
                 for j in i["ratings"]:
@@ -131,7 +133,7 @@ def createDataBase(curs: sqlite3.Cursor):
                         "imdbRating"TEXT,
                         "imdbRatingCount"TEXT,
                         PRIMARY KEY("id"));''')
-    curs.execute('''CREATE TABLE IF NOT EXISTS "ratingData" (
+    curs.execute('''CREATE TABLE IF NOT EXISTS "ratingTvData" (
                         "id"    TEXT,
                         "totalRating"	    NUMERIC,
                         "totalRatingVotes"	INTEGER,
@@ -209,7 +211,7 @@ def createDictionaries():
             top250TvDict[parsedLine[0]]["imdbRating"] = parsedLine[6]
             top250TvDict[parsedLine[0]]["imdbRatingCount"] = parsedLine[7]
 
-    with open("textFiles/ratingData.txt", 'r') as dataFile:
+    with open("textFiles/ratingTvData.txt", 'r') as dataFile:
         for line in dataFile:
             parsedLine = line.strip().split(" | ")
             if len(parsedLine) == 23:
@@ -292,9 +294,9 @@ def fillTop250TvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Dict)
         conn.commit()
 
 
-def fillRatingData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingDict):
+def fillratingTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingDict):
     for key in ratingDict:
-        insert_statement = '''INSERT OR IGNORE INTO ratingData (id, totalRating, totalRatingVotes, \
+        insert_statement = '''INSERT OR IGNORE INTO ratingTvData (id, totalRating, totalRatingVotes, \
         tenRatingPercent, tenRatingVotes, nineRatingPercent, nineRatingVotes, \
         eightRatingPercent, eightRatingVotes, sevenRatingPercent, sevenRatingVotes, \
         sixRatingPercent, sixRatingVotes, fiveRatingPercent, fiveRatingVotes, \
