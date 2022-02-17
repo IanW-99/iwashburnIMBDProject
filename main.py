@@ -1,5 +1,4 @@
 import sys
-
 import secrets
 import requests
 import sqlite3
@@ -14,18 +13,14 @@ def main():
     mostPopularMoviesData = getMostPopularMovies()
     mostChangedMovies = getMovieIDs(mostPopularMoviesData)
     ratingMoviesData = getRatings(mostChangedMovies)
-    writeToOutput(ratingTvData, top250TvData, mostPopularTvData, top250MoviesData, mostPopularMoviesData,
-                  ratingMoviesData)
-    top250TvDict, ratingTvDict, mostPopularTvDict, top250MoviesDict, mostPopularMoviesDict, ratingMoviesDict\
-        = createDictionaries()
     conn, curs = dbConnect('imDataBase.db')
     createDataBase(curs)
-    fillTop250TvData(conn, curs, top250TvDict)
-    fillRatingTvData(conn, curs, ratingTvDict)
-    fillMostPopularTvData(conn, curs, mostPopularTvDict)
-    fillTop250MovieData(conn, curs, top250MoviesDict)
-    fillMostPopularMoviesData(conn, curs, mostPopularMoviesDict)
-    fillRatingMoviesData(conn, curs, ratingMoviesDict)
+    fillTop250TvData(conn, curs, top250TvData)
+    fillRatingTvData(conn, curs, ratingTvData)
+    fillMostPopularTvData(conn, curs, mostPopularTvData)
+    fillTop250MovieData(conn, curs, top250MoviesData)
+    fillMostPopularMoviesData(conn, curs, mostPopularMoviesData)
+    fillRatingMoviesData(conn, curs, ratingMoviesData)
 
 
 def getTop250Tv():
@@ -105,51 +100,6 @@ def getMovieIDs(mostPopularMoviesDict):
             lowestRank = (key["id"], rankChange)
     movieIds = [rank1[0], rank2[0], rank3[0], lowestRank[0]]
     return movieIds
-
-
-def writeToOutput(ratingTvData, top250TvData, mostPopularTvData, top250MoviesData, mostPopularMoviesData,
-                  ratingMoviesData):
-    with open('textFiles/ratingTvData.txt', 'w') as f:
-        for i in ratingTvData:
-            output_data = f'{i["imDbId"]} | {i["totalRating"]} | {i["totalRatingVotes"]}'
-            if i["ratings"] is not None:
-                for j in i["ratings"]:
-                    output_data += f' | {j["percent"]} | {j["votes"]}'
-                output_data += '\n'
-                f.write(output_data)
-
-    with open('textFiles/top250Tv.txt', 'w') as f:
-        for i in top250TvData['items']:
-            output_data = f'{i["id"]} | {i["rank"]} | {i["title"]} | {i["fullTitle"]} | {i["year"]} | {i["crew"]} |  ' \
-                          f'{i["imDbRating"]} | {i["imDbRatingCount"]} \n'
-            f.write(output_data)
-
-    with open('textFiles/mostPopularTv.txt', 'w') as f:
-        for i in mostPopularTvData['items']:
-            output_data = f'{i["id"]} | {i["rank"]} | {i["rankUpDown"]} | {i["title"]} | {i["fullTitle"]} | ' \
-                          f'{i["year"]} | {i["crew"]} | {i["imDbRating"]} | {i["imDbRatingCount"]} \n'
-            f.write(output_data)
-
-    with open('textFiles/top250Movies.txt', 'w') as f:
-        for i in top250MoviesData['items']:
-            output_data = f'{i["id"]} | {i["rank"]} | {i["title"]} | {i["fullTitle"]} | {i["year"]} | {i["crew"]} |  ' \
-                          f'{i["imDbRating"]} | {i["imDbRatingCount"]} \n'
-            f.write(output_data)
-
-    with open('textFiles/mostPopularMovies.txt', 'w') as f:
-        for i in mostPopularMoviesData['items']:
-            output_data = f'{i["id"]} | {i["rank"]} | {i["rankUpDown"]} | {i["title"]} | {i["fullTitle"]} | ' \
-                          f'{i["year"]} | {i["crew"]} | {i["imDbRating"]} | {i["imDbRatingCount"]} \n'
-            f.write(output_data)
-
-    with open('textFiles/ratingMoviesData.txt', 'w') as f:
-        for i in ratingMoviesData:
-            output_data = f'{i["imDbId"]} | {i["totalRating"]} | {i["totalRatingVotes"]}'
-            if i["ratings"] is not None:
-                for j in i["ratings"]:
-                    output_data += f' | {j["percent"]} | {j["votes"]}'
-                output_data += '\n'
-                f.write(output_data)
 
 
 def dbConnect(filename):
@@ -253,127 +203,8 @@ def createDataBase(curs: sqlite3.Cursor):
                             PRIMARY KEY("id"));''')
 
 
-def createDictionaries():
-    top250TvDict = {}
-    ratingTvDict = {}
-    mostPopularTvDict = {}
-    top250MoviesDict = {}
-    mostPopularMoviesDict = {}
-    ratingMoviesDict = {}
-
-    with open("textFiles/top250Tv.txt", 'r') as dataFile:
-        for line in dataFile:
-            parsedLine = line.strip().split(" | ")
-            top250TvDict[parsedLine[0]] = {}
-            top250TvDict[parsedLine[0]]["rank"] = parsedLine[1]
-            top250TvDict[parsedLine[0]]["title"] = parsedLine[2]
-            top250TvDict[parsedLine[0]]["fullTitle"] = parsedLine[3]
-            top250TvDict[parsedLine[0]]["year"] = parsedLine[4]
-            top250TvDict[parsedLine[0]]["crew"] = parsedLine[5]
-            top250TvDict[parsedLine[0]]["imdbRating"] = parsedLine[6]
-            top250TvDict[parsedLine[0]]["imdbRatingCount"] = parsedLine[7]
-
-    with open("textFiles/ratingTvData.txt", 'r') as dataFile:
-        for line in dataFile:
-            parsedLine = line.strip().split(" | ")
-            if len(parsedLine) == 23:
-                ratingTvDict[parsedLine[0]] = {}
-                ratingTvDict[parsedLine[0]]["totalRating"] = parsedLine[1]
-                ratingTvDict[parsedLine[0]]["totalRatingVotes"] = parsedLine[2]
-                ratingTvDict[parsedLine[0]]["tenRatingPercent"] = parsedLine[3]
-                ratingTvDict[parsedLine[0]]["tenRatingVotes"] = parsedLine[4]
-                ratingTvDict[parsedLine[0]]["nineRatingPercent"] = parsedLine[5]
-                ratingTvDict[parsedLine[0]]["nineRatingVotes"] = parsedLine[6]
-                ratingTvDict[parsedLine[0]]["eightRatingPercent"] = parsedLine[7]
-                ratingTvDict[parsedLine[0]]["eightRatingVotes"] = parsedLine[8]
-                ratingTvDict[parsedLine[0]]["sevenRatingPercent"] = parsedLine[9]
-                ratingTvDict[parsedLine[0]]["sevenRatingVotes"] = parsedLine[10]
-                ratingTvDict[parsedLine[0]]["sixRatingPercent"] = parsedLine[11]
-                ratingTvDict[parsedLine[0]]["sixRatingVotes"] = parsedLine[12]
-                ratingTvDict[parsedLine[0]]["fiveRatingPercent"] = parsedLine[13]
-                ratingTvDict[parsedLine[0]]["fiveRatingVotes"] = parsedLine[14]
-                ratingTvDict[parsedLine[0]]["fourRatingPercent"] = parsedLine[15]
-                ratingTvDict[parsedLine[0]]["fourRatingVotes"] = parsedLine[16]
-                ratingTvDict[parsedLine[0]]["threeRatingPercent"] = parsedLine[17]
-                ratingTvDict[parsedLine[0]]["threeRatingVotes"] = parsedLine[18]
-                ratingTvDict[parsedLine[0]]["twoRatingPercent"] = parsedLine[19]
-                ratingTvDict[parsedLine[0]]["twoRatingVotes"] = parsedLine[20]
-                ratingTvDict[parsedLine[0]]["oneRatingPercent"] = parsedLine[21]
-                ratingTvDict[parsedLine[0]]["oneRatingVotes"] = parsedLine[22]
-
-    with open('textFiles/mostPopularTv.txt', 'r') as dataFile:
-        for line in dataFile:
-            parsedLine = line.strip().split(" | ")
-            if len(parsedLine) == 9:
-                mostPopularTvDict[parsedLine[0]] = {}
-                mostPopularTvDict[parsedLine[0]]["rank"] = parsedLine[1]
-                mostPopularTvDict[parsedLine[0]]["rankUpDown"] = parsedLine[2]
-                mostPopularTvDict[parsedLine[0]]["title"] = parsedLine[3]
-                mostPopularTvDict[parsedLine[0]]["fullTitle"] = parsedLine[4]
-                mostPopularTvDict[parsedLine[0]]["year"] = parsedLine[5]
-                mostPopularTvDict[parsedLine[0]]["crew"] = parsedLine[6]
-                mostPopularTvDict[parsedLine[0]]["imdbRating"] = parsedLine[7]
-                mostPopularTvDict[parsedLine[0]]["imdbRatingCount"] = parsedLine[8]
-
-    with open("textFiles/top250Movies.txt", 'r') as dataFile:
-        for line in dataFile:
-            parsedLine = line.strip().split(" | ")
-            top250MoviesDict[parsedLine[0]] = {}
-            top250MoviesDict[parsedLine[0]]["rank"] = parsedLine[1]
-            top250MoviesDict[parsedLine[0]]["title"] = parsedLine[2]
-            top250MoviesDict[parsedLine[0]]["fullTitle"] = parsedLine[3]
-            top250MoviesDict[parsedLine[0]]["year"] = parsedLine[4]
-            top250MoviesDict[parsedLine[0]]["crew"] = parsedLine[5]
-            top250MoviesDict[parsedLine[0]]["imdbRating"] = parsedLine[6]
-            top250MoviesDict[parsedLine[0]]["imdbRatingCount"] = parsedLine[7]
-
-    with open('textFiles/mostPopularMovies.txt', 'r') as dataFile:
-        for line in dataFile:
-            parsedLine = line.strip().split(" | ")
-            if len(parsedLine) == 9:
-                mostPopularMoviesDict[parsedLine[0]] = {}
-                mostPopularMoviesDict[parsedLine[0]]["rank"] = parsedLine[1]
-                mostPopularMoviesDict[parsedLine[0]]["rankUpDown"] = parsedLine[2]
-                mostPopularMoviesDict[parsedLine[0]]["title"] = parsedLine[3]
-                mostPopularMoviesDict[parsedLine[0]]["fullTitle"] = parsedLine[4]
-                mostPopularMoviesDict[parsedLine[0]]["year"] = parsedLine[5]
-                mostPopularMoviesDict[parsedLine[0]]["crew"] = parsedLine[6]
-                mostPopularMoviesDict[parsedLine[0]]["imdbRating"] = parsedLine[7]
-                mostPopularMoviesDict[parsedLine[0]]["imdbRatingCount"] = parsedLine[8]
-
-    with open("textFiles/ratingMoviesData.txt", 'r') as dataFile:
-        for line in dataFile:
-            parsedLine = line.strip().split(" | ")
-            if len(parsedLine) == 23:
-                ratingMoviesDict[parsedLine[0]] = {}
-                ratingMoviesDict[parsedLine[0]]["totalRating"] = parsedLine[1]
-                ratingMoviesDict[parsedLine[0]]["totalRatingVotes"] = parsedLine[2]
-                ratingMoviesDict[parsedLine[0]]["tenRatingPercent"] = parsedLine[3]
-                ratingMoviesDict[parsedLine[0]]["tenRatingVotes"] = parsedLine[4]
-                ratingMoviesDict[parsedLine[0]]["nineRatingPercent"] = parsedLine[5]
-                ratingMoviesDict[parsedLine[0]]["nineRatingVotes"] = parsedLine[6]
-                ratingMoviesDict[parsedLine[0]]["eightRatingPercent"] = parsedLine[7]
-                ratingMoviesDict[parsedLine[0]]["eightRatingVotes"] = parsedLine[8]
-                ratingMoviesDict[parsedLine[0]]["sevenRatingPercent"] = parsedLine[9]
-                ratingMoviesDict[parsedLine[0]]["sevenRatingVotes"] = parsedLine[10]
-                ratingMoviesDict[parsedLine[0]]["sixRatingPercent"] = parsedLine[11]
-                ratingMoviesDict[parsedLine[0]]["sixRatingVotes"] = parsedLine[12]
-                ratingMoviesDict[parsedLine[0]]["fiveRatingPercent"] = parsedLine[13]
-                ratingMoviesDict[parsedLine[0]]["fiveRatingVotes"] = parsedLine[14]
-                ratingMoviesDict[parsedLine[0]]["fourRatingPercent"] = parsedLine[15]
-                ratingMoviesDict[parsedLine[0]]["fourRatingVotes"] = parsedLine[16]
-                ratingMoviesDict[parsedLine[0]]["threeRatingPercent"] = parsedLine[17]
-                ratingMoviesDict[parsedLine[0]]["threeRatingVotes"] = parsedLine[18]
-                ratingMoviesDict[parsedLine[0]]["twoRatingPercent"] = parsedLine[19]
-                ratingMoviesDict[parsedLine[0]]["twoRatingVotes"] = parsedLine[20]
-                ratingMoviesDict[parsedLine[0]]["oneRatingPercent"] = parsedLine[21]
-                ratingMoviesDict[parsedLine[0]]["oneRatingVotes"] = parsedLine[22]
-
-    return top250TvDict, ratingTvDict, mostPopularTvDict, top250MoviesDict, mostPopularMoviesDict, ratingMoviesDict
-
-
 def fillTop250TvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Dict):
-    for key in top250Dict:
+    for key in top250Dict["items"]:
         insert_statement = '''INSERT OR IGNORE INTO top250TvData (id, rank, title, fullTitle, year, crew, imdbRating,
                             imdbRatingCount) VALUES (?,?,?,?,?,?,?,?)'''
 
@@ -384,8 +215,8 @@ def fillTop250TvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Dict)
         conn.commit()
 
 
-def fillRatingTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingDict):
-    for key in ratingDict:
+def fillRatingTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingData):
+    for key in ratingData:
         insert_statement = '''INSERT OR IGNORE INTO ratingTvData (id, totalRating, totalRatingVotes, \
         tenRatingPercent, tenRatingVotes, nineRatingPercent, nineRatingVotes, \
         eightRatingPercent, eightRatingVotes, sevenRatingPercent, sevenRatingVotes, \
@@ -394,17 +225,17 @@ def fillRatingTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingDict)
         twoRatingPercent, twoRatingVotes, oneRatingPercent, oneRatingVotes) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,
         ?,?,?,?,?,?,?,?,?)'''
 
-        data = key, ratingDict[key]["totalRating"], ratingDict[key]["totalRatingVotes"], \
-            ratingDict[key]["tenRatingPercent"], ratingDict[key]["tenRatingVotes"], \
-            ratingDict[key]["nineRatingPercent"], ratingDict[key]["nineRatingVotes"], \
-            ratingDict[key]["eightRatingPercent"], ratingDict[key]["eightRatingVotes"], \
-            ratingDict[key]["sevenRatingPercent"], ratingDict[key]["sevenRatingVotes"], \
-            ratingDict[key]["sixRatingPercent"], ratingDict[key]["sixRatingVotes"], \
-            ratingDict[key]["fiveRatingPercent"], ratingDict[key]["fiveRatingVotes"], \
-            ratingDict[key]["fourRatingPercent"], ratingDict[key]["fourRatingVotes"], \
-            ratingDict[key]["threeRatingPercent"], ratingDict[key]["threeRatingVotes"], \
-            ratingDict[key]["twoRatingPercent"], ratingDict[key]["twoRatingVotes"], \
-            ratingDict[key]["oneRatingPercent"], ratingDict[key]["oneRatingVotes"]
+        data = key, ratingData[key]["totalRating"], ratingData[key]["totalRatingVotes"], \
+            ratingData[key]["tenRatingPercent"], ratingData[key]["tenRatingVotes"], \
+            ratingData[key]["nineRatingPercent"], ratingData[key]["nineRatingVotes"], \
+            ratingData[key]["eightRatingPercent"], ratingData[key]["eightRatingVotes"], \
+            ratingData[key]["sevenRatingPercent"], ratingData[key]["sevenRatingVotes"], \
+            ratingData[key]["sixRatingPercent"], ratingData[key]["sixRatingVotes"], \
+            ratingData[key]["fiveRatingPercent"], ratingData[key]["fiveRatingVotes"], \
+            ratingData[key]["fourRatingPercent"], ratingData[key]["fourRatingVotes"], \
+            ratingData[key]["threeRatingPercent"], ratingData[key]["threeRatingVotes"], \
+            ratingData[key]["twoRatingPercent"], ratingData[key]["twoRatingVotes"], \
+            ratingData[key]["oneRatingPercent"], ratingData[key]["oneRatingVotes"]
         curs.execute(insert_statement, data)
         conn.commit()
 
@@ -447,8 +278,8 @@ def fillMostPopularMoviesData(conn: sqlite3.Connection, curs: sqlite3.Cursor, mo
         conn.commit()
 
 
-def fillRatingMoviesData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingDict):
-    for key in ratingDict:
+def fillRatingMoviesData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingData):
+    for key in ratingData:
         insert_statement = '''INSERT OR IGNORE INTO ratingMoviesData (id, totalRating, totalRatingVotes, \
         tenRatingPercent, tenRatingVotes, nineRatingPercent, nineRatingVotes, \
         eightRatingPercent, eightRatingVotes, sevenRatingPercent, sevenRatingVotes, \
@@ -457,17 +288,17 @@ def fillRatingMoviesData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingD
         twoRatingPercent, twoRatingVotes, oneRatingPercent, oneRatingVotes) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,
         ?,?,?,?,?,?,?,?,?)'''
 
-        data = key, ratingDict[key]["totalRating"], ratingDict[key]["totalRatingVotes"], \
-            ratingDict[key]["tenRatingPercent"], ratingDict[key]["tenRatingVotes"], \
-            ratingDict[key]["nineRatingPercent"], ratingDict[key]["nineRatingVotes"], \
-            ratingDict[key]["eightRatingPercent"], ratingDict[key]["eightRatingVotes"], \
-            ratingDict[key]["sevenRatingPercent"], ratingDict[key]["sevenRatingVotes"], \
-            ratingDict[key]["sixRatingPercent"], ratingDict[key]["sixRatingVotes"], \
-            ratingDict[key]["fiveRatingPercent"], ratingDict[key]["fiveRatingVotes"], \
-            ratingDict[key]["fourRatingPercent"], ratingDict[key]["fourRatingVotes"], \
-            ratingDict[key]["threeRatingPercent"], ratingDict[key]["threeRatingVotes"], \
-            ratingDict[key]["twoRatingPercent"], ratingDict[key]["twoRatingVotes"], \
-            ratingDict[key]["oneRatingPercent"], ratingDict[key]["oneRatingVotes"]
+        data = key, ratingData[key]["totalRating"], ratingData[key]["totalRatingVotes"], \
+            ratingData[key]["tenRatingPercent"], ratingData[key]["tenRatingVotes"], \
+            ratingData[key]["nineRatingPercent"], ratingData[key]["nineRatingVotes"], \
+            ratingData[key]["eightRatingPercent"], ratingData[key]["eightRatingVotes"], \
+            ratingData[key]["sevenRatingPercent"], ratingData[key]["sevenRatingVotes"], \
+            ratingData[key]["sixRatingPercent"], ratingData[key]["sixRatingVotes"], \
+            ratingData[key]["fiveRatingPercent"], ratingData[key]["fiveRatingVotes"], \
+            ratingData[key]["fourRatingPercent"], ratingData[key]["fourRatingVotes"], \
+            ratingData[key]["threeRatingPercent"], ratingData[key]["threeRatingVotes"], \
+            ratingData[key]["twoRatingPercent"], ratingData[key]["twoRatingVotes"], \
+            ratingData[key]["oneRatingPercent"], ratingData[key]["oneRatingVotes"]
         curs.execute(insert_statement, data)
         conn.commit()
 
