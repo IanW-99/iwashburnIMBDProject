@@ -80,7 +80,7 @@ def getMostPopularMovies():
 
 
 def writeToOutput(ratingData, top250TvData, mostPopularTvData, top250MoviesData, mostPopularMoviesData):
-    with open('ratingData.txt', 'w') as f:
+    with open('textFiles/ratingData.txt', 'w') as f:
         for i in ratingData:
             output_data = f'{i["imDbId"]} | {i["totalRating"]} | {i["totalRatingVotes"]}'
             if i["ratings"] is not None:
@@ -89,25 +89,25 @@ def writeToOutput(ratingData, top250TvData, mostPopularTvData, top250MoviesData,
                 output_data += '\n'
                 f.write(output_data)
 
-    with open('top250Tv.txt', 'w') as f:
+    with open('textFiles/top250Tv.txt', 'w') as f:
         for i in top250TvData['items']:
             output_data = f'{i["id"]} | {i["rank"]} | {i["title"]} | {i["fullTitle"]} | {i["year"]} | {i["crew"]} |  ' \
                           f'{i["imDbRating"]} | {i["imDbRatingCount"]} \n'
             f.write(output_data)
 
-    with open('mostPopularTv.txt', 'w') as f:
+    with open('textFiles/mostPopularTv.txt', 'w') as f:
         for i in mostPopularTvData['items']:
             output_data = f'{i["id"]} | {i["rank"]} | {i["rankUpDown"]} | {i["title"]} | {i["fullTitle"]} | ' \
                           f'{i["year"]} | {i["crew"]} | {i["imDbRating"]} | {i["imDbRatingCount"]} \n'
             f.write(output_data)
 
-    with open('top250Movies.txt', 'w') as f:
+    with open('textFiles/top250Movies.txt', 'w') as f:
         for i in top250MoviesData['items']:
             output_data = f'{i["id"]} | {i["rank"]} | {i["title"]} | {i["fullTitle"]} | {i["year"]} | {i["crew"]} |  ' \
                           f'{i["imDbRating"]} | {i["imDbRatingCount"]} \n'
             f.write(output_data)
 
-    with open('mostPopularMovies.txt', 'w') as f:
+    with open('textFiles/mostPopularMovies.txt', 'w') as f:
         for i in mostPopularMoviesData['items']:
             output_data = f'{i["id"]} | {i["rank"]} | {i["rankUpDown"]} | {i["title"]} | {i["fullTitle"]} | ' \
                           f'{i["year"]} | {i["crew"]} | {i["imDbRating"]} | {i["imDbRatingCount"]} \n'
@@ -197,7 +197,7 @@ def createDictionaries():
     top250MoviesDict = {}
     mostPopularMoviesDict = {}
 
-    with open("top250Tv.txt", 'r') as dataFile:
+    with open("textFiles/top250Tv.txt", 'r') as dataFile:
         for line in dataFile:
             parsedLine = line.strip().split(" | ")
             top250TvDict[parsedLine[0]] = {}
@@ -209,7 +209,7 @@ def createDictionaries():
             top250TvDict[parsedLine[0]]["imdbRating"] = parsedLine[6]
             top250TvDict[parsedLine[0]]["imdbRatingCount"] = parsedLine[7]
 
-    with open("ratingData.txt", 'r') as dataFile:
+    with open("textFiles/ratingData.txt", 'r') as dataFile:
         for line in dataFile:
             parsedLine = line.strip().split(" | ")
             if len(parsedLine) == 23:
@@ -237,7 +237,7 @@ def createDictionaries():
                 ratingDict[parsedLine[0]]["oneRatingPercent"] = parsedLine[21]
                 ratingDict[parsedLine[0]]["oneRatingVotes"] = parsedLine[22]
 
-    with open('mostPopularTv.txt', 'r') as dataFile:
+    with open('textFiles/mostPopularTv.txt', 'r') as dataFile:
         for line in dataFile:
             parsedLine = line.strip().split(" | ")
             if len(parsedLine) == 9:
@@ -251,7 +251,7 @@ def createDictionaries():
                 mostPopularTvDict[parsedLine[0]]["imdbRating"] = parsedLine[7]
                 mostPopularTvDict[parsedLine[0]]["imdbRatingCount"] = parsedLine[8]
 
-    with open("top250Movies.txt", 'r') as dataFile:
+    with open("textFiles/top250Movies.txt", 'r') as dataFile:
         for line in dataFile:
             parsedLine = line.strip().split(" | ")
             top250MoviesDict[parsedLine[0]] = {}
@@ -263,7 +263,7 @@ def createDictionaries():
             top250MoviesDict[parsedLine[0]]["imdbRating"] = parsedLine[6]
             top250MoviesDict[parsedLine[0]]["imdbRatingCount"] = parsedLine[7]
 
-    with open('mostPopularMovies.txt', 'r') as dataFile:
+    with open('textFiles/mostPopularMovies.txt', 'r') as dataFile:
         for line in dataFile:
             parsedLine = line.strip().split(" | ")
             if len(parsedLine) == 9:
