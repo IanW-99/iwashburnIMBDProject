@@ -217,22 +217,23 @@ def fillTop250TvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Tv):
 def fillRatingTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingData):
     for item in ratingData:
         ratings = item["ratings"]
-        insert_statement = '''INSERT OR IGNORE INTO ratingTvData (id, totalRating, totalRatingVotes, \
-        tenRatingPercent, tenRatingVotes, nineRatingPercent, nineRatingVotes, \
-        eightRatingPercent, eightRatingVotes, sevenRatingPercent, sevenRatingVotes, \
-        sixRatingPercent, sixRatingVotes, fiveRatingPercent, fiveRatingVotes, \
-        fourRatingPercent, fourRatingVotes, threeRatingPercent, threeRatingVotes, \
-        twoRatingPercent, twoRatingVotes, oneRatingPercent, oneRatingVotes) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,
-        ?,?,?,?,?,?,?,?,?)'''
+        if ratings is not None and len(ratings) == 10:
+            insert_statement = '''INSERT OR IGNORE INTO ratingTvData (id, totalRating, totalRatingVotes, \
+            tenRatingPercent, tenRatingVotes, nineRatingPercent, nineRatingVotes, \
+            eightRatingPercent, eightRatingVotes, sevenRatingPercent, sevenRatingVotes, \
+            sixRatingPercent, sixRatingVotes, fiveRatingPercent, fiveRatingVotes, \
+            fourRatingPercent, fourRatingVotes, threeRatingPercent, threeRatingVotes, \
+            twoRatingPercent, twoRatingVotes, oneRatingPercent, oneRatingVotes) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,
+            ?,?,?,?,?,?,?,?,?)'''
 
-        data = item["imDbId"], item["totalRating"], item["totalRatingVotes"], ratings[0]["percent"], \
-            ratings[0]["votes"], ratings[1]["percent"], ratings[1]["votes"], ratings[2]["percent"], \
-            ratings[2]["votes"], ratings[3]["percent"], ratings[3]["votes"], ratings[4]["percent"],\
-            ratings[4]["votes"], ratings[5]["percent"], ratings[5]["votes"], ratings[6]["percent"],\
-            ratings[6]["votes"], ratings[7]["percent"], ratings[7]["votes"], ratings[8]["percent"],\
-            ratings[8]["votes"], ratings[9]["percent"], ratings[9]["votes"]
-        curs.execute(insert_statement, data)
-        conn.commit()
+            data = item["imDbId"], item["totalRating"], item["totalRatingVotes"], ratings[0]["percent"], \
+                ratings[0]["votes"], ratings[1]["percent"], ratings[1]["votes"], ratings[2]["percent"], \
+                ratings[2]["votes"], ratings[3]["percent"], ratings[3]["votes"], ratings[4]["percent"],\
+                ratings[4]["votes"], ratings[5]["percent"], ratings[5]["votes"], ratings[6]["percent"],\
+                ratings[6]["votes"], ratings[7]["percent"], ratings[7]["votes"], ratings[8]["percent"],\
+                ratings[8]["votes"], ratings[9]["percent"], ratings[9]["votes"]
+            curs.execute(insert_statement, data)
+            conn.commit()
 
 
 def fillMostPopularTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, most_popular_tv_data):

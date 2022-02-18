@@ -7,8 +7,9 @@ def test_getTop250Tv():
 
 
 def test_dbCreation_and_dbFilling():
-    testHeadlineDict = {'t0000000': {'rank': 1, 'title': 'test', 'fullTitle': 'test_show', 'year': '2022',
-                                     'crew': 'Ian Washburn, John Santore', 'imdbRating': '100', 'imdbRatingCount': '1'}}
+    testHeadlineDict = {"items": [{'id': 't0000000', 'rank': 1, 'title': 'test', 'fullTitle': 'test_show',
+                        'year': '2022', 'crew': 'Ian Washburn, John Santore', 'imDbRating': '100',
+                                   'imDbRatingCount': '1'}], "error msg": 'none'}
     test_databaseName = 'test_db.db'
     conn, curs = main.dbConnect(test_databaseName)
     main.createDataBase(curs)
