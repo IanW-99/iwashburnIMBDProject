@@ -203,8 +203,8 @@ def createDataBase(curs: sqlite3.Cursor):
                             PRIMARY KEY("id"));''')
 
 
-def fillTop250TvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Dict):
-    for item in top250Dict["items"]:
+def fillTop250TvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Tv):
+    for item in top250Tv["items"]:
         insert_statement = '''INSERT OR IGNORE INTO top250TvData (id, rank, title, fullTitle, year, crew, imdbRating,
                             imdbRatingCount) VALUES (?,?,?,?,?,?,?,?)'''
 

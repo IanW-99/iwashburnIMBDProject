@@ -19,10 +19,10 @@ def test_dbCreation_and_dbFilling():
 
 
 def test_fillTop250TvData():
-    test_data = {
-        "items": [{"id": "tt5491994", "rank": "1", "title": "Planet Earth II", "fullTitle": "Planet Earth II (2016)",
-                   "year": "2016", "crew": "David Attenborough, Gordon Buchanan", "imdbRating": "9.5",
-                   "imdbRatingCount": "110384"}], "error message": "none"}
+    test_data = {"items": [{"id": "tt5491994", "rank": "1", "title": "Planet Earth II",
+                            "fullTitle": "Planet Earth II (2016)", "year": "2016",
+                            "crew": "David Attenborough, Gordon Buchanan", "imDbRating": "9.5",
+                            "imDbRatingCount": "110384"}], "error message": "none"}
     conn, curs = main.dbConnect('test_db.db')
     main.fillTop250TvData(conn, curs, test_data)
 
@@ -30,8 +30,8 @@ def test_fillTop250TvData():
 def test_fillTop250MoviesData():
     test_data = {
         "items": [{"id": "tt5491994", "rank": "1", "title": "Planet Earth II", "fullTitle": "Planet Earth II (2016)",
-                   "year": "2016", "crew": "David Attenborough, Gordon Buchanan", "imdbRating": "9.5",
-                   "imdbRatingCount": "110384"}], "error message": "none"}
+                   "year": "2016", "crew": "David Attenborough, Gordon Buchanan", "imDbRating": "9.5",
+                   "imDbRatingCount": "110384"}], "error message": "none"}
     conn, curs = main.dbConnect('test_db.db')
     main.createDataBase(curs)
     main.fillTop250MovieData(conn, curs, test_data)
