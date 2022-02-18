@@ -78,9 +78,9 @@ def getMostPopularMovies():
 
 
 def getMovieIDs(mostPopularMoviesDict):
-    rank1 = ('randomId', -sys.maxsize-1)
-    rank2 = ('randomId2', -sys.maxsize-1)
-    rank3 = ('randomId3', -sys.maxsize-1)
+    rank1 = ('randomId', -sys.maxsize - 1)
+    rank2 = ('randomId2', -sys.maxsize - 1)
+    rank3 = ('randomId3', -sys.maxsize - 1)
     lowestRank = ('randomId4', sys.maxsize)
 
     for key in mostPopularMoviesDict["items"]:
@@ -204,19 +204,19 @@ def createDataBase(curs: sqlite3.Cursor):
 
 
 def fillTop250TvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Dict):
-    for key in top250Dict["items"]:
+    for item in top250Dict["items"]:
         insert_statement = '''INSERT OR IGNORE INTO top250TvData (id, rank, title, fullTitle, year, crew, imdbRating,
                             imdbRatingCount) VALUES (?,?,?,?,?,?,?,?)'''
 
-        data = key, top250Dict[key]["rank"], top250Dict[key]["title"], top250Dict[key]["fullTitle"], \
-            top250Dict[key]["year"], top250Dict[key]["crew"], \
-            top250Dict[key]["imdbRating"], top250Dict[key]["imdbRatingCount"]
+        data = item["id"], item["rank"], item["title"], item["fullTitle"], item["year"], item["crew"],\
+            item["imDbRating"], item["imDbRatingCount"]
         curs.execute(insert_statement, data)
         conn.commit()
 
 
 def fillRatingTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingData):
-    for key in ratingData:
+    for item in ratingData:
+        ratings = item["ratings"]
         insert_statement = '''INSERT OR IGNORE INTO ratingTvData (id, totalRating, totalRatingVotes, \
         tenRatingPercent, tenRatingVotes, nineRatingPercent, nineRatingVotes, \
         eightRatingPercent, eightRatingVotes, sevenRatingPercent, sevenRatingVotes, \
@@ -225,82 +225,69 @@ def fillRatingTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingData)
         twoRatingPercent, twoRatingVotes, oneRatingPercent, oneRatingVotes) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,
         ?,?,?,?,?,?,?,?,?)'''
 
-        data = key, ratingData[key]["totalRating"], ratingData[key]["totalRatingVotes"], \
-            ratingData[key]["tenRatingPercent"], ratingData[key]["tenRatingVotes"], \
-            ratingData[key]["nineRatingPercent"], ratingData[key]["nineRatingVotes"], \
-            ratingData[key]["eightRatingPercent"], ratingData[key]["eightRatingVotes"], \
-            ratingData[key]["sevenRatingPercent"], ratingData[key]["sevenRatingVotes"], \
-            ratingData[key]["sixRatingPercent"], ratingData[key]["sixRatingVotes"], \
-            ratingData[key]["fiveRatingPercent"], ratingData[key]["fiveRatingVotes"], \
-            ratingData[key]["fourRatingPercent"], ratingData[key]["fourRatingVotes"], \
-            ratingData[key]["threeRatingPercent"], ratingData[key]["threeRatingVotes"], \
-            ratingData[key]["twoRatingPercent"], ratingData[key]["twoRatingVotes"], \
-            ratingData[key]["oneRatingPercent"], ratingData[key]["oneRatingVotes"]
+        data = item["imDbId"], item["totalRating"], item["totalRatingVotes"], ratings[0]["percent"], \
+            ratings[0]["votes"], ratings[1]["percent"], ratings[1]["votes"], ratings[2]["percent"], \
+            ratings[2]["votes"], ratings[3]["percent"], ratings[3]["votes"], ratings[4]["percent"],\
+            ratings[4]["votes"], ratings[5]["percent"], ratings[5]["votes"], ratings[6]["percent"],\
+            ratings[6]["votes"], ratings[7]["percent"], ratings[7]["votes"], ratings[8]["percent"],\
+            ratings[8]["votes"], ratings[9]["percent"], ratings[9]["votes"]
         curs.execute(insert_statement, data)
         conn.commit()
 
 
-def fillMostPopularTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, mostPopularTvDict):
-    for key in mostPopularTvDict:
+def fillMostPopularTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, most_popular_tv_data):
+    for item in most_popular_tv_data["items"]:
         insert_statement = '''INSERT OR IGNORE INTO topTvData(id, rank, rankUpDown, title, fullTitle, year, crew,
          imdbRating, imdbRatingCount) VALUES (?,?,?,?,?,?,?,?,?)'''
 
-        data = key, mostPopularTvDict[key]["rank"], mostPopularTvDict[key]["rankUpDown"], \
-            mostPopularTvDict[key]["title"], mostPopularTvDict[key]["fullTitle"], mostPopularTvDict[key]["year"], \
-            mostPopularTvDict[key]["crew"], mostPopularTvDict[key]["imdbRating"], \
-            mostPopularTvDict[key]["imdbRatingCount"]
+        data = item["id"], item["rank"], item["rankUpDown"], item["title"], item["fullTitle"], \
+            item["year"], item["crew"], item["imDbRating"], item["imDbRatingCount"]
         curs.execute(insert_statement, data)
         conn.commit()
 
 
-def fillTop250MovieData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250MoviesDict):
-    for key in top250MoviesDict:
+def fillTop250MovieData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Movies):
+    for item in top250Movies["items"]:
         insert_statement = '''INSERT OR IGNORE INTO top250MoviesData (id, rank, title, fullTitle, year, crew,
-                            imdbRating, imdbRatingCount) VALUES (?,?,?,?,?,?,?,?)'''
+            imdbRating,imdbRatingCount) VALUES (?,?,?,?,?,?,?,?)'''
 
-        data = key, top250MoviesDict[key]["rank"], top250MoviesDict[key]["title"], top250MoviesDict[key]["fullTitle"], \
-            top250MoviesDict[key]["year"], top250MoviesDict[key]["crew"], \
-            top250MoviesDict[key]["imdbRating"], top250MoviesDict[key]["imdbRatingCount"]
+        data = item["id"], item["rank"], item["title"], item["fullTitle"], \
+            item["year"], item["crew"], item["imDbRating"], item["imDbRatingCount"]
         curs.execute(insert_statement, data)
         conn.commit()
 
 
-def fillMostPopularMoviesData(conn: sqlite3.Connection, curs: sqlite3.Cursor, mostPopularMoviesDict):
-    for key in mostPopularMoviesDict:
+def fillMostPopularMoviesData(conn: sqlite3.Connection, curs: sqlite3.Cursor, mostPopularMovies):
+    for item in mostPopularMovies["items"]:
         insert_statement = '''INSERT OR IGNORE INTO topMoviesData(id, rank, rankUpDown, title, fullTitle, year, crew,
          imdbRating, imdbRatingCount) VALUES (?,?,?,?,?,?,?,?,?)'''
 
-        data = key, mostPopularMoviesDict[key]["rank"], mostPopularMoviesDict[key]["rankUpDown"], \
-            mostPopularMoviesDict[key]["title"], mostPopularMoviesDict[key]["fullTitle"], \
-            mostPopularMoviesDict[key]["year"], mostPopularMoviesDict[key]["crew"], \
-            mostPopularMoviesDict[key]["imdbRating"], mostPopularMoviesDict[key]["imdbRatingCount"]
+        data = item["id"], item["rank"], item["rankUpDown"], item["title"], item["fullTitle"], \
+            item["year"], item["crew"], item["imDbRating"], item["imDbRatingCount"]
         curs.execute(insert_statement, data)
         conn.commit()
 
 
 def fillRatingMoviesData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingData):
-    for key in ratingData:
-        insert_statement = '''INSERT OR IGNORE INTO ratingMoviesData (id, totalRating, totalRatingVotes, \
-        tenRatingPercent, tenRatingVotes, nineRatingPercent, nineRatingVotes, \
-        eightRatingPercent, eightRatingVotes, sevenRatingPercent, sevenRatingVotes, \
-        sixRatingPercent, sixRatingVotes, fiveRatingPercent, fiveRatingVotes, \
-        fourRatingPercent, fourRatingVotes, threeRatingPercent, threeRatingVotes, \
-        twoRatingPercent, twoRatingVotes, oneRatingPercent, oneRatingVotes) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,
-        ?,?,?,?,?,?,?,?,?)'''
+    for item in ratingData:
+        ratings = item["ratings"]
+        if ratings is not None and len(ratings) == 10:
+            insert_statement = '''INSERT OR IGNORE INTO ratingMoviesData (id, totalRating, totalRatingVotes, \
+            tenRatingPercent, tenRatingVotes, nineRatingPercent, nineRatingVotes, \
+            eightRatingPercent, eightRatingVotes, sevenRatingPercent, sevenRatingVotes, \
+            sixRatingPercent, sixRatingVotes, fiveRatingPercent, fiveRatingVotes, \
+            fourRatingPercent, fourRatingVotes, threeRatingPercent, threeRatingVotes, \
+            twoRatingPercent, twoRatingVotes, oneRatingPercent, oneRatingVotes) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,
+            ?,?,?,?,?,?,?,?,?)'''
 
-        data = key, ratingData[key]["totalRating"], ratingData[key]["totalRatingVotes"], \
-            ratingData[key]["tenRatingPercent"], ratingData[key]["tenRatingVotes"], \
-            ratingData[key]["nineRatingPercent"], ratingData[key]["nineRatingVotes"], \
-            ratingData[key]["eightRatingPercent"], ratingData[key]["eightRatingVotes"], \
-            ratingData[key]["sevenRatingPercent"], ratingData[key]["sevenRatingVotes"], \
-            ratingData[key]["sixRatingPercent"], ratingData[key]["sixRatingVotes"], \
-            ratingData[key]["fiveRatingPercent"], ratingData[key]["fiveRatingVotes"], \
-            ratingData[key]["fourRatingPercent"], ratingData[key]["fourRatingVotes"], \
-            ratingData[key]["threeRatingPercent"], ratingData[key]["threeRatingVotes"], \
-            ratingData[key]["twoRatingPercent"], ratingData[key]["twoRatingVotes"], \
-            ratingData[key]["oneRatingPercent"], ratingData[key]["oneRatingVotes"]
-        curs.execute(insert_statement, data)
-        conn.commit()
+            data = item["imDbId"], item["totalRating"], item["totalRatingVotes"], ratings[0]["percent"], \
+                ratings[0]["votes"], ratings[1]["percent"], ratings[1]["votes"], ratings[2]["percent"], \
+                ratings[2]["votes"], ratings[3]["percent"], ratings[3]["votes"], ratings[4]["percent"], \
+                ratings[4]["votes"], ratings[5]["percent"], ratings[5]["votes"], ratings[6]["percent"], \
+                ratings[6]["votes"], ratings[7]["percent"], ratings[7]["votes"], ratings[8]["percent"], \
+                ratings[8]["votes"], ratings[9]["percent"], ratings[9]["votes"]
+            curs.execute(insert_statement, data)
+            conn.commit()
 
 
 main()
