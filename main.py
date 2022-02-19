@@ -5,25 +5,25 @@ import sqlite3
 
 
 def main():
-    top250TvData = getTop250Tv()
-    showIDs = getShowID(top250TvData)
-    ratingTvData = getRatings(showIDs)
-    mostPopularTvData = getMostPopularTv()
-    top250MoviesData = getTop250Movies()
-    mostPopularMoviesData = getMostPopularMovies()
-    mostChangedMovies = getMovieIDs(mostPopularMoviesData)
-    ratingMoviesData = getRatings(mostChangedMovies)
-    conn, curs = dbConnect('imDataBase.db')
-    createDataBase(curs)
-    fillTop250TvData(conn, curs, top250TvData)
-    fillRatingTvData(conn, curs, ratingTvData)
-    fillMostPopularTvData(conn, curs, mostPopularTvData)
-    fillTop250MovieData(conn, curs, top250MoviesData)
-    fillMostPopularMoviesData(conn, curs, mostPopularMoviesData)
-    fillRatingMoviesData(conn, curs, ratingMoviesData)
+    top250TvData = get_top_250_tv()
+    showIDs = get_show_ID(top250TvData)
+    ratingTvData = get_ratings(showIDs)
+    mostPopularTvData = get_most_popular_tv()
+    top250MoviesData = get_top_250_movies()
+    mostPopularMoviesData = get_most_popular_movies()
+    mostChangedMovies = get_movie_IDs(mostPopularMoviesData)
+    ratingMoviesData = get_ratings(mostChangedMovies)
+    conn, curs = db_connect('imDataBase.db')
+    create_dataBase_tables(curs)
+    fill_top_250_tv_table(conn, curs, top250TvData)
+    fill_rating_tv_table(conn, curs, ratingTvData)
+    fill_most_popular_tv_table(conn, curs, mostPopularTvData)
+    fill_top_250_movie_table(conn, curs, top250MoviesData)
+    fill_most_popular_movies_table(conn, curs, mostPopularMoviesData)
+    fill_rating_movies_table(conn, curs, ratingMoviesData)
 
 
-def getTop250Tv():
+def get_top_250_tv():
     response = requests.get(f"https://imdb-api.com/en/API/Top250TVs/{secrets.imdbKey}")
     try:
         json_data = response.json()
@@ -32,7 +32,7 @@ def getTop250Tv():
         print('No Response from API')
 
 
-def getShowID(top250Data):
+def get_show_ID(top250Data):
     showIDs = []
     for i in top250Data["items"]:
         if int(i["rank"]) == 1 or int(i["rank"]) == 50 or int(i["rank"]) == 100 or int(i["rank"]) == 200:
@@ -41,7 +41,7 @@ def getShowID(top250Data):
     return showIDs
 
 
-def getRatings(showIDs):
+def get_ratings(showIDs):
     user_ratings = []
     for showID in showIDs:
         response = requests.get(f"https://imdb-api.com/en/API/UserRatings/{secrets.imdbKey}/{showID}")
@@ -50,7 +50,7 @@ def getRatings(showIDs):
     return user_ratings
 
 
-def getMostPopularTv():
+def get_most_popular_tv():
     response = requests.get(f"https://imdb-api.com/en/API/MostPopularTVs/{secrets.imdbKey}")
     try:
         json_data = response.json()
@@ -59,7 +59,7 @@ def getMostPopularTv():
         print('No Response from API')
 
 
-def getTop250Movies():
+def get_top_250_movies():
     response = requests.get(f"https://imdb-api.com/en/API/Top250Movies/{secrets.imdbKey}")
     try:
         json_data = response.json()
@@ -68,7 +68,7 @@ def getTop250Movies():
         print('No Response from API')
 
 
-def getMostPopularMovies():
+def get_most_popular_movies():
     response = requests.get(f"https://imdb-api.com/en/API/MostPopularMovies/{secrets.imdbKey}")
     try:
         json_data = response.json()
@@ -77,13 +77,13 @@ def getMostPopularMovies():
         print('No Response from API')
 
 
-def getMovieIDs(mostPopularMoviesDict):
+def get_movie_IDs(mostPopularMovies):
     rank1 = ('randomId', -sys.maxsize - 1)
     rank2 = ('randomId2', -sys.maxsize - 1)
     rank3 = ('randomId3', -sys.maxsize - 1)
     lowestRank = ('randomId4', sys.maxsize)
 
-    for key in mostPopularMoviesDict["items"]:
+    for key in mostPopularMovies["items"]:
         rankChange = int(key["rankUpDown"].replace(',', ''))
         if rankChange > rank3[1]:
             if rankChange > rank2[1]:
@@ -102,13 +102,13 @@ def getMovieIDs(mostPopularMoviesDict):
     return movieIds
 
 
-def dbConnect(filename):
+def db_connect(filename):
     conn = sqlite3.connect(filename)
     curs = conn.cursor()
     return conn, curs
 
 
-def createDataBase(curs: sqlite3.Cursor):
+def create_dataBase_tables(curs: sqlite3.Cursor):
     curs.execute('''CREATE TABLE IF NOT EXISTS "top250TvData" (
                         "id"	    TEXT,
                         "rank"      TEXT,
@@ -203,7 +203,7 @@ def createDataBase(curs: sqlite3.Cursor):
                             PRIMARY KEY("id"));''')
 
 
-def fillTop250TvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Tv):
+def fill_top_250_tv_table(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Tv):
     for item in top250Tv["items"]:
         insert_statement = '''INSERT OR IGNORE INTO top250TvData (id, rank, title, fullTitle, year, crew, imdbRating,
                             imdbRatingCount) VALUES (?,?,?,?,?,?,?,?)'''
@@ -214,7 +214,7 @@ def fillTop250TvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Tv):
         conn.commit()
 
 
-def fillRatingTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingData):
+def fill_rating_tv_table(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingData):
     for item in ratingData:
         ratings = item["ratings"]
         if ratings is not None and len(ratings) == 10:
@@ -236,7 +236,7 @@ def fillRatingTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingData)
             conn.commit()
 
 
-def fillMostPopularTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, most_popular_tv_data):
+def fill_most_popular_tv_table(conn: sqlite3.Connection, curs: sqlite3.Cursor, most_popular_tv_data):
     for item in most_popular_tv_data["items"]:
         insert_statement = '''INSERT OR IGNORE INTO topTvData(id, rank, rankUpDown, title, fullTitle, year, crew,
          imdbRating, imdbRatingCount) VALUES (?,?,?,?,?,?,?,?,?)'''
@@ -247,7 +247,7 @@ def fillMostPopularTvData(conn: sqlite3.Connection, curs: sqlite3.Cursor, most_p
         conn.commit()
 
 
-def fillTop250MovieData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Movies):
+def fill_top_250_movie_table(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Movies):
     for item in top250Movies["items"]:
         insert_statement = '''INSERT OR IGNORE INTO top250MoviesData (id, rank, title, fullTitle, year, crew,
             imdbRating,imdbRatingCount) VALUES (?,?,?,?,?,?,?,?)'''
@@ -258,7 +258,7 @@ def fillTop250MovieData(conn: sqlite3.Connection, curs: sqlite3.Cursor, top250Mo
         conn.commit()
 
 
-def fillMostPopularMoviesData(conn: sqlite3.Connection, curs: sqlite3.Cursor, mostPopularMovies):
+def fill_most_popular_movies_table(conn: sqlite3.Connection, curs: sqlite3.Cursor, mostPopularMovies):
     for item in mostPopularMovies["items"]:
         insert_statement = '''INSERT OR IGNORE INTO topMoviesData(id, rank, rankUpDown, title, fullTitle, year, crew,
          imdbRating, imdbRatingCount) VALUES (?,?,?,?,?,?,?,?,?)'''
@@ -269,7 +269,7 @@ def fillMostPopularMoviesData(conn: sqlite3.Connection, curs: sqlite3.Cursor, mo
         conn.commit()
 
 
-def fillRatingMoviesData(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingData):
+def fill_rating_movies_table(conn: sqlite3.Connection, curs: sqlite3.Cursor, ratingData):
     for item in ratingData:
         ratings = item["ratings"]
         if ratings is not None and len(ratings) == 10:
