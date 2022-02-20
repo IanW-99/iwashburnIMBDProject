@@ -84,20 +84,23 @@ def get_movie_IDs(mostPopularMovies):
     lowestRank = ('randomId4', sys.maxsize)
 
     for key in mostPopularMovies["items"]:
-        rankChange = int(key["rankUpDown"].replace(',', ''))
-        if rankChange > rank3[1]:
-            if rankChange > rank2[1]:
-                if rankChange > rank1[1]:
-                    rank3 = rank2
-                    rank2 = rank1
-                    rank1 = (key["id"], rankChange)
+        try:
+            rankChange = int(key["rankUpDown"].replace(',', ''))
+            if rankChange > rank3[1]:
+                if rankChange > rank2[1]:
+                    if rankChange > rank1[1]:
+                        rank3 = rank2
+                        rank2 = rank1
+                        rank1 = (key["id"], rankChange)
+                    else:
+                        rank3 = rank2
+                        rank2 = (key["id"], rankChange)
                 else:
-                    rank3 = rank2
-                    rank2 = (key["id"], rankChange)
-            else:
-                rank3 = (key["id"], rankChange)
-        elif rankChange < lowestRank[1]:
-            lowestRank = (key["id"], rankChange)
+                    rank3 = (key["id"], rankChange)
+            elif rankChange < lowestRank[1]:
+                lowestRank = (key["id"], rankChange)
+        except ValueError:
+            pass
     movieIds = [rank1[0], rank2[0], rank3[0], lowestRank[0]]
     return movieIds
 
@@ -200,6 +203,9 @@ def create_dataBase_tables(curs: sqlite3.Cursor):
                             "twoRatingVotes"	INTEGER,
                             "oneRatingPercent"	NUMERIC,
                             "oneRatingVotes"	INTEGER,
+                            CONSTRAINT topMoviesData
+                                FOREIGN KEY (id)
+                                REFERENCES topMoviesData(id)
                             PRIMARY KEY("id"));''')
 
 
