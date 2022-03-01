@@ -1,6 +1,6 @@
 import sqlite3
 
-from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton
+from PyQt5.QtWidgets import QMainWindow, QPushButton
 import api_interaction
 
 
@@ -51,4 +51,3 @@ class DataVisualization(QMainWindow):
         self.setWindowTitle('iwashburnIMDBProject/DataVisualization')
         self.setGeometry(400, 200, 1000, 750)
         self.setFixedSize(1000, 750)
-

@@ -1,6 +1,6 @@
 import sys
 import sqlite3
-
+from PyQt5.QtWidgets import QApplication
 import GUI
 
 
@@ -8,7 +8,7 @@ def main():
     conn, curs = db_connect('imDataBase.db')
     create_dataBase_tables(curs)
 
-    app = GUI.QApplication(sys.argv)
+    app = QApplication(sys.argv)
     window = GUI.MainWindow(conn, curs)
     window.show()
     sys.exit(app.exec_())
