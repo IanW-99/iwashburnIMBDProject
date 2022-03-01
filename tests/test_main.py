@@ -1,8 +1,9 @@
 import main
+import api_interaction
 
 
 def test_getTop250Tv():
-    test_data = main.get_top_250_tv()
+    test_data = api_interaction.get_top_250_tv()
     assert len(test_data["items"]) == 250
 
 
@@ -13,7 +14,7 @@ def test_dbCreation_and_dbFilling():
     test_databaseName = 'test_db.db'
     conn, curs = main.db_connect(test_databaseName)
     main.create_dataBase_tables(curs)
-    main.fill_top_250_tv_table(conn, curs, testHeadlineDict)
+    api_interaction.fill_top_250_tv_table(conn, curs, testHeadlineDict)
     curs.execute('''SELECT title FROM top250TvData WHERE id = ?''', ('t0000000',))
     title = curs.fetchone()[0]
     assert title == 'test'
@@ -25,7 +26,7 @@ def test_fillTop250TvData():
                             "crew": "David Attenborough, Gordon Buchanan", "imDbRating": "9.5",
                             "imDbRatingCount": "110384"}], "error message": "none"}
     conn, curs = main.db_connect('test_db.db')
-    main.fill_top_250_tv_table(conn, curs, test_data)
+    api_interaction.fill_top_250_tv_table(conn, curs, test_data)
 
 
 def test_fillTop250MoviesData():
@@ -35,7 +36,7 @@ def test_fillTop250MoviesData():
                    "imDbRatingCount": "110384"}], "error message": "none"}
     conn, curs = main.db_connect('test_db.db')
     main.create_dataBase_tables(curs)
-    main.fill_top_250_movie_table(conn, curs, test_data)
+    api_interaction.fill_top_250_movie_table(conn, curs, test_data)
 
 
 def test_get_movie_IDs():
@@ -45,7 +46,7 @@ def test_get_movie_IDs():
                            {"id": 'badTest', "rankUpDown": 'non-int'}],
                  "error msg": "none"}
     # should return ['test1', 'test3', 'test6', 'test4']
-    ids = main.get_movie_IDs(test_data)
+    ids = api_interaction.get_movie_IDs(test_data)
     assert ids[0] == 'test1' and ids[1] == 'test3' and ids[2] == 'test6' and ids[3] == 'test4'
 
 
@@ -56,7 +57,7 @@ def test_fill_top_movie_table():
                    "imDbRatingCount": "110384"}], "error message": "none"}
     conn, curs = main.db_connect('test_db.db')
     main.create_dataBase_tables(curs)
-    main.fill_most_popular_movies_table(conn, curs, test_data)
+    api_interaction.fill_most_popular_movies_table(conn, curs, test_data)
     curs.execute('''SELECT title FROM topMoviesData WHERE id = ?''', ('tt000',))
     title = curs.fetchone()[0]
     assert title == 'Test Movie'
