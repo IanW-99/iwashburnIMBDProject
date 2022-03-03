@@ -36,7 +36,14 @@ class MainWindow(QMainWindow):
         self.hide()
         self.data_visualization.show()
 
-    def update_data(self):
+    def update_data(self):  # need to drop all old data first
+        self.curs.execute('''DELETE FROM ratingMoviesData;''')
+        self.curs.execute('''DELETE FROM ratingTvData;''')
+        self.curs.execute('''DELETE FROM top250MoviesData;''')
+        self.curs.execute('''DELETE FROM top250TvData;''')
+        self.curs.execute('''DELETE FROM topMoviesData;''')
+        self.curs.execute('''DELETE FROM topTvData;''')
+        self.conn.commit()
         api_interaction.data_grab_and_store(self.conn, self.curs)
 
 
@@ -91,10 +98,14 @@ class TableWindow(QMainWindow):
         self.setFixedSize(500, 600)
 
         self.sort_by_rank = QPushButton('Sort by Rank')
-        self.sort_by_rank.clicked.connect(table.sort_by_rank)
+        self.sort_by_rank.clicked.connect(self.table.sort_by_rank)
+
+        self.sort_by_rank_change = QPushButton('Sort by Rank Change')
+        self.sort_by_rank_change.clicked.connect(self.table.sort_by_rank_change)
 
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.sort_by_rank)
+        self.layout.addWidget(self.sort_by_rank_change)
         self.layout.addWidget(self.table)
 
         self.widget = QWidget()
@@ -107,7 +118,7 @@ class TvTable(QTableWidget):
         super().__init__()
         self.tv_data = tv_data
         self.title = 'Most Popular Tv Table'
-        self.column_labels = ['Rank', 'Rank Change', 'Show Title', 'Show ID']
+        self.column_labels = ['Rank', 'Rank Change', 'Show Title', 'ID']
 
         self.width = 500
         self.height = 600
@@ -130,18 +141,20 @@ class TvTable(QTableWidget):
         self.verticalHeader().setVisible(False)
         self.setSortingEnabled(False)
         self.fill_table(self.tv_data.keys())
-        self.move(0, 0)
 
     def fill_table(self, keys):
         i = 0
         for key in keys:
             self.setItem(i, 0, QTableWidgetItem(self.tv_data[key]['rank']))
-            print('got here')
             self.setItem(i, 1, QTableWidgetItem(self.tv_data[key]['rankUpDown']))
             self.setItem(i, 2, QTableWidgetItem(self.tv_data[key]['title']))
             self.setItem(i, 3, QTableWidgetItem(key))
             i += 1
 
     def sort_by_rank(self):
-        sorted_keys = sorted(self.tv_data, key=lambda x: (self.tv_data[x]['rank']))
+        sorted_keys = sorted(self.tv_data, key=lambda x: (int(self.tv_data[x]['rank'])))
+        self.fill_table(sorted_keys)
+
+    def sort_by_rank_change(self):
+        sorted_keys = sorted(self.tv_data, key=lambda x: (int(self.tv_data[x]['rankUpDown'])), reverse=True)
         self.fill_table(sorted_keys)
