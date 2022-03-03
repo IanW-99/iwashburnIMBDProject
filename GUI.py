@@ -80,8 +80,11 @@ class DataVisualization(QMainWindow):
         most_popular_tv_data = {}
         select_statement = """SELECT id, rank, rankUpDown, title FROM topTvData;"""
         self.curs.execute(select_statement)
-        for row in self.curs:
-            row_data = {row[0]: {'rank': row[1], 'rankUpDown': row[2], 'title': row[3]}}
+        for row in self.curs:  # imdb api is trash and sends wrong rank change format sometimes
+            clean_rankUpDown = row[2]
+            if clean_rankUpDown[0].isdigit():
+                clean_rankUpDown = "+" + clean_rankUpDown
+            row_data = {row[0]: {'rank': row[1], 'rankUpDown': clean_rankUpDown, 'title': row[3]}}
             most_popular_tv_data.update(row_data)
 
         tv_table = Table(most_popular_tv_data, 0)
@@ -93,7 +96,10 @@ class DataVisualization(QMainWindow):
         select_statement = """SELECT id, rank, rankUpDown, title FROM topMoviesData;"""
         self.curs.execute(select_statement)
         for row in self.curs:
-            row_data = {row[0]: {'rank': row[1], 'rankUpDown': row[2], 'title': row[3]}}
+            clean_rankUpDown = row[2]
+            if clean_rankUpDown[0].isdigit():
+                clean_rankUpDown = "+" + clean_rankUpDown
+            row_data = {row[0]: {'rank': row[1], 'rankUpDown': clean_rankUpDown, 'title': row[3]}}
             most_popular_movie_data.update(row_data)
 
         movie_table = Table(most_popular_movie_data, 1)
@@ -150,8 +156,8 @@ class Table(QTableWidget):
         self.setColumnCount(4)
         self.setColumnWidth(0, 50)
         self.setColumnWidth(1, 100)
-        self.setColumnWidth(2, 250)
-        self.setColumnWidth(3, 100)
+        self.setColumnWidth(2, 225)
+        self.setColumnWidth(3, 75)
         self.setHorizontalHeaderLabels(self.column_labels)
         self.verticalHeader().setVisible(False)
         self.setSortingEnabled(False)
@@ -167,9 +173,9 @@ class Table(QTableWidget):
             i += 1
 
     def sort_by_rank(self):
-        sorted_keys = sorted(self.data, key=lambda x: (int(self.data[x]['rank'])))
+        sorted_keys = sorted(self.data, key=lambda x: (int(self.data[x]['rank'].replace(",", ""))))
         self.fill_table(sorted_keys)
 
     def sort_by_rank_change(self):
-        sorted_keys = sorted(self.data, key=lambda x: (int(self.data[x]['rankUpDown'])), reverse=True)
+        sorted_keys = sorted(self.data, key=lambda x: (int(self.data[x]['rankUpDown'].replace(",", ""))), reverse=True)
         self.fill_table(sorted_keys)
