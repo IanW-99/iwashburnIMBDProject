@@ -71,7 +71,7 @@ class DataVisualization(QMainWindow):
         self.movie_data.setText('Movie Data')
         self.movie_data.resize(150, 50)
         self.movie_data.move(200, 50)
-        # self.movie_data.clicked.connect(self.open_movie_data)
+        self.movie_data.clicked.connect(self.open_movie_data)
 
         self.tv_table_window = 0
         self.movie_table_window = 0
@@ -87,6 +87,18 @@ class DataVisualization(QMainWindow):
         tv_table = Table(most_popular_tv_data, 0)
         self.tv_table_window = TableWindow(tv_table)
         self.tv_table_window.show()
+
+    def open_movie_data(self):
+        most_popular_movie_data = {}
+        select_statement = """SELECT id, rank, rankUpDown, title FROM topMoviesData;"""
+        self.curs.execute(select_statement)
+        for row in self.curs:
+            row_data = {row[0]: {'rank': row[1], 'rankUpDown': row[2], 'title': row[3]}}
+            most_popular_movie_data.update(row_data)
+
+        movie_table = Table(most_popular_movie_data, 1)
+        self.movie_table_window = TableWindow(movie_table)
+        self.movie_table_window.show()
 
 
 class TableWindow(QMainWindow):
