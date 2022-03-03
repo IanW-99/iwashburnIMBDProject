@@ -71,9 +71,14 @@ class DataVisualization(QMainWindow):
         self.movie_table_window = 0
 
     def open_tv_data(self):
-        test_dict = {1: {'rank': '2', 'rankChange': '+3', 'title': 'Test Show'}, 2: {'rank': '1', 'rankChange': '-6',
-                                                                                     'title': 'Test Show2'}}
-        tv_table = TvTable(test_dict)
+        most_popular_tv_data = {}
+        select_statement = """SELECT id, rank, rankUpDown, title FROM topTvData;"""
+        self.curs.execute(select_statement)
+        for row in self.curs:
+            row_data = {row[0]: {'rank': row[1], 'rankUpDown': row[2], 'title': row[3]}}
+            most_popular_tv_data.update(row_data)
+
+        tv_table = TvTable(most_popular_tv_data)
         self.tv_table_window = TableWindow(tv_table)
         self.tv_table_window.show()
 
@@ -84,7 +89,7 @@ class TableWindow(QMainWindow):
         self.table = table
         self.setWindowTitle(self.table.title)
         self.setGeometry(500, 500, 400, 600)
-        self.setFixedSize(400, 600)
+        self.setFixedSize(500, 600)
         self.setCentralWidget(self.table)
 
 
@@ -93,7 +98,9 @@ class TvTable(QTableWidget):
         super().__init__()
         self.tv_data = tv_data
         self.title = 'Most Popular Tv Table'
-        self.width = 400
+        self.column_labels = ['Rank', 'Rank Change', 'Show Title', 'Show ID']
+
+        self.width = 500
         self.height = 600
         self.setup_ui()
 
@@ -105,10 +112,19 @@ class TvTable(QTableWidget):
 
     def create_tv_table(self):
         self.setRowCount(len(self.tv_data))
-        self.setColumnCount(3)
+        self.setColumnCount(4)
+        self.setColumnWidth(0, 50)
+        self.setColumnWidth(1, 100)
+        self.setColumnWidth(2, 250)
+        self.setColumnWidth(3, 100)
+        self.setHorizontalHeaderLabels(self.column_labels)
+        self.verticalHeader().setVisible(False)
 
-        for i in self.tv_data:
-            self.setItem(i-1, 0, QTableWidgetItem(self.tv_data[i]['rank']))
-            self.setItem(i-1, 1, QTableWidgetItem(self.tv_data[i]['rankChange']))
-            self.setItem(i-1, 2, QTableWidgetItem(self.tv_data[i]['title']))
+        i = 0
+        for key in self.tv_data:
+            self.setItem(i, 0, QTableWidgetItem(self.tv_data[key]['rank']))
+            self.setItem(i, 1, QTableWidgetItem(self.tv_data[key]['rankUpDown']))
+            self.setItem(i, 2, QTableWidgetItem(self.tv_data[key]['title']))
+            self.setItem(i, 3, QTableWidgetItem(key))
+            i += 1
         self.move(0, 0)
