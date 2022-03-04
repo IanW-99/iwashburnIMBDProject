@@ -88,7 +88,7 @@ class DataVisualization(QMainWindow):
             row_data = {row[0]: {'rank': row[1], 'rankUpDown': clean_rankUpDown, 'title': row[3]}}
             most_popular_tv_data.update(row_data)
 
-        tv_table = MostPopularTable(most_popular_tv_data, 0)
+        tv_table = MostPopularTable(most_popular_tv_data, 0, self.conn, self.curs)
         self.tv_table_window = TableWindow(tv_table)
         self.tv_table_window.show()
 
@@ -103,7 +103,7 @@ class DataVisualization(QMainWindow):
             row_data = {row[0]: {'rank': row[1], 'rankUpDown': clean_rankUpDown, 'title': row[3]}}
             most_popular_movie_data.update(row_data)
 
-        movie_table = MostPopularTable(most_popular_movie_data, 1)
+        movie_table = MostPopularTable(most_popular_movie_data, 1, self.conn, self.curs)
         self.movie_table_window = TableWindow(movie_table)
         self.movie_table_window.show()
 
@@ -137,8 +137,10 @@ class TableWindow(QMainWindow):
 
 
 class MostPopularTable(QTableWidget):
-    def __init__(self, data: dict, table_type: int):  # 0 = tv & 1 = movie
+    def __init__(self, data: dict, table_type: int, conn: sqlite3.Connection, curs: sqlite3.Cursor):
         super().__init__()
+        self.conn = conn
+        self.curs = curs
         self.data = data
         self.table_type = table_type
         if self.table_type == 0:
@@ -174,6 +176,7 @@ class MostPopularTable(QTableWidget):
         self.verticalHeader().setVisible(False)
         self.setSortingEnabled(False)
         self.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.setSelectionMode(QAbstractItemView.SingleSelection)
         self.fill_table(self.data.keys())
 
     def fill_table(self, keys):
@@ -197,7 +200,29 @@ class MostPopularTable(QTableWidget):
         if self.table_type == 0:
             self.make_popup_window('This only works for movies, sorry!', QMessageBox.Warning, (300, 300))
         else:
-            self.make_popup_window('Here you go!', QMessageBox.Information, (700, 300))
+            if self.selectedItems():
+                movie_id = self.selectedItems()[3].text()
+                query = '''SELECT * FROM ratingMoviesData where id = ?'''
+                data = movie_id,
+                self.curs.execute(query, data)
+                ratings = self.curs.fetchone()
+                if ratings is not None:
+                    msg = f"Total Rating: {ratings[1]}, Total Votes: {ratings[2]} \n" \
+                          f"10 Rating Percent: {ratings[3]}, Votes: {ratings[4]} \n" \
+                          f"9 Rating Percent: {ratings[5]}, Votes: {ratings[6]} \n" \
+                          f"8 Rating Percent: {ratings[7]}, Votes: {ratings[8]} \n" \
+                          f"7 Rating Percent: {ratings[9]}, Votes: {ratings[10]} \n" \
+                          f"6 Rating Percent: {ratings[11]}, Votes: {ratings[12]} \n" \
+                          f"5 Rating Percent: {ratings[13]}, Votes: {ratings[14]} \n" \
+                          f"4 Rating Percent: {ratings[15]}, Votes: {ratings[16]} \n" \
+                          f"3 Rating Percent: {ratings[17]}, Votes: {ratings[18]} \n" \
+                          f"2 Rating Percent: {ratings[19]}, Votes: {ratings[20]} \n" \
+                          f"1 Rating Percent: {ratings[21]}, Votes: {ratings[22]}"
+                    self.make_popup_window(msg, QMessageBox.Information, (700, 300))
+                else:
+                    self.make_popup_window('No Rating Data Available', QMessageBox.Information, (300, 300))
+            else:
+                self.make_popup_window('You must select a row!', QMessageBox.Warning, (300, 300))
 
     def make_popup_window(self, msg, icon, size: tuple):
         self.select_msg.setText(msg)
