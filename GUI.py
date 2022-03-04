@@ -56,8 +56,8 @@ class DataVisualization(QMainWindow):
         self.previous_window = previous_window
         super(DataVisualization, self).__init__()
         self.setWindowTitle('iwashburnIMDBProject/DataVisualization')
-        self.setGeometry(400, 400, 400, 400)
-        self.setFixedSize(400, 400)
+        self.setGeometry(400, 400, 400, 150)
+        self.setFixedSize(400, 150)
 
         self.tv_data_open = False
         self.tv_data = QPushButton(self)
@@ -88,7 +88,7 @@ class DataVisualization(QMainWindow):
             row_data = {row[0]: {'rank': row[1], 'rankUpDown': clean_rankUpDown, 'title': row[3]}}
             most_popular_tv_data.update(row_data)
 
-        tv_table = MostPopularTable(most_popular_tv_data, 0, self.conn, self.curs)
+        tv_table = Table(most_popular_tv_data, 0, self.conn, self.curs)
         self.tv_table_window = TableWindow(tv_table)
         self.tv_table_window.show()
 
@@ -103,7 +103,7 @@ class DataVisualization(QMainWindow):
             row_data = {row[0]: {'rank': row[1], 'rankUpDown': clean_rankUpDown, 'title': row[3]}}
             most_popular_movie_data.update(row_data)
 
-        movie_table = MostPopularTable(most_popular_movie_data, 1, self.conn, self.curs)
+        movie_table = Table(most_popular_movie_data, 1, self.conn, self.curs)
         self.movie_table_window = TableWindow(movie_table)
         self.movie_table_window.show()
 
@@ -122,12 +122,16 @@ class TableWindow(QMainWindow):
         self.sort_by_rank_change = QPushButton('Sort by Rank Change')
         self.sort_by_rank_change.clicked.connect(self.table.sort_by_rank_change)
 
+        self.also_in_top_250 = QPushButton('Also in Top 250')
+        self.also_in_top_250.clicked.connect(self.table.get_crossover)
+
         self.get_selected_info = QPushButton('Get More Info on Selected Row')
         self.get_selected_info.clicked.connect(self.table.get_cell_info)
 
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.sort_by_rank)
         self.layout.addWidget(self.sort_by_rank_change)
+        self.layout.addWidget(self.also_in_top_250)
         self.layout.addWidget(self.get_selected_info)
         self.layout.addWidget(self.table)
 
@@ -136,7 +140,7 @@ class TableWindow(QMainWindow):
         self.setCentralWidget(self.widget)
 
 
-class MostPopularTable(QTableWidget):
+class Table(QTableWidget):
     def __init__(self, data: dict, table_type: int, conn: sqlite3.Connection, curs: sqlite3.Cursor):
         super().__init__()
         self.conn = conn
@@ -166,7 +170,6 @@ class MostPopularTable(QTableWidget):
         self.create_table()
 
     def create_table(self):
-        self.setRowCount(len(self.data))
         self.setColumnCount(4)
         self.setColumnWidth(0, 50)
         self.setColumnWidth(1, 100)
@@ -180,6 +183,8 @@ class MostPopularTable(QTableWidget):
         self.fill_table(self.data.keys())
 
     def fill_table(self, keys):
+        self.setRowCount(0)
+        self.setRowCount(len(keys))
         i = 0
         for key in keys:
             self.setItem(i, 0, QTableWidgetItem(self.data[key]['rank']))
@@ -195,6 +200,19 @@ class MostPopularTable(QTableWidget):
     def sort_by_rank_change(self):
         sorted_keys = sorted(self.data, key=lambda x: (int(self.data[x]['rankUpDown'].replace(",", ""))), reverse=True)
         self.fill_table(sorted_keys)
+
+    def get_crossover(self):
+        if self.table_type == 0:
+            self.curs.execute("""SELECT topTvData.id FROM topTvData INNER JOIN top250TvData ON topTvData.id = 
+                                    top250TvData.id;""")
+        else:
+            self.curs.execute("""SELECT topMoviesData.id FROM topMoviesData INNER JOIN top250MoviesData ON 
+                                    topMoviesData.id = top250MoviesData.id;""")
+        matching_ids = self.curs.fetchall()
+        keys = []
+        for i in matching_ids:
+            keys.append(i[0])
+        self.fill_table(keys)
 
     def get_cell_info(self):
         if self.table_type == 0:
