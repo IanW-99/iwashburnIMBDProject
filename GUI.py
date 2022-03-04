@@ -214,7 +214,7 @@ class Table(QTableWidget):
 
     def get_crossover(self):
         if self.table_type == 0:
-            self.curs.execute("""SELECT topTvData.id FROM topTvData INNER JOIN top250TvData ON topTvData.id = 
+            self.curs.execute("""SELECT topTvData.id FROM topTvData INNER JOIN top250TvData ON topTvData.id =
                                     top250TvData.id;""")
         else:
             self.curs.execute("""SELECT topMoviesData.id FROM topMoviesData INNER JOIN top250MoviesData ON
