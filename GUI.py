@@ -1,5 +1,6 @@
 import sqlite3
-from PyQt5.QtWidgets import QMainWindow, QPushButton, QTableWidget, QTableWidgetItem, QWidget, QVBoxLayout
+from PyQt5.QtWidgets import QMainWindow, QPushButton, QTableWidget, QTableWidgetItem, QWidget, QVBoxLayout, \
+    QAbstractItemView, QMessageBox
 import api_interaction
 
 
@@ -55,20 +56,20 @@ class DataVisualization(QMainWindow):
         self.previous_window = previous_window
         super(DataVisualization, self).__init__()
         self.setWindowTitle('iwashburnIMDBProject/DataVisualization')
-        self.setGeometry(400, 400, 400, 150)
-        self.setFixedSize(400, 150)
+        self.setGeometry(400, 400, 400, 400)
+        self.setFixedSize(400, 400)
 
         self.tv_data_open = False
         self.tv_data = QPushButton(self)
         self.movie_data_open = False
         self.movie_data = QPushButton(self)
 
-        self.tv_data.setText('Tv Data')
+        self.tv_data.setText('Most Popular Tv Data')
         self.tv_data.resize(150, 50)
         self.tv_data.move(50, 50)
         self.tv_data.clicked.connect(self.open_tv_data)
 
-        self.movie_data.setText('Movie Data')
+        self.movie_data.setText('Most Popular Movie Data')
         self.movie_data.resize(150, 50)
         self.movie_data.move(200, 50)
         self.movie_data.clicked.connect(self.open_movie_data)
@@ -87,7 +88,7 @@ class DataVisualization(QMainWindow):
             row_data = {row[0]: {'rank': row[1], 'rankUpDown': clean_rankUpDown, 'title': row[3]}}
             most_popular_tv_data.update(row_data)
 
-        tv_table = Table(most_popular_tv_data, 0)
+        tv_table = MostPopularTable(most_popular_tv_data, 0)
         self.tv_table_window = TableWindow(tv_table)
         self.tv_table_window.show()
 
@@ -102,7 +103,7 @@ class DataVisualization(QMainWindow):
             row_data = {row[0]: {'rank': row[1], 'rankUpDown': clean_rankUpDown, 'title': row[3]}}
             most_popular_movie_data.update(row_data)
 
-        movie_table = Table(most_popular_movie_data, 1)
+        movie_table = MostPopularTable(most_popular_movie_data, 1)
         self.movie_table_window = TableWindow(movie_table)
         self.movie_table_window.show()
 
@@ -121,9 +122,13 @@ class TableWindow(QMainWindow):
         self.sort_by_rank_change = QPushButton('Sort by Rank Change')
         self.sort_by_rank_change.clicked.connect(self.table.sort_by_rank_change)
 
+        self.get_selected_info = QPushButton('Get More Info on Selected Row')
+        self.get_selected_info.clicked.connect(self.table.get_cell_info)
+
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.sort_by_rank)
         self.layout.addWidget(self.sort_by_rank_change)
+        self.layout.addWidget(self.get_selected_info)
         self.layout.addWidget(self.table)
 
         self.widget = QWidget()
@@ -131,11 +136,12 @@ class TableWindow(QMainWindow):
         self.setCentralWidget(self.widget)
 
 
-class Table(QTableWidget):
+class MostPopularTable(QTableWidget):
     def __init__(self, data: dict, table_type: int):  # 0 = tv & 1 = movie
         super().__init__()
         self.data = data
-        if table_type == 0:
+        self.table_type = table_type
+        if self.table_type == 0:
             self.title = 'Most Popular Tv Table'
         else:
             self.title = ' Most Popular Movie Table'
@@ -143,11 +149,17 @@ class Table(QTableWidget):
 
         self.width = 500
         self.height = 600
+
+        self.select_msg = QMessageBox(self)
+        self.select_msg.setWindowTitle('Selected Cell Info')
+        self.select_msg.hide()
+
         self.setup_ui()
 
     def setup_ui(self):
         self.setWindowTitle(self.title)
         self.setGeometry(0, 0, self.width, self.height)
+        self.setEditTriggers(QAbstractItemView.NoEditTriggers)
 
         self.create_table()
 
@@ -161,6 +173,7 @@ class Table(QTableWidget):
         self.setHorizontalHeaderLabels(self.column_labels)
         self.verticalHeader().setVisible(False)
         self.setSortingEnabled(False)
+        self.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.fill_table(self.data.keys())
 
     def fill_table(self, keys):
@@ -179,3 +192,15 @@ class Table(QTableWidget):
     def sort_by_rank_change(self):
         sorted_keys = sorted(self.data, key=lambda x: (int(self.data[x]['rankUpDown'].replace(",", ""))), reverse=True)
         self.fill_table(sorted_keys)
+
+    def get_cell_info(self):
+        if self.table_type == 0:
+            self.make_popup_window('This only works for movies, sorry!', QMessageBox.Warning, (300, 300))
+        else:
+            self.make_popup_window('Here you go!', QMessageBox.Information, (700, 300))
+
+    def make_popup_window(self, msg, icon, size: tuple):
+        self.select_msg.setText(msg)
+        self.select_msg.setIcon(icon)
+        self.select_msg.resize(size[0], size[1])
+        self.select_msg.show()
