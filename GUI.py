@@ -128,16 +128,25 @@ class TableWindow(QMainWindow):
         self.get_selected_info = QPushButton('Get More Info on Selected Row')
         self.get_selected_info.clicked.connect(self.table.get_cell_info)
 
+        self.show_graph = QPushButton('View Graph')
+        self.graph_window = 0
+        self.show_graph.clicked.connect(self.create_graph)
+
         self.layout = QVBoxLayout()
         self.layout.addWidget(self.sort_by_rank)
         self.layout.addWidget(self.sort_by_rank_change)
         self.layout.addWidget(self.also_in_top_250)
+        self.layout.addWidget(self.show_graph)
         self.layout.addWidget(self.get_selected_info)
         self.layout.addWidget(self.table)
 
         self.widget = QWidget()
         self.widget.setLayout(self.layout)
         self.setCentralWidget(self.widget)
+
+    def create_graph(self):
+        self.graph_window = GraphWindow(self.table)
+        self.graph_window.show()
 
 
 class Table(QTableWidget):
@@ -247,3 +256,35 @@ class Table(QTableWidget):
         self.select_msg.setIcon(icon)
         self.select_msg.resize(size[0], size[1])
         self.select_msg.show()
+
+
+class GraphWindow(QMainWindow):
+    def __init__(self, table: QTableWidget):
+        super().__init__()
+        self.table = table
+        self.width = 500
+        self.height = 600
+        self.positive = 0
+        self.negative = 0
+        self.no_change = 0
+
+        if self.table.table_type == 0:
+            self.title = 'Tv Info Graph'
+        else:
+            self.title = 'Movie Info Graph'
+
+        self.create_graph()
+        self.setup_ui()
+
+    def setup_ui(self):
+        self.setWindowTitle(self.title)
+        self.setGeometry(0, 0, self.width, self.height)
+
+    def create_graph(self):
+        for key in self.table.data.keys():
+            if int(self.table.data[key]['rankUpDown']) > 0:
+                self.positive += 1
+            elif int(self.table.data[key]['rankUpDown']) < 0:
+                self.negative += 1
+            else:
+                self.no_change += 1
