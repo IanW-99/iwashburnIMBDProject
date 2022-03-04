@@ -12,3 +12,4 @@ virtualenv==20.13.1
 virtualenv-clone==0.5.7
 
 PyQt5~=5.15.6
+matplotlib~=3.5.1

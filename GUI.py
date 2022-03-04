@@ -1,4 +1,6 @@
 import sqlite3
+from PyQt5.QtChart import QBarSet, QBarSeries, QChart, QBarCategoryAxis, QValueAxis, QChartView
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QTableWidget, QTableWidgetItem, QWidget, QVBoxLayout, \
     QAbstractItemView, QMessageBox
 import api_interaction
@@ -264,27 +266,51 @@ class GraphWindow(QMainWindow):
         self.table = table
         self.width = 500
         self.height = 600
-        self.positive = 0
-        self.negative = 0
-        self.no_change = 0
+        self.changes = [0, 0, 0]
+        self.change_categories = ('Rank Increased', 'Rank Decreased', 'No Change')
 
         if self.table.table_type == 0:
             self.title = 'Tv Info Graph'
         else:
             self.title = 'Movie Info Graph'
 
-        self.create_graph()
+        self.graph_data()
+        set0 = QBarSet('x')
+        set0.append(self.changes)
+        series = QBarSeries()
+        series.append(set0)
+        series.setLabelsVisible(True)
+
+        chart = QChart()
+        chart.addSeries(series)
+        chart.setTitle(self.title)
+        chart.setAnimationOptions(QChart.SeriesAnimations)
+
+        axisX = QBarCategoryAxis()
+        axisX.append(self.change_categories)
+
+        axisY = QValueAxis()
+        axisY.setRange(0, max(self.changes))
+
+        chart.addAxis(axisX, Qt.AlignBottom)
+        chart.addAxis(axisY, Qt.AlignLeft)
+
+        chart.legend().setVisible(False)
+
+        chartView = QChartView(chart)
+        self.setCentralWidget(chartView)
+
         self.setup_ui()
 
     def setup_ui(self):
         self.setWindowTitle(self.title)
         self.setGeometry(0, 0, self.width, self.height)
 
-    def create_graph(self):
+    def graph_data(self):
         for key in self.table.data.keys():
-            if int(self.table.data[key]['rankUpDown']) > 0:
-                self.positive += 1
-            elif int(self.table.data[key]['rankUpDown']) < 0:
-                self.negative += 1
+            if int(self.table.data[key]['rankUpDown'].replace(",", "")) > 0:
+                self.changes[0] += 1
+            elif int(self.table.data[key]['rankUpDown'].replace(",", "")) < 0:
+                self.changes[1] += 1
             else:
-                self.no_change += 1
+                self.changes[2] += 1
