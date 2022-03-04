@@ -215,7 +215,7 @@ class Table(QTableWidget):
             self.curs.execute("""SELECT topTvData.id FROM topTvData INNER JOIN top250TvData ON topTvData.id = 
                                     top250TvData.id;""")
         else:
-            self.curs.execute("""SELECT topMoviesData.id FROM topMoviesData INNER JOIN top250MoviesData ON 
+            self.curs.execute("""SELECT topMoviesData.id FROM topMoviesData INNER JOIN top250MoviesData ON
                                     topMoviesData.id = top250MoviesData.id;""")
         matching_ids = self.curs.fetchall()
         keys = []
