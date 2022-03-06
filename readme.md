@@ -1,5 +1,5 @@
 Ian Washburn
-Sprint 3 will grab information of the most popular movies from the imdb database api and store 
-them into the database 'imDataBase.db'. The movies with the best and worst rank changes will have thier user 
-rating data retrieved and stored in ratingsMovieData. There are two automated tests that will test to make 
-sure that all the items are received from the api and that they are successfully stored in the database.
+Sprint 4 introduces a GUI which will display data and analytics to the user. The data is taken from the imdb api and
+stored in the local database 'imDatabase.db'. Users are given the option to either update the data in the database or 
+view a variety of data visualizations. Requirements.txt contains all the necessary imports and installations needed to 
+properly run this program. 
